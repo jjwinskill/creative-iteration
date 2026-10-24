@@ -3,7 +3,7 @@ name: creative-iteration
 description: An agent-led idea generator that turns a vague want ("I want to do this thing but don't know what it should look like") into the best few ideas, seen from many outside perspectives. Agents fan out about 30 sketches from a fetched pool of real candidates or precedents, shaped by randomly drawn thinking moves from real people and trades, a judge filters them, the person picks from a short menu, and the picks are developed, attacked and delivered as an idea dossier ready for strategy and planning. Use whenever someone has a loose brief or a "what should I build / make / do" question and wants fresh, non-obvious ideas, for example "build grinder grindr", "show me a new way to build an electric guitar", "I've got a pile of scrap wood, what should I make", "I need an idea for a side project", or "help my daughter with reading", even if they never say "creative iteration". Not for planning or building an idea that's already chosen.
 ---
 
-# Creative Iteration (v0.7)
+# Creative Iteration (v0.8)
 
 **What it's for:** going from "I want to do this, but I don't know what it looks like" to the best few ideas. Strategy and planning come afterward, as a separate step.
 
@@ -34,8 +34,9 @@ Make `runs/YYYY-MM-DD-<slug>/` in the current working folder unless the person n
 | File | Holds |
 |---|---|
 | `brief.md` | The intake answers, 0, the why and why-test, both dials, the tension register, the brief score, the obvious answer |
+| `rounds/references.md` | Principles and register distilled from the person's references (when they name any) |
 | `rounds/problems.md` | The problems found and the framing |
-| `rounds/pool.md` | The numbered pool with source links, and the slices dealt |
+| `rounds/pool.md` | The numbered pool (or subject and mechanism pools) with source links, and the slices dealt |
 | `rounds/fanout.md` | Every sketch, the unprompted lists, the wells, the filter's scores, the menu, the person's picks |
 | `rounds/grounding.md` | The menu existence check (internal) |
 | `rounds/priorart.md` | The prior-art check on each pick (originality briefs only) |
@@ -74,9 +75,16 @@ Ask up to **five questions in one message**, chosen from the gaps that would cha
 - the no list
 - what they want out of making it
 
+**Audience-facing work** is anything other people will play, read, watch, wear or be pitched: a game, a theme, a name, a story, a costume. For it, ask up to **seven** questions, and three of them are always these:
+- **who the others are:** ages, and what they're into. In the pinball run, "just the three of us" hid that one player was the person's kid.
+- **the hook:** what would make them want to try it, from the name or one-line pitch alone?
+- **the register:** what should it feel like?
+
+The pinball run lost two full rounds to these. Its menus went esoteric (nobody could tell what the themes were), then domestic (graspable, but no pull), then kid comedy (pull, wrong feel). The person's reference machines carried all three answers implicitly, and nothing asked for them.
+
 Skip any already answered, don't follow up, and fill the rest with marked assumptions. Infer the drift setting if it isn't given.
 
-**Context stays context.** Only the why, the no list and the stated limits are requirements. Everything else the person tells you (a past project that failed, a story about how they work) is **background**: label it that way in the brief block. In the Pi run, a story about a pedal that died at debugging became problem 1 for both problem agents and then a principle in the framing, and most sketches argued for themselves as multimeter-testable. It's the same failure as run 5's bonus, through a new door.
+**Context stays context.** Only the why, the no list, the stated limits, the hook and the register are requirements. Everything else the person tells you (a past project that failed, a story about how they work) is **background**: label it that way in the brief block. In the Pi run, a story about a pedal that died at debugging became problem 1 for both problem agents and then a principle in the framing, and most sketches argued for themselves as multimeter-testable. It's the same failure as run 5's bonus, through a new door.
 
 **Assumptions come only from this brief, never from earlier runs or memory.** In run 5, the lead filled an unanswered question with "a full woodshop, $75" from an earlier exercise, and every agent reached for plywood. When a gap would bend the ideas (materials, budget, skills), mark it **unknown** and tell the agents the method is open, rather than guessing from context.
 
@@ -94,6 +102,14 @@ Below 7, fix it or ask.
 - **Unknowns:** gaps left open on purpose (for example, "making method: open").
 
 **Make a second, requirements-only version** for the roles that seed ideas (the cold samplers, the retrieval agent, the sketch generators, the control and the wild card): the same block with every background line removed. Labels alone don't stop background from steering. In the guitar run, "shoegaze" was labeled background, and still about 7 of 12 menu items were reverb or ambience ideas. Tensions drawn from background are left out of it too: mark them **(background)** in the register. The full block goes to everyone else: the problem agents, the filter, the judges, the developers and the adversary. Background helps judge fit; it shouldn't seed the ideas. Gate 0 shows the full block.
+
+**References** are things the person names as examples of what they love: machines, books, products, people. They're background, so their subjects don't seed the ideas. But they carry what the person values, so distill it first. One **reference agent** (sonnet, with web) reads reviews and write-ups of each, and returns two subject-free lists:
+- **play or use principles:** how it works, and why people love it
+- **register words:** how it feels
+
+Both lists become requirements, marked "distilled from the references." The names, the subjects and the person's quotes about them stay background, and Section B of the agent's report (per-reference notes with links) goes only to the judging and developing roles. In the pinball run, the principles alone kept the loops strong, but with no register, the tone drifted.
+
+**Quote check.** Before Gate 0, scan every requirement line for a reference's subject: its names, settings, creatures and objects. Split any such line. The principle becomes the requirement, in your words, marked as a paraphrase for the person to approve at Gate 0. The verbatim quote moves to background. In the pinball run, two requirement lines quoted the person describing their references ("overload a nuclear reactor", "battling of the monsters"), and those subjects became two of the run's four wells.
 
 **Gate 0: "Is this you?"** Show the person the brief block and ask them to correct anything wrong, in one quick reply. This is the cheapest gate in the run and catches the lead's mistakes before every agent inherits them. Skip it only if the person explicitly says to. Log the reply verbatim.
 
@@ -114,8 +130,13 @@ Merge them. Update the tension register, and write **one framing paragraph**: th
 In the v0.5 test, a fetched pool was the only change that widened the ideas *and* produced the best-rated ones. One **retrieval agent** (sonnet, with web) builds a numbered pool of about **80 real entries, each with its source URL**, from **at least 6 published sources** that span different regions, eras and kinds. The pool takes one of two forms:
 - **Candidates,** when the brief chooses among real things (books, places, products, gifts, recipes, people, events). Each entry is something the person could pick. For books, that might mean international prizes across languages, national canons, translated-fiction and genre award lists.
 - **Precedents,** when the brief asks for something to make or do. Each entry is a real work, design, practice or project, from anywhere, that answered a nearby need. Sketches build *from* precedents; they don't copy them.
+- **Subjects plus precedents,** when the brief asks for a subject the audience has to recognize: a theme, a setting, a name, a topic. Build **two pools**:
+  - a **subject pool** (about 60) of things the audience already knows and likes, across media and culture, that this medium hasn't used
+  - a **mechanism pool** (about 60) of far-flung precedents for how it could work
 
-Write it to `rounds/pool.md`. Then deal slices by script, so the lead never picks who sees what: `scripts/deal.py --pool <N> --hands g1:15 g2:15 g3:15 g4:15 control:15 wild:5`. Record the slices in `pool.md`.
+  Each sketch takes its subject from its subject slice and its mechanics from its mechanism slice. In the pinball run, one far-flung pool did both jobs, and its precedents became the subjects: a steppe horseback game, a Foucault pendulum, an Edo clockwork archer. The loops were strong, and nobody could tell what the themes were.
+
+Write it to `rounds/pool.md`. Then deal slices by script, so the lead never picks who sees what: `scripts/deal.py --pool <N> --hands g1:15 g2:15 g3:15 g4:15 control:15 wild:5`. With two pools, deal each separately. Record the slices in `pool.md`.
 
 ## Stage 2: Fan-out (about 30 sketches)
 
@@ -136,6 +157,7 @@ One fresh **filter judge** gets every sketch plus the two cold answers, shuffled
 - **feasibility** within the 0 (fine / risky / dead), with one reason
 - **fit** to the why (yes / partly / no)
 - **forced fit:** yes, if the sketch bends its pool entry to make the idea work
+- **pull,** 1–5: would the audience on the dial want it, from the one-line pitch alone?
 
 With more than about 40 sketches, split them across two filter judges and have the second also group duplicates across the whole list. Otherwise use one judge.
 
@@ -147,7 +169,7 @@ With more than about 40 sketches, split them across two filter judges and have t
 In the v0.5 test, wells came from what generators reached for, and they repeated across runs (*Middlemarch*, *War and Peace*, *Remains of the Day*), while a map built from cold samples missed them. Wells are kept, never discarded: likeness isn't badness.
 
 **Build the menu:** drop anything dead or no-fit, and keep one per duplicate group.
-- **About 8 non-well items** ordered by the drift setting's preference. Forced fits rank below clean fits at equal distance.
+- **About 8 non-well items** ordered by the drift setting's preference. Forced fits rank below clean fits at equal distance. Break remaining ties by **pull**, and only then by script. In the pinball run, 11 ideas tied at distance 4 with a full fit, so a shuffle chose the menu.
 - **Plus 2 wild slots** for what the main ordering underweights, so it still reaches the person. In *refine* and *stretch*, the two highest-distance feasible ideas below the cut. In *surprise*, where the main list is already ordered by distance, the two best fits below the cut. (In the Pi run, surprise mode's wild slots became just the next two in line, and the winner came from one of them.)
 - **Plus a convergent lane:** up to 2 wells, the strongest, labeled "well" with where they came from. They compete like everything else.
 - **Plus the obvious answer** as a labeled reference.
@@ -161,6 +183,12 @@ The full scored list is always available on request.
 Show the framing and the menu, each item in one line with its distance. Ask the person to **pick two or three, veto any, and add a note** if they like. Log their words verbatim.
 
 **Cook mode:** three judges with different stakes (`references/roles.md`) pick the top three instead, using `references/click.md`. They get the grounding notes.
+
+**When the person vetoes the menu,** the redo has to keep every requirement, not just the new one. In the pinball run, each veto note became the loudest requirement, and each round overcorrected: esoteric, then domestic, then kid comedy. The person quit from fatigue. So:
+1. **Log the note verbatim** as a requirement in both versions of the brief block, and update the why-test.
+2. **Carry forward what they said worked** (for example, "the loops are great") as a requirement too, so it isn't lost.
+3. **Run a light redo first:** two sketch generators and the control, with fresh draws and slices, aimed at the correction. That's about 18 sketches for a third of the cost. Run a full fan-out only if the person asks for it, or vetoes the light redo's menu too.
+4. **The filter scores fit against every requirement separately** (yes / partly / no each). Anything with a "no" on any requirement leaves the menu, whichever round added that requirement.
 
 ## Stage 4a: Prior art (originality briefs only)
 
@@ -178,6 +206,8 @@ It rates the pick with links:
 - **known:** someone has done it
 - **known in principle, new in form:** the idea exists elsewhere; this form or medium is new
 - **no prior found:** list the queries tried
+
+It also searches the field's own catalog (every field that has one), and **lists every source it couldn't reach**, with the hand searches that would close the gap (where to look, and which terms). With a key source unreachable, "no prior found" becomes "**no prior found in reachable sources**", and Gate 2 shows the hand-search list. In the pinball run, the main pinball databases blocked automated fetches, so the check could only clear the themes in the sources it could reach.
 
 Write it to `rounds/priorart.md`, and give each rating to that pick's developer, who reshapes toward the genuinely new part. A "known" pick goes to Gate 2 labeled as such, not dropped: the person decides.
 

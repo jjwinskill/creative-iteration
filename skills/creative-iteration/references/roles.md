@@ -12,6 +12,14 @@ Every role prompt opens with this line: *"The brief below is your only source of
 
 Agents with web (retrieval, grounding, developers, the fact-checker) link every real-world specific they assert. Other agents work from memory and don't tag it; fetched checks downstream catch what memory gets wrong.
 
+## Reference agent (sonnet, with web), Stage 0, when the person names references
+
+> {brief block}. The person named these as things they love: {references}. Read reviews, write-ups and players' or users' accounts of each (positive ones especially), and find why people love them. Return two sections.
+> - **Section A, subject-free:** (1) play or use principles: how each works and what makes it compelling; (2) register words: how each feels to play or use. Use no names, settings, creatures, objects or plot from the references; a reader shouldn't be able to tell what they are.
+> - **Section B:** per-reference notes, with links.
+>
+> Flag anything the person said about a reference that your sources don't support.
+
 ## Cold sampler (haiku), two
 
 > {requirements-only brief block, without the framing}. Give your single best answer to it, in about 150 words. No hedging, no list of options. No research needed; deliver your answer as your final report.
@@ -40,7 +48,7 @@ The same prompt with the lenses and the seed removed: "Find the three biggest un
 >
 > **Step 1, before reading further:** name the 3–4 answers you'd give to this brief unprompted, each with a guess at how likely a typical model would be to suggest it (0–100%). Don't use them below unless they're in your slice.
 >
-> **Step 2.** Your pool slice (real {candidates / precedents}, fetched from published sources):
+> **Step 2.** Your pool slice (real {candidates / precedents}, fetched from published sources){; with two pools: a subject slice and a mechanism slice. Take each sketch's subject from the subject slice and its mechanics from the mechanism slice}:
 > {numbered entries with their one-line descriptions}
 >
 > You have three lenses and one hard constraint:
@@ -73,6 +81,8 @@ The same prompt with the lenses and the constraint removed. It keeps its slice, 
 > - feasibility within the stated limits: fine / risky / dead, with one reason
 > - fit to the why: yes / partly / no
 > - forced fit: yes if the sketch bends its source (a book, a precedent) to make the idea work, else no
+> - pull, 1–5: would the audience on the dial want it, from the one-line pitch alone?
+> - {after a veto: fit to each requirement separately, yes / partly / no each: {requirements}}
 >
 > Be terse: one line per sketch. Don't rank.
 
@@ -82,7 +92,7 @@ The same prompt with the lenses and the constraint removed. It keeps its slice, 
 
 ## Prior-art agent (sonnet, with web), one per pick, Stage 4a (originality briefs)
 
-> {brief block}. The person picked this idea: {sketch}. They need it to be genuinely new. Find whether it, or its core principle, already exists. Search every kind of source: patents, shipping products and retailers, software and plugins and studio techniques, research papers, DIY and maker forums, and the same principle in another medium or field. Rate it **known** (someone has done it), **known in principle, new in form** (say exactly what's new), or **no prior found** (list every query you tried). Link every source. Then name the narrowest claim of novelty that survives your search.
+> {brief block}. The person picked this idea: {sketch}. They need it to be genuinely new. Find whether it, or its core principle, already exists. Search every kind of source: patents, shipping products and retailers, software and plugins and studio techniques, research papers, DIY and maker forums, and the same principle in another medium or field. Rate it **known** (someone has done it), **known in principle, new in form** (say exactly what's new), or **no prior found** (list every query you tried). Link every source. Then name the narrowest claim of novelty that survives your search. Include the field's own catalog, if it has one. List every source you couldn't reach (blocked or failed), with the hand searches that would close the gap; if a key source was unreachable, say "no prior found in reachable sources".
 
 ## Fact-checker (sonnet, with web), after the dossier
 

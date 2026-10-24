@@ -12,6 +12,10 @@ One slot per question, and each slot asks one thing: one question mark, with no 
 3. **<Label>:** <one question>
 4. **<Label>:** <one question>
 5. **<Label>:** <one question>
+<For audience-facing work, up to 7 slots, and these three are always among them:>
+- **Who they are:** <how old are the others, and what are they into?>
+- **The hook:** <what would make them want to try it, from the name alone?>
+- **The feel:** <what should it feel like?>
 
 <Optional: one assumption to check, stated as a sentence, not a question.>
 ```
@@ -66,12 +70,24 @@ One slot per question, and each slot asks one thing: one question mark, with no 
 ## rounds/pool.md
 
 ```markdown
-# Pool: candidates | precedents
+# Pool: candidates | precedents | subjects + precedents
+(With two pools, one table each: the subject pool, then the mechanism pool, each dealt separately.)
 Sources (N): <name, URL> …
 | # | Entry | One line | Source |
 |---|---|---|---|
 ## Slices (deal.py output)
 g1: … · g2: … · g3: … · g4: … · control: … · wild: …
+```
+
+## rounds/references.md (when the person names references)
+
+```markdown
+# References
+## Section A (subject-free; becomes requirements)
+Principles: 1. … · Register: …
+## Section B (judges, developers and adversary only)
+<per reference: notes with links>
+Unsupported claims by the person: …
 ```
 
 ## rounds/problems.md
@@ -96,8 +112,8 @@ Draws: generator 1: moves …, constraint …; … ; wild card: …, seed …, t
 |---|---|
 
 ## Sketches (filter scores; blind labels from the script)
-| Label | Source (card / control / wild / cold) | Pool # | Sketch (one line) | Group | Distance | Feasible | Fit | Forced | Well |
-|---|---|---|---|---|---|---|---|---|---|
+| Label | Source (card / control / wild / cold) | Pool # | Sketch (one line) | Group | Distance | Feasible | Fit | Forced | Pull | Well |
+|---|---|---|---|---|---|---|---|---|---|---|
 
 ## Wells this run
 | Well | Why (ledger / 3+ unprompted lists / both cold) |
@@ -155,6 +171,7 @@ Picks: … · Vetoes: … · Note: "…"
 | Pick | Rating (known / known in principle, new in form / no prior found) | Closest prior art, with links | Narrowest surviving novelty claim |
 |---|---|---|---|
 Queries tried: …
+Unreachable sources, and the hand searches to close the gap: …
 ```
 
 ## rounds/grounding.md and rounds/factcheck.md

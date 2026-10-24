@@ -2,7 +2,7 @@
 
 A suite of agent-led tools for the hard first step of making something: getting from "I want to do this, but I don't know what it looks like" to an idea worth building. The first tool is the **Creative Iteration** skill for Claude Code, an idea generator. Strategy and planning tools are planned to follow it.
 
-> **Status: experimental (v0.7).** This is a working research project, not a finished product. It has had eleven runs on eight briefs, and every run changed the method. Expect rough edges, high token use, and rules that will keep changing.
+> **Status: experimental (v0.8).** This is a working research project, not a finished product. It has had twelve runs on nine briefs, and every run changed the method. Expect rough edges, high token use, and rules that will keep changing.
 
 ## Why it exists
 
@@ -19,12 +19,12 @@ So this skill treats the model as cheap, dumb mutation and spends its judgment o
 Then fresh agents filter, judge and attack, and the person steers at two short menus, because people are bad at specifying what they want and good at reacting to what's in front of them.
 
 ## How a run goes
-1. **Intake.** Up to five short questions. The person's answers go to every agent verbatim, and the person confirms the brief ("Is this you?").
+1. **Intake.** Up to five short questions, or seven for work other people will play or use (who they are, the hook, the feel). The person's answers go to every agent verbatim, and the person confirms the brief ("Is this you?"). Any references the person names are distilled into subject-free principles and tone, so their subjects don't steer the ideas.
 2. **Problems.** Two agents look for the real problem under the request, one with drawn moves and one without.
 3. **The pool.** One agent fetches about 80 real entries from at least six sources across regions, eras and kinds. A script deals each idea agent its own random slice.
 4. **Fan-out.** Four agents with drawn moves, one no-card control and one wild card write about 30 sketches.
 5. **Filter.** A fresh judge scores every sketch, unlabeled and shuffled, for distance from the obvious answer, feasibility and fit. The answers every model reaches for ("wells") are flagged, not deleted.
-6. **Gate 1.** The person picks two or three from a short menu.
+6. **Gate 1.** The person picks two or three from a short menu, or vetoes it. A veto triggers a light redo aimed at the correction, which still has to meet every earlier requirement.
 7. **Develop and attack.** Each pick is developed, checked against real sources, and attacked by an adversary. When the brief demands something new, a prior-art search on each pick (patents, products, plugins, papers, forums, and the same principle in other fields) comes first.
 8. **Gate 2.** The person chooses.
 9. **The dossier.** The winner and the runners-up are fact-checked and written up as an idea dossier. That's where this skill stops: planning is a separate step, and the dossier is its brief.

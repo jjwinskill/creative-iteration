@@ -194,7 +194,7 @@ The brief asked for an original piece of guitar technology that has never been d
 - **The intake bundled questions again,** although the skill said not to.
 - **The lead wrote a full design plan in the run,** with no stage gating, attacking or fact-checking it.
 
-## v0.7 (current)
+## v0.7
 
 Built from the guitar run:
 - **A prior-art stage** for briefs that demand novelty. One agent per pick searches patents, products, plugins and studio techniques, papers, forums, and the same principle in other fields. It rates each pick known, known in principle but new in form, or no prior found, before development.
@@ -202,4 +202,25 @@ Built from the guitar run:
 - **An intake template:** one slot per question, one thing per slot.
 - **An explicit handoff.** The run ends at the fact-checked dossier. Planning is a separate step that takes the dossier as its brief.
 
-v0.7 hasn't had a full run yet.
+## 2026-10-24 UTC: v0.7 first run, an original pinball theme (gated)
+
+The brief asked for a pinball theme no machine has used, with a novel toy and a list of shots, built as a home machine. The person named four reference machines for how they play, not their subjects. 36 agents, about 3.1M tokens, 94 minutes, because of two redos.
+- **Requirements-only generators worked.** With the reference machines hidden from the idea-seeding roles, their genre didn't pull the menu. All 11 first-round items had a real loop with an ending.
+- **The prior-art stage worked,** and rated both picks' toys "known in principle, new in form" while their themes were clear. But the field's main databases blocked automated fetches.
+- **Three rounds swung.** Round 1 was esoteric: pool precedents became the subjects. Round 2 was graspable but domestic. Round 3 had hooks, but leaned to children's comedy. Each veto note became the loudest requirement, and nothing held the earlier ones.
+- **The brief lacked three things audience-facing work needs:** legibility, a hook, and a register. The references carried all three implicitly. Hiding them stopped their subjects steering, but also hid their tone.
+- **Requirement lines that quoted the person describing a reference carried its subject,** and two of the run's four wells came from those quotes.
+- **11 ideas tied at the top of the filter,** so a shuffle chose the menu.
+
+## v0.8 (current)
+
+Built from the pinball run:
+- **Intake for audience-facing work:** up to seven questions, always including who the others are, the hook, and the feel.
+- **References are distilled** by a reference agent into subject-free play principles and register words, which become requirements. Names, subjects and quotes stay background.
+- **A quote check:** a requirement line that names a reference's subject is split into the principle (a requirement) and the quote (background).
+- **Two pools for subject briefs:** subjects the audience already knows that the medium hasn't used, and far-flung precedents for the mechanics.
+- **Vetoes:** a light redo first, carrying forward what worked, and the filter scores fit against every requirement separately.
+- **A pull score** (would the audience want it from the pitch alone?) breaks ties before any shuffle.
+- **Prior art lists unreachable sources** and the hand searches to close the gap.
+
+v0.8 hasn't had a full run yet.

@@ -94,7 +94,7 @@ Below 7, fix it or ask.
 
 **Cold answers:** two cold samplers (haiku) answer the brief with no cards. That's **the obvious answer**, the reference for distance. (Six cold samplers cost about 340k tokens in the v0.5 test and still missed the real wells, so two is enough.)
 
-**Known wells:** open this skill's `wells.md` and copy the section matching this kind of brief into `brief.md`, if one exists. Wells are answers models keep reaching for. The ledger is about model habits, not the person, so it doesn't break rule 6.
+**Known wells:** open this skill's `data/wells.md`, your own well ledger, and copy the section matching this kind of brief into `brief.md`, if one exists. Wells are answers models keep reaching for. The ledger is about model habits, not the person, so it doesn't break rule 6. It starts empty and grows with your runs; it's local and never committed.
 
 ## Stage 1: Problems (two agents)
 
@@ -211,5 +211,5 @@ Write `report.md` and end in chat with the same content, in **plain words**: run
 ## Afterward
 
 - Write `metrics.json`.
-- Add any new wells to `wells.md`, and bump the run count on wells seen again.
+- Add any new wells to `data/wells.md`, and bump the run count on wells seen again. Create the file if it's missing: one `## <kind of brief>` section per kind, each a table of well, runs, and how it showed up. A well goes in when it shows up in two or more runs, or when one run marks it a well. Wells are kept, never deleted.
 - If you maintain the skill, append what the run taught it to your own run log, timestamped with `date -u`. The public record of past runs is `docs/creative-iteration/LESSONS.md` in this repo.

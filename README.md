@@ -81,8 +81,7 @@ Then ask Claude Code something like "I've got a pile of scrap wood, what should 
 | `skills/creative-iteration/references/` | Agent prompts (`roles.md`), the judging rubric (`click.md`) and file templates (`templates.md`) |
 | `skills/creative-iteration/scripts/` | `draw.py` (random cards, logging, credits, stats) and `deal.py` (random pool slices) |
 | `skills/creative-iteration/deck/deck.json` | The move and constraint deck |
-| `skills/creative-iteration/wells.md` | The ledger of answers models keep reaching for, by kind of brief |
-| `skills/creative-iteration/data/` | Your local draw log (not committed) |
+| `skills/creative-iteration/data/` | Your local draw log and well ledger (the answers models keep reaching for, by kind of brief). Created on first use, never committed |
 | `docs/creative-iteration/` | Lessons from every run, and an example run |
 
 ## License

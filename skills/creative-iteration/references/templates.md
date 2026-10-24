@@ -41,7 +41,7 @@
 1. …
 2. …
 
-## Known wells (from wells.md, this kind of brief)
+## Known wells (from data/wells.md, this kind of brief)
 - … (or "none yet")
 ```
 

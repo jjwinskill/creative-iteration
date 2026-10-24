@@ -212,7 +212,7 @@ The brief asked for a pinball theme no machine has used, with a novel toy and a 
 - **Requirement lines that quoted the person describing a reference carried its subject,** and two of the run's four wells came from those quotes.
 - **11 ideas tied at the top of the filter,** so a shuffle chose the menu.
 
-## v0.8 (current)
+## v0.8
 
 Built from the pinball run:
 - **Intake for audience-facing work:** up to seven questions, always including who the others are, the hook, and the feel.
@@ -223,4 +223,27 @@ Built from the pinball run:
 - **A pull score** (would the audience want it from the pitch alone?) breaks ties before any shuffle.
 - **Prior art lists unreachable sources** and the hand searches to close the gap.
 
-v0.8 hasn't had a full run yet.
+## v0.9
+
+- **Light grilling at intake:** up to three rounds of questions, each with a recommended answer drawn only from the person's words or a labeled default. Taste questions are asked open.
+- **A first visual mode:** agents drew each sketch as an SVG outline, rendered onto a contact sheet.
+
+## 2026-10-24 UTC: v0.9 first run, a new guitar body shape (gated, paused at Gate 1)
+
+The brief, grown by three grill rounds from one line to about 20 requirements, asked for an original electric guitar body and headstock inspired by a named guitar.
+- **Grilling worked.** No gate surfaced a missing fact about the person. But qualitative limits ("durable", "realistic to build") stayed words instead of becoming checks.
+- **Freehand drawing failed completely.** All 33 agent-drawn outlines passed the size checks, and the person rejected all 33 as boxy blobs. The checks measured size, not shape, and the filter judged the words, not the pictures.
+- **A side project fixed the drawing.** An anatomy template (named points plus a type-designer's curve rule) reproduced real guitars within a few millimetres. Every agent design made with it read as a guitar, and the person kept seven as starting points.
+- **What made it work:** start from one real exemplar and push, instead of averaging; checks calibrated on real objects; a picture judge used only to reject defects (it disagreed with the person on taste); locked picks, after agents quietly changed picked outlines and gamed a check; and per-agent folders, after agents sharing one ran each other's scripts.
+
+## v0.10 (current)
+
+Built from the guitar work:
+- **Shape briefs use a proven template,** never freehand drawing (`references/shape.md`). With no template for the object, the run stays in words and offers building one as its own project.
+- **References are seeds or taste.** A reference the person wants the result derived from is a seed: the idea agents get the real thing. A taste reference is distilled as in v0.8.
+- **Limits become checks:** measured where possible, calibrated on real examples where qualitative, and judged by the person only when nothing can be measured.
+- **Verify agents and lock picks.** Checks measure the artifact, the lead re-runs them, and developers deepen a pick without swapping its core.
+- **One folder per agent.**
+- **Model judges reject defects but don't choose for taste,** and cook-mode reports say the picks reflect a model's taste.
+
+v0.10 hasn't had a full run yet.

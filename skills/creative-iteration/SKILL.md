@@ -3,7 +3,7 @@ name: creative-iteration
 description: An agent-led idea generator that turns a vague want ("I want to do this thing but don't know what it should look like") into the best few ideas, seen from many outside perspectives. Agents fan out about 30 sketches from a fetched pool of real candidates or precedents, shaped by randomly drawn thinking moves from real people and trades, a judge filters them, the person picks from a short menu, and the picks are developed, attacked and delivered as an idea dossier ready for strategy and planning. Use whenever someone has a loose brief or a "what should I build / make / do" question and wants fresh, non-obvious ideas, for example "build grinder grindr", "show me a new way to build an electric guitar", "I've got a pile of scrap wood, what should I make", "I need an idea for a side project", or "help my daughter with reading", even if they never say "creative iteration". Not for planning or building an idea that's already chosen.
 ---
 
-# Creative Iteration (v0.8)
+# Creative Iteration (v0.10)
 
 **What it's for:** going from "I want to do this, but I don't know what it looks like" to the best few ideas. Strategy and planning come afterward, as a separate step.
 
@@ -59,14 +59,26 @@ These keep the outside perspective real and the choosing honest. Breaking one qu
 6. **The brief block is the agents' only source of facts.** Every role prompt says so, and tells the agent to ignore anything else it knows about the person or this project, including names in file paths or the environment. Agents inherit project and memory context: run 4's "cold" answers cited the person's files, and in the Pi run a problem agent took the person's name from the home-folder path. **The lead scrubs it:** before passing any agent's output on, remove names and details about the person that aren't in the brief block, and log the removal.
 7. **The lead doesn't patch fatal flaws.** If the attack finds one in a developed concept, show it to the person with the flaw named. Or, in cook mode, run a small fix round (two generators get the concept and the flaw, and the filter judge picks). In two earlier runs, the decisive late fix was the lead's, which kept the cards out of it. Correcting a *fact* the fact-check marks wrong is different, and the lead does that (see Output).
 8. **Real-world specifics come from fetched sources, not model memory.** The pool is fetched, the menu is checked for existence, the developers check source fidelity, and the dossier is fact-checked. Generators may work from memory; nothing reaches the person as fact until a fetched source backs it. Don't make agents tag their memory claims: in the v0.5 test, about 119 such tags changed no decisions.
+9. **Verify agents' claims, and lock picks.** Agents will satisfy a check any way they can on paper. In the guitar work, one passed a horn-width check by moving the points the check measured from, and two developers quietly changed outlines the person had picked. So:
+   - checks measure the artifact itself, never an agent's own numbers or labels;
+   - the lead re-runs every check before anything reaches the person;
+   - a pick is **locked**: developers deepen it but don't swap its core (the central idea, the chosen item, the picked geometry). The lead compares each developed concept against the picked sketch, and any drift goes back.
+10. **One folder per agent.** Agents that write files work in their own folder under the run and don't read others'. In the guitar run, agents sharing a scratch folder ran each other's scripts.
 
-Role prompts are in `references/roles.md`. Models: haiku for cold answers, sonnet for everything else.
+Role prompts are in `references/roles.md`; shape briefs also follow `references/shape.md`. Models: haiku for cold answers, sonnet for everything else, and Opus for a picture judge.
 
 ## Stage 0: Intake and brief
 
 **Say the scope first.** If the request asks for more than ideas (a plan, a design, a build), say in the intake message that this run finds and develops the idea, and that planning is a separate step afterward (see Handoff).
 
-Ask up to **five questions in one message**, chosen from the gaps that would change the ideas most, **written in the intake template** in `references/templates.md`: one slot per question, one thing per slot. In the Pi run, "which room, and who else uses it?" got an answer to the room only, and the fact that decided the winner (the person's kids) surfaced at Gate 2. In the guitar run, the rule was in the skill and the lead still bundled "skills, tools and budget" into one question. **Always include the role question and the who-else question.**
+**Grill, lightly.** Intake is a short interview in rounds, adapted from Matt Pocock's `grilling` skill (github.com/mattpocock/skills). The goal is to draw out the requirements the person didn't think to say, not to settle every detail. In both the Pi and pinball runs, the fact that decided the run surfaced only at a gate: the person's kids, and the missing hook and feel.
+- **Map the brief as a tree.** Some answers open new questions: "who are the others?" only makes sense after "who else plays?"; "what should a hand-shaped body feel like?" only after "is comfort the point?". The **frontier** is every question whose prerequisites are settled.
+- **Ask the whole frontier in one round,** numbered, one thing per question, in the intake template in `references/templates.md`. Give each question a **recommended answer**, worded so "yes" accepts it.
+- **Recommendations come only from the person's own words or a labeled default,** never from the lead's taste, earlier runs or memory. Mark each one *(from your words)* or *(default)*. Give **no recommendation** for taste questions (the hook, the feel, the no list, what they love). Ask those open, because a "yes" to the lead's guess there becomes the lead's taste. Run 5's pollution came from exactly this kind of guess.
+- **Facts are the lead's job; decisions are the person's.** Don't ask for anything you can look up, such as what a reference is or how it's built. Send the reference agent or a quick search instead.
+- **Stop at three rounds,** or sooner when the frontier holds only questions whose answers wouldn't change which ideas win. The *what* stays loose, because that's what the run finds. Grilling is about the 0, the why and the limits, not the solution.
+
+The first round always includes the **role question** and the **who-else question**. In the Pi run, "which room, and who else uses it?" got an answer to the room only. In the guitar run, the lead bundled "skills, tools and budget" into one question.
 - **their role:** what will *they* actually be doing during it? In run 5, nobody asked, and every design solved a job the person doesn't have.
 - **who else:** who else will use it, see it, or live with it?
 - who it's for
@@ -75,14 +87,14 @@ Ask up to **five questions in one message**, chosen from the gaps that would cha
 - the no list
 - what they want out of making it
 
-**Audience-facing work** is anything other people will play, read, watch, wear or be pitched: a game, a theme, a name, a story, a costume. For it, ask up to **seven** questions, and three of them are always these:
+**Audience-facing work** is anything other people will play, read, watch, wear or be pitched: a game, a theme, a name, a story, a costume. For it, the grilling always covers these three, in whichever round their prerequisites allow:
 - **who the others are:** ages, and what they're into. In the pinball run, "just the three of us" hid that one player was the person's kid.
 - **the hook:** what would make them want to try it, from the name or one-line pitch alone?
 - **the register:** what should it feel like?
 
 The pinball run lost two full rounds to these. Its menus went esoteric (nobody could tell what the themes were), then domestic (graspable, but no pull), then kid comedy (pull, wrong feel). The person's reference machines carried all three answers implicitly, and nothing asked for them.
 
-Skip any already answered, don't follow up, and fill the rest with marked assumptions. Infer the drift setting if it isn't given.
+Skip any already answered, and fill whatever is left after the last round with marked assumptions. Infer the drift setting if it isn't given, and ask about it only if the brief points both ways.
 
 **Context stays context.** Only the why, the no list, the stated limits, the hook and the register are requirements. Everything else the person tells you (a past project that failed, a story about how they work) is **background**: label it that way in the brief block. In the Pi run, a story about a pedal that died at debugging became problem 1 for both problem agents and then a principle in the framing, and most sketches argued for themselves as multimeter-testable. It's the same failure as run 5's bonus, through a new door.
 
@@ -96,6 +108,13 @@ Write `brief.md` with a **tension register** (pairs of demands that pull against
 
 Below 7, fix it or ask.
 
+**Turn limits into checks.** Write a **checks** list in `brief.md`: each limit and no-list item, and how it will be checked.
+- **By code or a fetched source** wherever it can be measured: a size, a weight, a budget, a date, a word count, "never been done".
+- **With a threshold calibrated on real examples** wherever the word is qualitative: "durable", "readable", "light", "comfortable". Measure real things that clearly pass and clearly fail, and set the line between them.
+- **Marked "the person judges"** only when nothing can be measured: taste, feel, the hook.
+
+In the guitar work, "durable" and "realistic to build" stayed words through the whole fan-out. They became checks (a horn-strength index calibrated on real guitars, minimum wood under the neck pocket) only after the person flagged weak horns. The filter, the developers and the adversary all work from this list.
+
 **Build the brief block**, the only text agents get about the person. It has three labeled parts:
 - **Their words:** the intake answers verbatim, never paraphrased, each labeled **requirement** (the why, the no list, limits) or **background**. Run 5's paraphrase turned "trick-or-treating with the kids" into "handling kids and candy."
 - **Assumptions:** each one marked with where it came from (inferred from their words, or a default).
@@ -103,13 +122,17 @@ Below 7, fix it or ask.
 
 **Make a second, requirements-only version** for the roles that seed ideas (the cold samplers, the retrieval agent, the sketch generators, the control and the wild card): the same block with every background line removed. Labels alone don't stop background from steering. In the guitar run, "shoegaze" was labeled background, and still about 7 of 12 menu items were reverb or ambience ideas. Tensions drawn from background are left out of it too: mark them **(background)** in the register. The full block goes to everyone else: the problem agents, the filter, the judges, the developers and the adversary. Background helps judge fit; it shouldn't seed the ideas. Gate 0 shows the full block.
 
-**References** are things the person names as examples of what they love: machines, books, products, people. They're background, so their subjects don't seed the ideas. But they carry what the person values, so distill it first. One **reference agent** (sonnet, with web) reads reviews and write-ups of each, and returns two subject-free lists:
+**References come in two kinds,** and the grilling settles which kind each one is:
+- **A seed** is a reference the person wants the result *derived from* ("inspired by the Parker Fly"). It's a requirement, and the idea-seeding roles get the real thing: its geometry, text or specs, not a description. Distance is then measured from the seed, and the pushes away from it create the originality. In the guitar work, agents given a description of the Fly drifted to "some kind of strange in between," while agents seeded from its fitted outline produced the designs the person kept.
+- **A taste reference** is something they love for how it plays or feels ("pins I admire for how they're made"). It's handled as below.
+
+**Taste references** are background, so their subjects don't seed the ideas. But they carry what the person values, so distill it first. One **reference agent** (sonnet, with web) reads reviews and write-ups of each, and returns two subject-free lists:
 - **play or use principles:** how it works, and why people love it
 - **register words:** how it feels
 
 Both lists become requirements, marked "distilled from the references." The names, the subjects and the person's quotes about them stay background, and Section B of the agent's report (per-reference notes with links) goes only to the judging and developing roles. In the pinball run, the principles alone kept the loops strong, but with no register, the tone drifted.
 
-**Quote check.** Before Gate 0, scan every requirement line for a reference's subject: its names, settings, creatures and objects. Split any such line. The principle becomes the requirement, in your words, marked as a paraphrase for the person to approve at Gate 0. The verbatim quote moves to background. In the pinball run, two requirement lines quoted the person describing their references ("overload a nuclear reactor", "battling of the monsters"), and those subjects became two of the run's four wells.
+**Quote check.** Before Gate 0, scan every requirement line for a taste reference's subject (seeds are meant to be seen): its names, settings, creatures and objects. Split any such line. The principle becomes the requirement, in your words, marked as a paraphrase for the person to approve at Gate 0. The verbatim quote moves to background. In the pinball run, two requirement lines quoted the person describing their references ("overload a nuclear reactor", "battling of the monsters"), and those subjects became two of the run's four wells.
 
 **Gate 0: "Is this you?"** Show the person the brief block and ask them to correct anything wrong, in one quick reply. This is the cheapest gate in the run and catches the lead's mistakes before every agent inherits them. Skip it only if the person explicitly says to. Log the reply verbatim.
 
@@ -144,6 +167,15 @@ Draw `--moves 13 --constraints 4 --wiki 1 --run <slug> --stage fanout`, then ass
 - **Four sketch generators.** Each gets **three moves**, one constraint, its pool slice and the known wells. Before it reads its slice, it names the 3–4 answers it would give unprompted, each with a guess at how likely a typical model would suggest it (0–100%). Those lists feed the well map. (Slices don't overlap, so only the unprompted lists can show many agents reaching for the same thing.) Then it writes **six sketches**, each built from an entry in its slice. Each move shapes at least one sketch, **the constraint shapes exactly two**, and each sketch is a *different kind of thing* from the other five. (In the Pi run, "smell and touch only" applied to all six, so all six came back as scent machines and four were merged as duplicates.) Three moves, not six: the pool already widens, and in the v0.5 test, cards stacked on slices over-constrained the generators (fit 5/24 with cards vs. 3/6 for the control).
 - **One no-card control.** It gets a slice and the known wells, and writes six sketches under the same rules.
 - **One wild card.** It gets the 13th move, the seed and 5 pool entries, and attacks a tension picked by the script. It writes one strange sketch and says what it reveals.
+
+**Shape briefs** (a body, a profile, a part, a piece of furniture) need a **shape template**, never freehand drawing. In the v0.9 guitar run, agents wrote raw SVG coordinates: all 33 outlines passed the size checks, and the person rejected all 33 as "boxy blobs." A side project then built a guitar template that worked: 30 of 30 designs read as guitars, and the person kept seven as starting points. Follow `references/shape.md`, which covers:
+- the template: named anatomy points and a curve rule, proven by reproducing real examples
+- seeds: start from one real exemplar and push it
+- checks calibrated on real objects
+- a picture judge that only rejects defects
+- true-scale sheets, locked picks, and development in layers (outline, then carve, then hardware)
+
+**If no proven template exists for this kind of object, don't improvise one inside the run.** Run the idea search in words: what the shape does, which precedent it builds from, and its key proportions. Then offer building the template as its own project, before any drawing.
 
 **Every sketch must be the kind of thing the brief asks for** (if it asks for a book, a book). In the v0.5 test, one generator wrote five sketches about how to run the blog series instead.
 
@@ -183,6 +215,8 @@ The full scored list is always available on request.
 Show the framing and the menu, each item in one line with its distance. Ask the person to **pick two or three, veto any, and add a note** if they like. Log their words verbatim.
 
 **Cook mode:** three judges with different stakes (`references/roles.md`) pick the top three instead, using `references/click.md`. They get the grounding notes.
+
+**A model's taste isn't the person's.** In the guitar work, a picture judge marked down two of the person's three favourite designs; its suggested threshold would have rejected everything they liked. So model judges and the filter **reject defects** (dead, no-fit, failed checks, blobs) and never cut for taste, and the **pull** score only breaks ties. In cook mode, the report says plainly that the picks reflect a model's taste, and keeps the runners-up close enough that the person can overrule them.
 
 **When the person vetoes the menu,** the redo has to keep every requirement, not just the new one. In the pinball run, each veto note became the loudest requirement, and each round overcorrected: esoteric, then domestic, then kid comedy. The person quit from fatigue. So:
 1. **Log the note verbatim** as a requirement in both versions of the brief block, and update the why-test.

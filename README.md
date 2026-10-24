@@ -2,7 +2,7 @@
 
 A suite of agent-led tools for the hard first step of making something: getting from "I want to do this, but I don't know what it looks like" to an idea worth building. The first tool is the **Creative Iteration** skill for Claude Code, an idea generator. Strategy and planning tools are planned to follow it.
 
-> **Status: experimental (v0.8).** This is a working research project, not a finished product. It has had twelve runs on nine briefs, and every run changed the method. Expect rough edges, high token use, and rules that will keep changing.
+> **Status: experimental (v0.10).** This is a working research project, not a finished product. It has had thirteen runs on ten briefs, and every run changed the method. Expect rough edges, high token use, and rules that will keep changing.
 
 ## Why it exists
 
@@ -19,7 +19,7 @@ So this skill treats the model as cheap, dumb mutation and spends its judgment o
 Then fresh agents filter, judge and attack, and the person steers at two short menus, because people are bad at specifying what they want and good at reacting to what's in front of them.
 
 ## How a run goes
-1. **Intake.** Up to five short questions, or seven for work other people will play or use (who they are, the hook, the feel). The person's answers go to every agent verbatim, and the person confirms the brief ("Is this you?"). Any references the person names are distilled into subject-free principles and tone, so their subjects don't steer the ideas.
+1. **Intake.** A short interview in up to three rounds, each with a recommended answer you can accept with "yes" (adapted from Matt Pocock's grilling skill). For work other people will play or use, it always covers who they are, the hook and the feel. Every limit becomes a check: measured where possible, calibrated on real examples where the word is qualitative. The person's answers go to every agent verbatim, and the person confirms the brief ("Is this you?"). Any references the person names are distilled into subject-free principles and tone, so their subjects don't steer the ideas.
 2. **Problems.** Two agents look for the real problem under the request, one with drawn moves and one without.
 3. **The pool.** One agent fetches about 80 real entries from at least six sources across regions, eras and kinds. A script deals each idea agent its own random slice.
 4. **Fan-out.** Four agents with drawn moves, one no-card control and one wild card write about 30 sketches.
@@ -30,6 +30,8 @@ Then fresh agents filter, judge and attack, and the person steers at two short m
 9. **The dossier.** The winner and the runners-up are fact-checked and written up as an idea dossier. That's where this skill stops: planning is a separate step, and the dossier is its brief.
 
 It can also run in **cook mode**, where judges with different stakes make the gate decisions.
+
+**Shape briefs** (a guitar body, a chair back) use a shape template instead of freehand drawing: named anatomy points and a curve rule, proven on real examples, with each agent pushing one real exemplar. See [`references/shape.md`](skills/creative-iteration/references/shape.md).
 
 ## Why diverse voices matter here
 This method only works if the outside perspective is actually outside. A deck of moves drawn from the same few Western, mostly male thinkers would push every run toward the same corner. That's the homogeneity this project exists to escape. So the deck is deliberately broad:

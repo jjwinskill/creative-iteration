@@ -1,32 +1,35 @@
 # Run folder templates
 
-## The intake message (Stage 0)
+## An intake round (Stage 0)
 
-One slot per question, and each slot asks one thing: one question mark, with no "and" or comma list joining two asks. If a slot needs two answers, it's two slots, or one gets cut. Always include slots 1 and 2.
+Each question asks one thing: one question mark, with no "and" or comma list joining two asks. If a question needs two answers, it's two questions, or one waits for a later round. Round 1 always includes the role and who-else questions. At most three rounds.
 
 ```markdown
-<If the request asks for a plan, design or build: one line saying this run finds and develops the idea, and planning is a separate step after.>
+<Round 1 only, if the request asks for a plan, design or build: one line saying this run finds and develops the idea, and planning is a separate step after.>
 
-1. **Your role:** <what will you be doing with it, day to day?>
-2. **Who else:** <who else will use it, see it, or live with it?>
-3. **<Label>:** <one question>
-4. **<Label>:** <one question>
-5. **<Label>:** <one question>
-<For audience-facing work, up to 7 slots, and these three are always among them:>
-- **Who they are:** <how old are the others, and what are they into?>
-- **The hook:** <what would make them want to try it, from the name alone?>
-- **The feel:** <what should it feel like?>
+**Round N.** <one line: what this round settles, and what it opens next>
 
-<Optional: one assumption to check, stated as a sentence, not a question.>
+**Q1 · Your role:** <what will you be doing with it, day to day?>
+Recommended: <answer> *(from your words: "…")* — or *(default)*
+
+**Q2 · Who else:** <who else will use it, see it, or live with it?>
+Recommended: <answer> *(from your words / default)*
+
+**Q3 · <Label>:** <one question>
+<For taste questions (the hook, the feel, the no list, what they love): no recommendation; ask it open.>
+
+Reply with "yes" to take a recommendation, or answer in your own words.
 ```
+
+<Audience-facing work: across the rounds, cover who the others are, the hook and the feel. Log every round and every reply verbatim in brief.md.>
 
 ## brief.md
 
 ```markdown
 # <Working name>
 
-## Intake (the person's answers, verbatim)
-1. <question>: "<answer>"
+## Intake (each round, questions and replies verbatim)
+Round 1: Q1 <question> → "<reply>" …
 
 ## Brief block (exactly what agents receive; confirmed at Gate 0)
 **Their words:** <intake answers verbatim, each labeled requirement or background>
@@ -55,6 +58,14 @@ One slot per question, and each slot asks one thing: one question mark, with no 
 |---|---|---|
 | T1 | … | … |
 | T2 (background) | … | … |
+
+## References
+| Reference | Seed or taste | How it's used |
+|---|---|---|
+
+## Checks (one per limit and no-list item)
+| Requirement | How it's checked (code / fetched source / calibrated threshold / the person judges) | Pass line |
+|---|---|---|
 
 ## Brief score: N/10
 - Room to move / nothing missing from 0 / audience confirmed / four or more tensions: …

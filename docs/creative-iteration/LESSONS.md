@@ -173,7 +173,7 @@ The person chose the Patchwork Booth and said at the menu, "oh these are startin
 - A fact that decided the winner (another person in the household) surfaced only at Gate 2, because the intake bundled two questions into one.
 - **A problem agent took the person's name** from a home-folder path.
 
-## v0.6 (current)
+## v0.6
 
 Built from the Pi run:
 - **Context stays context.** Only the why, the no list and stated limits are requirements. Everything else is labeled background.
@@ -184,4 +184,22 @@ Built from the Pi run:
 - **The lead scrubs agent output** of names and details about the person that are not in the brief block.
 - **Still to look into:** what spawned agents inherit from their environment, the source of the name leak.
 
-v0.6 hasn't had a full run yet.
+## 2026-10-24 UTC: v0.6 first run, new guitar technology (gated)
+
+The brief asked for an original piece of guitar technology that has never been done, then a design for it. 20 agents, about 1.4M tokens, 45 minutes.
+- **"Fatal unless" worked.** Three questions at Gate 2 and two replies surfaced a requirement nobody had stated, ruled one pick out honestly, and settled the choice.
+- **Labeling an example as background worked.** The person's own example idea was exactly the well: both cold answers and all five unprompted lists. It stayed off the main menu.
+- **Labeling style as background didn't.** A musical style marked as background still pulled about 7 of 12 menu items toward one family of effects.
+- **The novelty check was too shallow** for a brief whose core requirement was originality. Menu items got 1–2 searches each. The winner's closest prior art (an expired patent and some studio plugins built on the same principle) surfaced only later.
+- **The intake bundled questions again,** although the skill said not to.
+- **The lead wrote a full design plan in the run,** with no stage gating, attacking or fact-checking it.
+
+## v0.7 (current)
+
+Built from the guitar run:
+- **A prior-art stage** for briefs that demand novelty. One agent per pick searches patents, products, plugins and studio techniques, papers, forums, and the same principle in other fields. It rates each pick known, known in principle but new in form, or no prior found, before development.
+- **Idea-seeding roles get a requirements-only brief.** Background lines and background tensions are removed for the cold samplers, the retrieval agent, the generators, the control and the wild card.
+- **An intake template:** one slot per question, one thing per slot.
+- **An explicit handoff.** The run ends at the fact-checked dossier. Planning is a separate step that takes the dossier as its brief.
+
+v0.7 hasn't had a full run yet.

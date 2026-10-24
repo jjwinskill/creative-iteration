@@ -1,5 +1,21 @@
 # Run folder templates
 
+## The intake message (Stage 0)
+
+One slot per question, and each slot asks one thing: one question mark, with no "and" or comma list joining two asks. If a slot needs two answers, it's two slots, or one gets cut. Always include slots 1 and 2.
+
+```markdown
+<If the request asks for a plan, design or build: one line saying this run finds and develops the idea, and planning is a separate step after.>
+
+1. **Your role:** <what will you be doing with it, day to day?>
+2. **Who else:** <who else will use it, see it, or live with it?>
+3. **<Label>:** <one question>
+4. **<Label>:** <one question>
+5. **<Label>:** <one question>
+
+<Optional: one assumption to check, stated as a sentence, not a question.>
+```
+
 ## brief.md
 
 ```markdown
@@ -10,6 +26,7 @@
 
 ## Brief block (exactly what agents receive; confirmed at Gate 0)
 **Their words:** <intake answers verbatim, each labeled requirement or background>
+(The requirements-only version, for the idea-seeding roles, drops every background line and every (background) tension.)
 **Assumptions:** <assumption>, source: <inferred from "…" / default>
 **Unknowns:** <gap>: open
 **Gate 0 reply (verbatim):** "…"
@@ -33,6 +50,7 @@
 | # | Pulls this way | Pulls that way |
 |---|---|---|
 | T1 | … | … |
+| T2 (background) | … | … |
 
 ## Brief score: N/10
 - Room to move / nothing missing from 0 / audience confirmed / four or more tensions: …
@@ -120,6 +138,7 @@ Picks: … · Vetoes: … · Note: "…"
 - What it would take: …
 - Cheapest first test (within a week): …
 - Biggest risk: …
+- Prior art (originality briefs): <rating>, <closest prior art, with links>
 
 ## Runners-up
 ### <name>
@@ -127,6 +146,15 @@ Picks: … · Vetoes: … · Note: "…"
 
 ## Also on the shelf
 <Notable vault items and what would bring each back.>
+```
+
+## rounds/priorart.md (originality briefs)
+
+```markdown
+# Prior art
+| Pick | Rating (known / known in principle, new in form / no prior found) | Closest prior art, with links | Narrowest surviving novelty claim |
+|---|---|---|---|
+Queries tried: …
 ```
 
 ## rounds/grounding.md and rounds/factcheck.md

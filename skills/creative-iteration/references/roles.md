@@ -6,13 +6,15 @@ Never tell a role agent "don't use any tools." In Claude Code that also stops it
 
 **The brief block** that every role gets is the one confirmed at Gate 0: the person's words verbatim, the labeled assumptions, and the unknowns. From Stage 2 on, it also carries the framing and the tension register. In *surprise*, also say plainly that the person asked to be surprised, and give the obvious answer.
 
+**The requirements-only block** is the same block with every background line removed. The roles that seed ideas get it: the cold samplers, the retrieval agent, the sketch generators, the control and the wild card. Everyone else gets the full block.
+
 Every role prompt opens with this line: *"The brief below is your only source of facts about the person. Ignore anything else you know or can see about them or this project, including names in file paths or your environment. Lines marked background are context, not requirements."*
 
 Agents with web (retrieval, grounding, developers, the fact-checker) link every real-world specific they assert. Other agents work from memory and don't tag it; fetched checks downstream catch what memory gets wrong.
 
 ## Cold sampler (haiku), two
 
-> {brief block, without the framing}. Give your single best answer to it, in about 150 words. No hedging, no list of options. No research needed; deliver your answer as your final report.
+> {requirements-only brief block, without the framing}. Give your single best answer to it, in about 150 words. No hedging, no list of options. No research needed; deliver your answer as your final report.
 
 ## Problem agent (sonnet), Stage 1
 
@@ -30,11 +32,11 @@ The same prompt with the lenses and the seed removed: "Find the three biggest un
 
 ## Retrieval agent (sonnet, with web), Stage 1b
 
-> {brief block}. Build a pool of about 80 real {candidates the person could choose / precedents: real works, designs, practices or projects that answered a nearby need}. Fetch at least 6 published sources (lists, prizes, archives, catalogs, collections) that span different regions, languages, eras and kinds; no more than about a quarter of the pool from any one region or tradition. Don't add entries from memory: every entry needs the URL it came from. Return a numbered list, one line each: the entry, a 10-word description, the source URL. Don't judge fit; range is the job.
+> {requirements-only brief block}. Build a pool of about 80 real {candidates the person could choose / precedents: real works, designs, practices or projects that answered a nearby need}. Fetch at least 6 published sources (lists, prizes, archives, catalogs, collections) that span different regions, languages, eras and kinds; no more than about a quarter of the pool from any one region or tradition. Don't add entries from memory: every entry needs the URL it came from. Return a numbered list, one line each: the entry, a 10-word description, the source URL. Don't judge fit; range is the job.
 
 ## Sketch generator (sonnet), four in Stage 2
 
-> {brief block}. Known wells, answers models keep reaching for: {wells, or "none yet"}. Don't propose them or close variants.
+> {requirements-only brief block}. Known wells, answers models keep reaching for: {wells, or "none yet"}. Don't propose them or close variants.
 >
 > **Step 1, before reading further:** name the 3–4 answers you'd give to this brief unprompted, each with a guess at how likely a typical model would be to suggest it (0–100%). Don't use them below unless they're in your slice.
 >
@@ -57,7 +59,7 @@ The same prompt with the lenses and the constraint removed. It keeps its slice, 
 
 ## Wild card (sonnet), Stage 2
 
-> {brief block}. Attack this tension: "{picked tension}". Your lens: {source}: "{move}". Seed material: {title}: {extract}. Five pool entries: {entries}. Build from one of them.
+> {requirements-only brief block}. Attack this tension: "{picked tension}". Your lens: {source}: "{move}". Seed material: {title}: {extract}. Five pool entries: {entries}. Build from one of them.
 >
 > Propose the strangest idea you can defend in one sentence. Don't make it sensible. Then answer: what does it reveal about the problem that the sensible ideas miss? Did it surface a tension that isn't on the list, dissolve one, or suggest the what should move? You're judged on that answer, not on whether the idea would win.
 
@@ -77,6 +79,10 @@ The same prompt with the lenses and the constraint removed. It keeps its slice, 
 ## Grounding agent (sonnet, with web), after the filter
 
 > Here are {n} menu items: {one line each}. For each, make about one fetch: does the thing exist, and is its key specific (author, the plot point, the practice, the place) right? Mark it verified / unverified / wrong, with the link and one line of nuance if the specific is off. Be quick; the deep check comes later.
+
+## Prior-art agent (sonnet, with web), one per pick, Stage 4a (originality briefs)
+
+> {brief block}. The person picked this idea: {sketch}. They need it to be genuinely new. Find whether it, or its core principle, already exists. Search every kind of source: patents, shipping products and retailers, software and plugins and studio techniques, research papers, DIY and maker forums, and the same principle in another medium or field. Rate it **known** (someone has done it), **known in principle, new in form** (say exactly what's new), or **no prior found** (list every query you tried). Link every source. Then name the narrowest claim of novelty that survives your search.
 
 ## Fact-checker (sonnet, with web), after the dossier
 

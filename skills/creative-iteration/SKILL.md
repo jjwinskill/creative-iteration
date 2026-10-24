@@ -3,7 +3,7 @@ name: creative-iteration
 description: An agent-led idea generator that turns a vague want ("I want to do this thing but don't know what it should look like") into the best few ideas, seen from many outside perspectives. Agents fan out about 30 sketches from a fetched pool of real candidates or precedents, shaped by randomly drawn thinking moves from real people and trades, a judge filters them, the person picks from a short menu, and the picks are developed, attacked and delivered as an idea dossier ready for strategy and planning. Use whenever someone has a loose brief or a "what should I build / make / do" question and wants fresh, non-obvious ideas, for example "build grinder grindr", "show me a new way to build an electric guitar", "I've got a pile of scrap wood, what should I make", "I need an idea for a side project", or "help my daughter with reading", even if they never say "creative iteration". Not for planning or building an idea that's already chosen.
 ---
 
-# Creative Iteration (v0.6)
+# Creative Iteration (v0.7)
 
 **What it's for:** going from "I want to do this, but I don't know what it looks like" to the best few ideas. Strategy and planning come afterward, as a separate step.
 
@@ -38,6 +38,7 @@ Make `runs/YYYY-MM-DD-<slug>/` in the current working folder unless the person n
 | `rounds/pool.md` | The numbered pool with source links, and the slices dealt |
 | `rounds/fanout.md` | Every sketch, the unprompted lists, the wells, the filter's scores, the menu, the person's picks |
 | `rounds/grounding.md` | The menu existence check (internal) |
+| `rounds/priorart.md` | The prior-art check on each pick (originality briefs only) |
 | `rounds/develop.md` | The developed concepts and the attack |
 | `rounds/factcheck.md` | The dossier fact-check and the corrections made |
 | `vault.md` | Ideas that didn't make it, why, and what would bring each one back |
@@ -62,7 +63,9 @@ Role prompts are in `references/roles.md`. Models: haiku for cold answers, sonne
 
 ## Stage 0: Intake and brief
 
-Ask up to **five questions in one message**, chosen from the gaps that would change the ideas most. **Each question asks one thing.** In the Pi run, "which room, and who else uses it?" got an answer to the room only, and the fact that decided the winner (the person's kids) surfaced at Gate 2. **Always include the role question and the who-else question.**
+**Say the scope first.** If the request asks for more than ideas (a plan, a design, a build), say in the intake message that this run finds and develops the idea, and that planning is a separate step afterward (see Handoff).
+
+Ask up to **five questions in one message**, chosen from the gaps that would change the ideas most, **written in the intake template** in `references/templates.md`: one slot per question, one thing per slot. In the Pi run, "which room, and who else uses it?" got an answer to the room only, and the fact that decided the winner (the person's kids) surfaced at Gate 2. In the guitar run, the rule was in the skill and the lead still bundled "skills, tools and budget" into one question. **Always include the role question and the who-else question.**
 - **their role:** what will *they* actually be doing during it? In run 5, nobody asked, and every design solved a job the person doesn't have.
 - **who else:** who else will use it, see it, or live with it?
 - who it's for
@@ -89,6 +92,8 @@ Below 7, fix it or ask.
 - **Their words:** the intake answers verbatim, never paraphrased, each labeled **requirement** (the why, the no list, limits) or **background**. Run 5's paraphrase turned "trick-or-treating with the kids" into "handling kids and candy."
 - **Assumptions:** each one marked with where it came from (inferred from their words, or a default).
 - **Unknowns:** gaps left open on purpose (for example, "making method: open").
+
+**Make a second, requirements-only version** for the roles that seed ideas (the cold samplers, the retrieval agent, the sketch generators, the control and the wild card): the same block with every background line removed. Labels alone don't stop background from steering. In the guitar run, "shoegaze" was labeled background, and still about 7 of 12 menu items were reverb or ambience ideas. Tensions drawn from background are left out of it too: mark them **(background)** in the register. The full block goes to everyone else: the problem agents, the filter, the judges, the developers and the adversary. Background helps judge fit; it shouldn't seed the ideas. Gate 0 shows the full block.
 
 **Gate 0: "Is this you?"** Show the person the brief block and ask them to correct anything wrong, in one quick reply. This is the cheapest gate in the run and catches the lead's mistakes before every agent inherits them. Skip it only if the person explicitly says to. Log the reply verbatim.
 
@@ -147,7 +152,7 @@ In the v0.5 test, wells came from what generators reached for, and they repeated
 - **Plus a convergent lane:** up to 2 wells, the strongest, labeled "well" with where they came from. They compete like everything else.
 - **Plus the obvious answer** as a labeled reference.
 
-**Grounding pass:** one grounding agent (sonnet, with web) checks every menu item with about one fetch each: does the thing exist, and is its key specific right? It marks each **verified / unverified / wrong**. Drop "wrong" items and refill from the next in order; label "unverified" ones. Write it to `rounds/grounding.md`. It's internal: the person sees only the word "unverified". It costs about one agent, and in the v0.5 test it changed two decisions.
+**Grounding pass:** one grounding agent (sonnet, with web) checks every menu item with about one fetch each: does the thing exist, and is its key specific right? It marks each **verified / unverified / wrong**. Drop "wrong" items and refill from the next in order; label "unverified" ones. Write it to `rounds/grounding.md`. It's internal: the person sees only the word "unverified". It costs about one agent, and in the v0.5 test it changed two decisions. On originality briefs, it also notes any sign that the idea itself already exists; that's a first screen only, and Stage 4a does the real check.
 
 The full scored list is always available on request.
 
@@ -157,14 +162,33 @@ Show the framing and the menu, each item in one line with its distance. Ask the 
 
 **Cook mode:** three judges with different stakes (`references/roles.md`) pick the top three instead, using `references/click.md`. They get the grounding notes.
 
+## Stage 4a: Prior art (originality briefs only)
+
+When the why, the why-test or the no list demands novelty ("never been done", "original", "the first"), the novelty claim is the requirement that matters most, so check it deeply before anything is developed. In the guitar run, the menu check made 1–2 searches per item and found nothing. The winner's closest prior art (an expired patent for the same trigger, plus studio plugins built on the same principle) surfaced only afterward, while the plan was being written.
+
+**One prior-art agent per pick** (sonnet, with web), in parallel. Each searches every kind of source:
+- patents
+- shipping products and retailers
+- software, plugins and studio techniques
+- research papers
+- DIY and maker forums
+- **the same principle in another medium or field**
+
+It rates the pick with links:
+- **known:** someone has done it
+- **known in principle, new in form:** the idea exists elsewhere; this form or medium is new
+- **no prior found:** list the queries tried
+
+Write it to `rounds/priorart.md`, and give each rating to that pick's developer, who reshapes toward the genuinely new part. A "known" pick goes to Gate 2 labeled as such, not dropped: the person decides.
+
 ## Stage 4: Develop and attack
 
-- **One developer per pick** expands the sketch into a short concept: what it is, how it works, why it fits the why, what it would take, the cheapest first test against reality, and the biggest risk. The person's note goes in the prompt.
+- **One developer per pick** expands the sketch into a short concept: what it is, how it works, why it fits the why, what it would take, the cheapest first test against reality, and the biggest risk. The person's note goes in the prompt, along with the prior-art rating on originality briefs.
 - **One adversary** then attacks all the concepts at once, without ranking them: the strongest reason each one fails, labeled **fatal**, **fatal unless** (a premise about the person that, if true, saves it), or a **scar**. In the Pi run, all three picks were called fatal for want of one fact each, and one sentence from the person settled it.
 
 ## Gate 2: the choice (the person)
 
-Show each "fatal unless" as a **question to the person** before anything else. Then show each developed concept with its attack, its **source-fidelity rating** when it rests on a source (run 6: this is what lets the person speak with authority, and it reshaped two of four picks), and **the premises it depends on** (the developer lists them), so a wrong assumption is visible at a glance. The person chooses one, a combination, or **"go again clean"**: a fresh fan-out after correcting whatever premise was wrong. A combination they ask for goes back through the adversary once.
+Show each "fatal unless" as a **question to the person** before anything else. Then show each developed concept with its attack, its **prior-art rating** on originality briefs, its **source-fidelity rating** when it rests on a source (run 6: this is what lets the person speak with authority, and it reshaped two of four picks), and **the premises it depends on** (the developer lists them), so a wrong assumption is visible at a glance. The person chooses one, a combination, or **"go again clean"**: a fresh fan-out after correcting whatever premise was wrong. A combination they ask for goes back through the adversary once.
 
 **Cook mode:** the judges choose. If they converge on a combination, it gets attacked once.
 
@@ -178,9 +202,15 @@ Write `dossier.md`: the chosen idea, then the runners-up. Each with:
 - the cheapest first test against reality
 - the biggest risk
 
-Include the vault. That's the handoff to strategy and planning. This skill doesn't plan.
+Include the vault, and on originality briefs, the prior-art rating with its links.
 
 **Fact-check the dossier.** One fact-checker (sonnet, with web) checks every real-world claim in `dossier.md` against fetched sources and marks it verified, unsupported or wrong. The lead fixes every wrong line, marks unflagged unsupported ones "unverified", and logs both in `rounds/factcheck.md`. In the v0.5 test, this pass found the only wrong claim in four documents, a confident plot line a developer wrote, plus 9 gaps the documents hadn't flagged.
+
+## Handoff: this skill doesn't plan
+
+The run ends at the fact-checked dossier. **Don't write a plan, a design or a build inside the run,** even when the person asked for one. In the guitar run, the lead went on to write a 1,600-word design plan in the same session. It was well researched, but no stage gated it, attacked it or fact-checked it.
+
+Instead, end the report with the handoff: the dossier is the brief for planning. Offer the person the planning step as a separate run, using the suite's planning skill when it exists. Until then, offer a fresh session that takes `dossier.md` as its brief, so planning starts clean rather than inheriting this run's agents and framing.
 
 ## Card tracking
 
@@ -207,6 +237,7 @@ Write `report.md` and end in chat with the same content, in **plain words**: run
 7. **How good the brief was.**
 8. **What the cards and the pool did:** credits and distance; the control vs. the cards; how many menu items came from far-flung pool entries; the wells found.
 9. **Cost:** agents, approximate tokens and minutes.
+10. **What's next:** the handoff to planning (see Handoff).
 
 ## Afterward
 

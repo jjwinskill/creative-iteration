@@ -2,7 +2,7 @@
 
 A suite of agent-led tools for the hard first step of making something: getting from "I want to do this, but I don't know what it looks like" to an idea worth building. The first tool is the **Creative Iteration** skill for Claude Code, an idea generator. Strategy and planning tools are planned to follow it.
 
-> **Status: experimental (v0.6).** This is a working research project, not a finished product. It has had ten runs on seven briefs, and every run changed the method. Expect rough edges, high token use, and rules that will keep changing.
+> **Status: experimental (v0.7).** This is a working research project, not a finished product. It has had eleven runs on eight briefs, and every run changed the method. Expect rough edges, high token use, and rules that will keep changing.
 
 ## Why it exists
 
@@ -25,9 +25,9 @@ Then fresh agents filter, judge and attack, and the person steers at two short m
 4. **Fan-out.** Four agents with drawn moves, one no-card control and one wild card write about 30 sketches.
 5. **Filter.** A fresh judge scores every sketch, unlabeled and shuffled, for distance from the obvious answer, feasibility and fit. The answers every model reaches for ("wells") are flagged, not deleted.
 6. **Gate 1.** The person picks two or three from a short menu.
-7. **Develop and attack.** Each pick is developed, checked against real sources, and attacked by an adversary.
+7. **Develop and attack.** Each pick is developed, checked against real sources, and attacked by an adversary. When the brief demands something new, a prior-art search on each pick (patents, products, plugins, papers, forums, and the same principle in other fields) comes first.
 8. **Gate 2.** The person chooses.
-9. **The dossier.** The winner and the runners-up are fact-checked and written up as an idea dossier, ready for planning.
+9. **The dossier.** The winner and the runners-up are fact-checked and written up as an idea dossier. That's where this skill stops: planning is a separate step, and the dossier is its brief.
 
 It can also run in **cook mode**, where judges with different stakes make the gate decisions.
 

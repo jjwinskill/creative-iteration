@@ -1,0 +1,3208 @@
+{
+  "version": 2,
+  "moves": [
+    {
+      "id": "dry-stone-one-over-two",
+      "source": "Dry-stone wallers' rule 'one over two, two over one'",
+      "move": "Place every piece so it rests across two below and is pinned by two above, so no joint runs straight through the whole structure.",
+      "asks": "Where does a single seam run straight through everything, and how could each piece bridge the joints of its neighbors instead?",
+      "kind": "domain"
+    },
+    {
+      "id": "kintsugi-gold-seam",
+      "source": "Japanese kintsugi, repairing broken pottery with gold lacquer",
+      "move": "Make the repair visible and beautiful so the history of the break becomes part of the object's value.",
+      "asks": "What if the place where this broke became the feature people value most?",
+      "kind": "domain"
+    },
+    {
+      "id": "blacksmith-working-heat",
+      "source": "Blacksmiths working iron only within its forging heat",
+      "move": "Shape the material only while it is in its workable window, and reheat rather than force it once it cools.",
+      "asks": "When is this actually malleable, and what cracks if you keep hammering after that window closes?",
+      "kind": "domain"
+    },
+    {
+      "id": "plumber-trace-upstream",
+      "source": "Plumbers tracing a ceiling stain back along the pipe run to the actual leak",
+      "move": "Treat where the damage appears as a clue, not the location, and follow the flow back to where it starts.",
+      "asks": "Where does the symptom show up, and where along the flow does it actually begin?",
+      "kind": "domain"
+    },
+    {
+      "id": "johnstone-status-play",
+      "source": "Keith Johnstone's status exercises in 'Impro' (1979)",
+      "move": "Read every exchange as a quiet transaction of high and low status, and change the scene by deliberately raising or lowering it.",
+      "asks": "Who holds the high status in this situation, and what happens if you flip it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "chris-rock-small-rooms",
+      "source": "Chris Rock workshopping new material in small clubs before a tour (Frank Rich interview, 2014)",
+      "move": "Try the raw version in front of a small, forgiving live audience many times before the version that counts.",
+      "asks": "Where is the small room where you could try this on real people tonight, before it matters?",
+      "kind": "domain"
+    },
+    {
+      "id": "miles-next-note",
+      "source": "Miles Davis turning Herbie Hancock's wrong chord into a right one (Hancock's retelling)",
+      "move": "Treat a mistake as unfinished rather than wrong, and choose the next move so it makes the mistake sound intended.",
+      "asks": "What next step would make the thing that just went wrong look deliberate?",
+      "kind": "thinker"
+    },
+    {
+      "id": "bunraku-visible-hands",
+      "source": "Bunraku puppetry, where black-clad puppeteers work in plain view",
+      "move": "Leave the mechanism in full sight and rely on the audience agreeing to look past it.",
+      "asks": "What machinery could you stop hiding, because people will happily ignore it once the convention is clear?",
+      "kind": "domain"
+    },
+    {
+      "id": "wright-own-wind-tunnel",
+      "source": "The Wright brothers' 1901 wind tunnel, built after published lift tables failed them",
+      "move": "When the accepted numbers don't match your results, build your own instrument and remeasure from scratch.",
+      "asks": "Which inherited number are you relying on that you have never measured yourself?",
+      "kind": "thinker"
+    },
+    {
+      "id": "feynman-dozen-problems",
+      "source": "Richard Feynman's dozen favorite problems, as told by Gian-Carlo Rota",
+      "move": "Keep a standing set of open problems in mind and test every new trick you meet against each of them.",
+      "asks": "Which of your long-standing unsolved problems could this new idea or tool crack?",
+      "kind": "thinker"
+    },
+    {
+      "id": "snow-pump-map",
+      "source": "John Snow's 1854 map of cholera deaths around the Broad Street pump",
+      "move": "Plot every occurrence on a map or timeline and let the clustering point to the cause.",
+      "asks": "If you marked every instance in space or time, where would they bunch up?",
+      "kind": "thinker"
+    },
+    {
+      "id": "darwin-golden-rule",
+      "source": "Charles Darwin's 'golden rule' in his Autobiography: write down contrary facts at once",
+      "move": "Record any evidence against your idea immediately, because the mind forgets unwelcome facts far faster than welcome ones.",
+      "asks": "What evidence against this idea have you already started forgetting?",
+      "kind": "thinker"
+    },
+    {
+      "id": "etak-moving-islands",
+      "source": "Carolinian navigators' etak system, where the canoe is held still and the islands move past",
+      "move": "Fix yourself as the stationary point and model the world as what moves, inverting the usual frame of reference.",
+      "asks": "What changes if you hold yourself still and treat everything around you as the thing in motion?",
+      "kind": "domain"
+    },
+    {
+      "id": "slime-mold-network",
+      "source": "Physarum slime mold recreating the Tokyo rail network (Tero et al., Science, 2010)",
+      "move": "Spread many cheap, thin connections at once, thicken the ones that carry flow, and let the rest wither.",
+      "asks": "If you built many weak paths at once, which ones would real use make thicker?",
+      "kind": "domain"
+    },
+    {
+      "id": "termite-stigmergy",
+      "source": "Stigmergy in termite mound building (Pierre-Paul Grassé, 1959)",
+      "move": "Coordinate without messages by letting each piece of finished work cue the next worker on what to do.",
+      "asks": "What trace could the work itself leave that tells the next person exactly what to do next?",
+      "kind": "domain"
+    },
+    {
+      "id": "serotinous-cones",
+      "source": "Serotinous pine cones, sealed with resin until a fire opens them",
+      "move": "Stay dormant through ordinary times and release everything at the moment a disruption clears the ground.",
+      "asks": "What becomes possible only after the coming disruption, and what could you have sealed and ready for it?",
+      "kind": "domain"
+    },
+    {
+      "id": "lichen-symbiosis",
+      "source": "Lichen, a fungus and an alga living as one organism",
+      "move": "Pair with a partner that lacks exactly what you have and has exactly what you lack, so together you survive where neither could alone.",
+      "asks": "Who is missing what you have in surplus, and has what you are missing?",
+      "kind": "domain"
+    },
+    {
+      "id": "hermit-crab-vacancy-chain",
+      "source": "Hermit crab vacancy chains, where crabs line up by size to swap into a newly freed shell",
+      "move": "Move into a structure someone else built and outgrew, and pass your old one down to the next in line.",
+      "asks": "What existing shell could you move into, and who would gladly take the one you leave behind?",
+      "kind": "domain"
+    },
+    {
+      "id": "go-tenuki",
+      "source": "Tenuki in the game of Go: leaving a local fight to play elsewhere",
+      "move": "Abandon the local exchange you are drawn into when a bigger point exists somewhere else on the board.",
+      "asks": "Which fight in front of you can you leave unfinished because a larger move is waiting elsewhere?",
+      "kind": "domain"
+    },
+    {
+      "id": "climbing-three-points",
+      "source": "Rock climbers' rule of three points of contact",
+      "move": "Keep three holds secure and move only one limb at a time.",
+      "asks": "What three things must stay fixed while you change the fourth?",
+      "kind": "domain"
+    },
+    {
+      "id": "duke-resulting",
+      "source": "Annie Duke on 'resulting' in 'Thinking in Bets' (2018)",
+      "move": "Judge a decision by what was knowable when it was made, not by how the dice happened to land.",
+      "asks": "Was that a bad decision or just a bad outcome, and how would you tell the difference?",
+      "kind": "domain"
+    },
+    {
+      "id": "fosbury-flop",
+      "source": "Dick Fosbury's backward high jump, made safe by new foam landing pits (1968)",
+      "move": "Notice when a change in the surroundings has removed the danger that made an odd technique unthinkable, and adopt it first.",
+      "asks": "What changed around you that makes a once-reckless approach safe now?",
+      "kind": "domain"
+    },
+    {
+      "id": "hawker-one-dish",
+      "source": "Singapore hawker stalls known for a single dish cooked thousands of times",
+      "move": "Offer one thing only and refine it until it is the best version anyone can get.",
+      "asks": "What if you offered only the single thing you do best and dropped everything else?",
+      "kind": "domain"
+    },
+    {
+      "id": "dabbawala-codes",
+      "source": "Mumbai's dabbawalas, who route lunchboxes with painted color and symbol codes",
+      "move": "Encode routing in simple marks that anyone in a relay can read at a glance, so handoffs need no judgment.",
+      "asks": "What simple mark would let anyone in the chain send this to the right place without reading or thinking?",
+      "kind": "domain"
+    },
+    {
+      "id": "fishmonger-closing-price",
+      "source": "Fishmongers marking down the catch as closing time nears",
+      "move": "Price by freshness, cutting the price on a schedule so nothing perishable goes home unsold.",
+      "asks": "What here loses value by the hour, and how do you move it before it spoils?",
+      "kind": "domain"
+    },
+    {
+      "id": "red-paperclip-trade-up",
+      "source": "Kyle MacDonald trading one red paperclip up to a house (2005–2006)",
+      "move": "Trade what you hold to someone who values it more, in exchange for something you value more, and repeat.",
+      "asks": "What small thing do you hold that someone else values more than you do, and what could you get for it?",
+      "kind": "domain"
+    },
+    {
+      "id": "apollo-13-scrubber",
+      "source": "Apollo 13 engineers fitting square CO2 scrubbers into round sockets with what was aboard (1970)",
+      "move": "Inventory exactly what is on hand and build the fix from only those parts, because nothing else is coming.",
+      "asks": "Using only what is already on board, how do you make the incompatible pieces fit?",
+      "kind": "domain"
+    },
+    {
+      "id": "shackleton-banjo",
+      "source": "Shackleton's Endurance crew dropping gold coins on the ice but keeping Hussey's banjo (1915)",
+      "move": "When you must strip down to carry weight, keep what sustains morale and drop what only looks valuable.",
+      "asks": "What here looks precious but is dead weight, and what looks frivolous but keeps people going?",
+      "kind": "domain"
+    },
+    {
+      "id": "feed-sack-dresses",
+      "source": "1930s mills printing patterns on flour and feed sacks once families sewed them into clothes",
+      "move": "Find what your waste or packaging is already being reused as, and design for that second life on purpose.",
+      "asks": "What are people already turning your leftovers into, and how could you make that easier?",
+      "kind": "domain"
+    },
+    {
+      "id": "mitticool-evaporation",
+      "source": "Mansukhbhai Prajapati's Mitticool clay refrigerator, cooled by evaporation with no electricity",
+      "move": "Replace the expensive component with a free physical effect that already does the job.",
+      "asks": "What free effect of physics, gravity, weather or habit could do the work of the costly part?",
+      "kind": "domain"
+    },
+    {
+      "id": "hemingway-stop-midstream",
+      "source": "Ernest Hemingway in 'A Moveable Feast': stop when you know what happens next",
+      "move": "End each session while you still know the next step, so tomorrow starts with momentum instead of a blank.",
+      "asks": "Where should you stop today so that starting tomorrow is easy?",
+      "kind": "thinker"
+    },
+    {
+      "id": "hitchcock-bomb-under-table",
+      "source": "Alfred Hitchcock's bomb-under-the-table example, in 'Hitchcock/Truffaut' (1966)",
+      "move": "Tell the audience the secret early, and turn a few seconds of surprise into minutes of suspense.",
+      "asks": "What if people knew the key fact up front, and what tension would that create?",
+      "kind": "thinker"
+    },
+    {
+      "id": "chekhov-gun",
+      "source": "Anton Chekhov's letter rule: a rifle shown in act one must go off",
+      "move": "Cut anything that is set up but never pays off, and set up anything that pays off without warning.",
+      "asks": "What is on display that never pays off, and what payoff arrives with no setup?",
+      "kind": "thinker"
+    },
+    {
+      "id": "picasso-bull-states",
+      "source": "Picasso's 'Bull' lithographs (1945–46), reduced over eleven states to a few lines",
+      "move": "Make successive versions, each removing more, until only the lines that carry the identity remain.",
+      "asks": "How much can you take away while it is still unmistakably itself?",
+      "kind": "thinker"
+    },
+    {
+      "id": "king-door-closed",
+      "source": "Stephen King in 'On Writing' (2000): write with the door closed, rewrite with it open",
+      "move": "Do the first version alone, protected from opinions, and invite others in only once it exists.",
+      "asks": "Which part needs to be made alone before anyone sees it, and when do you open the door?",
+      "kind": "domain"
+    },
+    {
+      "id": "start-triage",
+      "source": "START triage (Simple Triage and Rapid Treatment) in mass-casualty medicine",
+      "move": "Sort quickly into those who will be fine without you, those beyond help, and the middle group where your effort changes the outcome.",
+      "asks": "What will be fine without you, what can't be saved, and where does your effort actually change the result?",
+      "kind": "domain"
+    },
+    {
+      "id": "moltke-commanders-intent",
+      "source": "Auftragstaktik (mission command) in the Prussian-German army tradition, associated with Helmuth von Moltke the Elder",
+      "move": "Hand down the purpose and the end state rather than the steps, so people can improvise correctly when the plan breaks.",
+      "asks": "If every detail of the plan failed, what single purpose would let people still act rightly?",
+      "kind": "thinker"
+    },
+    {
+      "id": "dodge-escape-fire",
+      "source": "Wag Dodge lighting an escape fire at Mann Gulch, in Norman Maclean's 'Young Men and Fire'",
+      "move": "Set a small controlled version of the threat to burn away the fuel the big one needs, then shelter in the gap.",
+      "asks": "Could you deliberately create a small version of the danger now to rob the big one of fuel?",
+      "kind": "domain"
+    },
+    {
+      "id": "ship-bulkheads",
+      "source": "Watertight bulkheads and damage control in ship design",
+      "move": "Divide the whole into sealed compartments so a breach floods one section and the rest stays afloat.",
+      "asks": "Where are the bulkheads, so that one failure floods only one compartment?",
+      "kind": "domain"
+    },
+    {
+      "id": "rescuer-scene-safety",
+      "source": "Swiftwater and first-aid rescuers' rule: never become the second victim",
+      "move": "Secure your own footing before reaching for anyone, since a rescuer in trouble doubles the problem.",
+      "asks": "How do you help here without becoming the next thing that needs rescuing?",
+      "kind": "domain"
+    },
+    {
+      "id": "blanket-fort",
+      "source": "Children building blanket forts out of chairs and sofa cushions",
+      "move": "Claim a space within a space with the flimsiest possible boundary, and let the boundary alone make it feel like its own world.",
+      "asks": "What is the smallest boundary that would make this feel like its own place?",
+      "kind": "domain"
+    },
+    {
+      "id": "montessori-control-of-error",
+      "source": "Maria Montessori's materials with built-in control of error, like the knobbed cylinder blocks",
+      "move": "Build the correction into the material, so a mistake shows itself to the learner without anyone pointing it out.",
+      "asks": "How could the thing itself reveal the mistake without a teacher or a message?",
+      "kind": "thinker"
+    },
+    {
+      "id": "floor-is-lava",
+      "source": "Children's game 'the floor is lava'",
+      "move": "Declare an imaginary hazard that turns an ordinary space into a puzzle everyone suddenly wants to solve.",
+      "asks": "What invented rule would turn the plain ground you're on into a game worth playing?",
+      "kind": "domain"
+    },
+    {
+      "id": "book-negotiate-before-you-lose-the-asset",
+      "source": "François Guizot, A Popular History of France from the Earliest Times, Volume 5 (Project Gutenberg #11955)",
+      "move": "Make your terms with the other side while you still hold the thing they want, because once it is gone your leverage goes with it.",
+      "asks": "What do I hold right now that someone else wants, and what terms should I lock in before it slips away?",
+      "kind": "thinker"
+    },
+    {
+      "id": "book-stay-awake-let-it-commit",
+      "source": "Anonymous (tr. Francis Barton Gummere), Beowulf (Project Gutenberg #981)",
+      "move": "Let the threat commit to its first move before you answer, since the way it attacks shows how to meet it.",
+      "asks": "What would I learn by watching this problem make its first move before I respond?",
+      "kind": "domain"
+    },
+    {
+      "id": "book-let-fear-of-the-unknown-work",
+      "source": "Cleeve and Sastri, Tales of the Sun; or, Folklore of Southern India (Project Gutenberg #37002)",
+      "move": "Win a contest by naming something fearsome the other side has never seen, and let its imagination inflate your modest asset.",
+      "asks": "What small thing of mine could scare or impress simply because the other side cannot see it clearly?",
+      "kind": "domain"
+    },
+    {
+      "id": "book-be-gone-before-the-strike",
+      "source": "F. A. Bolwell, With a Reservist in France (Project Gutenberg #44511)",
+      "move": "Relocate before the hour when the other side can predict you will still be there.",
+      "asks": "Where will I be predictable at the moment someone moves against me, and how could I be gone by then?",
+      "kind": "domain"
+    },
+    {
+      "id": "book-change-what-gets-honoured",
+      "source": "Bertrand Russell, Why Men Fight (Project Gutenberg #55610)",
+      "move": "Change what the public honours and energetic people will redirect themselves, since talent flows toward whatever counts as visible success.",
+      "asks": "What does this community treat as the mark of success, and what would happen if it honoured something else?",
+      "kind": "thinker"
+    },
+    {
+      "id": "great-law-two-sides-of-the-fire",
+      "source": "Haudenosaunee Confederacy council practice under the Great Law of Peace (Gayanashagowa), where the Elder and Younger Brother nations confer before the Firekeepers",
+      "move": "Let one group deliberate and pass its conclusion across the fire to a second that confers separately, so a matter is settled only when both have independently reached the same view.",
+      "asks": "If two groups with different instincts had to reach the same answer separately, what would each one insist on, and where do they overlap?",
+      "kind": "domain"
+    },
+    {
+      "id": "talking-piece-circle",
+      "source": "Circle processes drawn from First Nations peacemaking in the Yukon, used in the sentencing circle of R. v. Moses (1992)",
+      "move": "Hand the right to speak to one object so that only its holder talks and everyone else must listen without reply until it comes round.",
+      "asks": "What would this problem reveal if every involved party got uninterrupted turns and nobody could rebut?",
+      "kind": "domain"
+    },
+    {
+      "id": "hawala-net-the-balances",
+      "source": "Hawala informal value-transfer brokers",
+      "move": "Let value move by trust and offsetting obligations, settling only the net difference between brokers rather than moving the thing itself each time.",
+      "asks": "Which flows in this problem could cancel each other out so that only the leftover difference has to physically move?",
+      "kind": "domain"
+    },
+    {
+      "id": "souk-no-posted-price",
+      "source": "Souk and bazaar haggling",
+      "move": "Refuse to fix the price or specification in advance and let it emerge through offer and counteroffer, reading the other side from how they move.",
+      "asks": "What if the answer weren't set up front but discovered by proposing something and watching how it gets pushed back?",
+      "kind": "domain"
+    },
+    {
+      "id": "dutch-clock-descend",
+      "source": "Aalsmeer flower auction (Dutch clock descending price)",
+      "move": "Start impossibly high and let the figure fall until the first person stops it, so the real value shows up as the moment someone says now.",
+      "asks": "If I began with the most ambitious version and shed ambition step by step, where would the first real taker appear?",
+      "kind": "domain"
+    },
+    {
+      "id": "underwriting-slip-slices",
+      "source": "Lloyd's coffee house underwriting slip",
+      "move": "Pass a risk down a line of strangers who each write their name under a small slice they will carry, so a thing is viable once enough people will each hold only a sliver.",
+      "asks": "Who would back a very small piece of this, and can the whole be cut into slices small enough that nobody fears them?",
+      "kind": "domain"
+    },
+    {
+      "id": "pawnbroker-forfeit-value",
+      "source": "Pawnbroking practice",
+      "move": "Lend only against what the collateral would fetch if the borrower vanished, valuing everything by its worth in the worst case.",
+      "asks": "If this fails completely, what is left that someone else would still pay for?",
+      "kind": "domain"
+    },
+    {
+      "id": "tanda-take-turns-with-the-pot",
+      "source": "Mexican tandas and West African susu rotating savings clubs",
+      "move": "Pool a small regular contribution from everyone and give the entire pot to one member per round in rotation, so commitment to the next round is what holds the group together.",
+      "asks": "Whose turn could it be to receive the full concentrated effort, and what keeps everyone showing up after their own turn has passed?",
+      "kind": "domain"
+    },
+    {
+      "id": "res-242-useful-ambiguity",
+      "source": "UN Security Council Resolution 242 (1967) drafting",
+      "move": "Leave one phrase deliberately open to more than one reading so each party can sign while believing it won, deferring the hard fight until after agreement exists.",
+      "asks": "Which decision can I leave undefined on purpose so that people can start without agreeing yet?",
+      "kind": "domain"
+    },
+    {
+      "id": "solomon-threaten-the-split",
+      "source": "Judgment of Solomon (1 Kings 3)",
+      "move": "Propose a drastic, irreversible-looking resolution you do not intend to carry out, and watch who recoils to learn which claim is real.",
+      "asks": "What extreme but harmless proposal would flush out who or what actually cares most?",
+      "kind": "domain"
+    },
+    {
+      "id": "unclos-you-cut-we-choose",
+      "source": "UN Convention on the Law of the Sea deep-seabed mining parity system",
+      "move": "Make the party who carves up the resource into two shares be the one who does not get to choose which share is theirs, forcing an honest split.",
+      "asks": "If whoever divides this had to live with the side they didn't pick, how would they divide it?",
+      "kind": "domain"
+    },
+    {
+      "id": "advocatus-diaboli-canonization",
+      "source": "The Promoter of the Faith ('devil's advocate') in the Catholic canonization process, an office kept until 1983",
+      "move": "Appoint an official whose entire job is to build the strongest case against, so a candidate is accepted only after that opponent has failed.",
+      "asks": "Who is formally charged with proving this wrong, and what do they find when they actually try?",
+      "kind": "domain"
+    },
+    {
+      "id": "wergild-price-every-harm",
+      "source": "Anglo-Saxon and Germanic wergild compensation schedules",
+      "move": "Replace an unending feud with a published tariff that assigns a fixed price to each type of harm, so grievances can be closed by payment.",
+      "asks": "If every cost and injury here had an agreed price, which endless disputes would end?",
+      "kind": "domain"
+    },
+    {
+      "id": "lawspeaker-recite-it-aloud",
+      "source": "The Icelandic Althing's law-speaker, who recited a portion of the law from the Law Rock each year",
+      "move": "Keep the rules in a form one person can recite aloud in public over a fixed cycle, so the whole body of rules stays short enough to be heard and known.",
+      "asks": "If every rule had to be spoken out loud from memory in one sitting, which would survive?",
+      "kind": "domain"
+    },
+    {
+      "id": "gacaca-judged-by-witnesses",
+      "source": "Rwandan gacaca, a traditional community dispute process revived after the 1994 genocide (its fairness was debated)",
+      "move": "Hold the hearing among the neighbors who saw the events, trading professional distance for local knowledge and public testimony, and guard the process against its risks to fairness.",
+      "asks": "Who actually witnessed this firsthand, and what could they decide that an outside expert could not?",
+      "kind": "domain"
+    },
+    {
+      "id": "hooponopono-formal-closing",
+      "source": "The closing release (ho'oku'u) of Hawaiian ho'oponopono, a family reconciliation practice documented by Mary Kawena Pukui",
+      "move": "End the process with a spoken release after which the matter is declared finished and may not be raised again.",
+      "asks": "What ritual or marker would let everyone agree this question is closed and stop reopening it?",
+      "kind": "domain"
+    },
+    {
+      "id": "atwa-forced-truce",
+      "source": "Arab tribal mediation (atwa truce before sulha)",
+      "move": "Declare a fixed period during which nobody may act or retaliate before any settlement talks begin, letting heat drain out first.",
+      "asks": "What would I decide differently after a mandatory pause where nothing could be done?",
+      "kind": "domain"
+    },
+    {
+      "id": "pie-powder-court-on-the-spot",
+      "source": "Medieval piepowder courts at trade fairs",
+      "move": "Hold the tribunal at the fair itself and judge disputes within hours while merchants still have dust on their feet, before anyone leaves.",
+      "asks": "How could the dispute or flaw be judged right where and when it happens rather than later by someone elsewhere?",
+      "kind": "domain"
+    },
+    {
+      "id": "mudaraba-share-the-outcome",
+      "source": "Islamic finance (mudaraba and musharaka profit-sharing)",
+      "move": "Swap a fixed charge for a share of whatever the venture actually earns or loses, so both sides win or lose together.",
+      "asks": "What if the payment here rose and fell with the outcome instead of being set in advance?",
+      "kind": "domain"
+    },
+    {
+      "id": "tuna-tail-sample-cut",
+      "source": "Tsukiji tuna auction tail-cut inspection",
+      "move": "Slice off one small piece to show the inside of an expensive object before anyone bids, so judgment rests on a sample, not the surface.",
+      "asks": "What single small cross-section would show what is really inside before committing to the whole?",
+      "kind": "domain"
+    },
+    {
+      "id": "doge-election-chained-lots",
+      "source": "Venetian election of the Doge (from 1268)",
+      "move": "Chain alternating rounds of random draw and vote through many stages so no faction can steer the final outcome.",
+      "asks": "How could I interleave chance and choice so nobody can rig the end result?",
+      "kind": "domain"
+    },
+    {
+      "id": "ostracism-vote-one-out",
+      "source": "Athenian ostracism (ostraka)",
+      "move": "Hold a periodic vote where everyone writes the one thing or person that has grown too dominant, and exile the top name for a set term.",
+      "asks": "Which single element has become too big, and what happens if it is sent away for a while?",
+      "kind": "domain"
+    },
+    {
+      "id": "khata-running-tab",
+      "source": "Indian kirana shop credit ledger (khata)",
+      "move": "Let a trusted regular take goods now and settle later, with the shopkeeper's memory of the relationship acting as collateral.",
+      "asks": "What could be handed over up front on the strength of an ongoing relationship instead of immediate payment or proof?",
+      "kind": "domain"
+    },
+    {
+      "id": "quaker-one-price",
+      "source": "Fixed-price shopkeeping, long associated with early Quaker merchants",
+      "move": "Remove bargaining altogether by posting one honest price for everyone, trading the thrill of negotiating for trust and speed.",
+      "asks": "What if there were exactly one fair version offered to everyone and no tailoring or haggling?",
+      "kind": "domain"
+    },
+    {
+      "id": "bazaar-cluster-rivals",
+      "source": "Traditional bazaar street-by-trade layout (e.g. Istanbul's Grand Bazaar)",
+      "move": "Place competitors side by side in one street so that being easy to compare draws more buyers than any one stall could alone.",
+      "asks": "What gets stronger if it sits right beside its rivals rather than hiding away from them?",
+      "kind": "domain"
+    },
+    {
+      "id": "praetors-edict-remedies-first",
+      "source": "Roman praetor's edict and formulary procedure",
+      "move": "Publish at the start of the term the list of specific complaints you will hear and the remedy for each, instead of declaring abstract rights.",
+      "asks": "Rather than stating principles, which concrete situations will I commit to fixing and exactly how?",
+      "kind": "domain"
+    },
+    {
+      "id": "chancery-escape-valve",
+      "source": "English Court of Chancery (equity alongside common law)",
+      "move": "Keep a second, discretionary channel for cases where applying the rule strictly would produce an absurd or cruel result.",
+      "asks": "Where will the rules bite wrongly, and who can bend them in that case?",
+      "kind": "domain"
+    },
+    {
+      "id": "no-cure-no-pay-salvage",
+      "source": "Lloyd's Open Form maritime salvage contract",
+      "move": "Promise payment only if the rescue succeeds and scale it to the value saved, so the rescuer carries the risk and is paid for results.",
+      "asks": "What if effort were paid only on success, in proportion to what was saved?",
+      "kind": "domain"
+    },
+    {
+      "id": "kula-never-keep-it",
+      "source": "Trobriand kula ring exchange (Malinowski)",
+      "move": "Make prized objects circulate in a loop, never owned for good, so status comes from having held and passed them on.",
+      "asks": "What would gain value if no one could keep it, only hold it for a while and hand it on?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-kigumi-no-fasteners",
+      "source": "Japanese kigumi joinery (timber joined without nails or glue)",
+      "move": "Hold parts together by the shape of the parts themselves instead of by an added fastener.",
+      "asks": "Which glue, bolt or rule could be deleted if the pieces were shaped to lock each other?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-thatch-shingle-overlap",
+      "source": "English and Japanese roof thatching, courses overlapped like scales",
+      "move": "Make every unit protect the joint of the one below it, so the whole sheds failure even though no single piece is sealed.",
+      "asks": "Where can overlapping imperfect parts do the job that one perfect part cannot?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-bookbinding-signatures",
+      "source": "Hand bookbinding, sewing folded signatures then joining them",
+      "move": "Build the whole from small self-complete gatherings that are finished on their own and stitched together at the end.",
+      "asks": "What are the folded sections here that can each be completed alone and joined later?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-weaving-warp-first",
+      "source": "Loom weaving, where the warp is fixed before any weft is thrown",
+      "move": "Fix the long, hard-to-change threads under tension first so everything afterward can be improvised freely across them.",
+      "asks": "What should be strung rigid and early so the rest can be played loose?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-pottery-centering",
+      "source": "Wheel-throwing pottery, centering and wedging the clay",
+      "move": "Spend the first effort making the raw material uniform and centered, because every later flaw traces to an off-center start.",
+      "asks": "What must be centered or purged of air bubbles before I shape anything?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-tailor-toile",
+      "source": "Tailoring and couture, fitting a muslin toile before cutting the real cloth",
+      "move": "Build a full-size cheap version first, fit it on the real body, and only then commit the expensive material.",
+      "asks": "What is my muslin, and who or what will I fit it on before the costly cut?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-boat-lofting-fairing",
+      "source": "Traditional boatbuilding, lofting lines full size and fairing curves",
+      "move": "Draw the thing at true scale where small errors show as visible bumps, and smooth until the whole curve reads right.",
+      "asks": "At what scale would the lumps become visible, and what happens if I draw it there?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-luthier-voicing",
+      "source": "Violin and guitar making, tap-tuning and thinning a soundboard",
+      "move": "Shape by alternating a small removal with a test of the actual output, tuning toward the result and not the drawing.",
+      "asks": "What is the equivalent of tapping the plate, and how often can I do it between cuts?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-reduction-print",
+      "source": "Reduction linocut printing, carving the same block between colours",
+      "move": "Use a single block that is destroyed step by step, so every earlier layer is committed and each cut permanently narrows what remains.",
+      "asks": "What if each decision removed material for good, and what order would I carve in?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-watch-escapement",
+      "source": "Mechanical watchmaking, the escapement",
+      "move": "Turn a continuous push into regular discrete ticks by letting something catch and release it.",
+      "asks": "Where is a steady flow overwhelming me, and what catch-and-release would meter it into countable beats?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-leather-saddle-stitch",
+      "source": "Hand saddle stitching in leatherwork",
+      "move": "Pass two independent threads through every hole so that a broken stitch cannot unravel the seam.",
+      "asks": "Where is one thread holding everything, and what is the second needle?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-boro-visible-patch",
+      "source": "Japanese boro textiles, layers of patches over generations",
+      "move": "Let the thing grow by accumulating patches, keeping each repair as a visible layer of its history.",
+      "asks": "What if this were never finished but patched, and the patches were the design?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-indigo-dip-and-air",
+      "source": "Indigo dyeing, repeated dips with oxidation in between",
+      "move": "Build intensity from many thin passes, each followed by a pause in the open air where the change actually develops.",
+      "asks": "Where would several light passes with rest between beat one heavy pass?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-pattern-welding",
+      "source": "Pattern-welded blades (Damascus, Viking-era steel)",
+      "move": "Fold and forge together unlike materials so the combined bar has the toughness of one and the edge of the other.",
+      "asks": "Which two incompatible qualities could be laminated rather than traded off?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-cooperage-hoop-tension",
+      "source": "Cooperage, staves bound by iron hoops into a watertight barrel",
+      "move": "Let loose individual pieces become sound by a surrounding force that squeezes them together, rather than by perfecting each joint.",
+      "asks": "What outer band could make these loose parts work as one?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-wheelwright-shrink-fit",
+      "source": "Wheelwrighting, fitting a hot iron tyre that shrinks tight on cooling",
+      "move": "Make the part slightly too big, assemble while it is expanded, and let the change of state lock it.",
+      "asks": "What fit could be achieved by a temperature or state change instead of force?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-scribing-to-fit",
+      "source": "Joinery and boatbuilding scribing a board to an irregular surface",
+      "move": "Trace the real, crooked edge onto the new piece and cut to the trace, instead of insisting on straight lines.",
+      "asks": "What irregular reality here can I trace instead of correcting?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-basket-coil-base",
+      "source": "Coiled and woven basketry, where the base fixes the whole form",
+      "move": "Start from a deliberate center and grow outward in one continuous spiral, knowing the base decides the final shape.",
+      "asks": "What is the base that all later turns will follow, and have I chosen it on purpose?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-washi-neri",
+      "source": "Japanese washi papermaking, adding neri mucilage to the vat",
+      "move": "Add something that slows the draining so the fibers have time to spread evenly before they set.",
+      "asks": "What slow-down additive would let this disperse evenly rather than clump?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-urushi-cure",
+      "source": "Urushi lacquerware, thin coats cured in a humid cabinet",
+      "move": "Control the conditions of curing and not the clock, since the material hardens only in the right environment.",
+      "asks": "What environment does this need to harden, and am I rushing the time instead?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-stone-bosting",
+      "source": "Stone carving, roughing out the block (bosting) before detail",
+      "move": "Remove the largest masses first to find the big planes of the form, and defer all fine detail until the block is true.",
+      "asks": "What are the big planes here, and what detail am I carving too early?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-glass-annealing",
+      "source": "Glassmaking, slow cooling in an annealer",
+      "move": "After the dramatic making, cool slowly and deliberately, because hidden internal stress will shatter the piece later.",
+      "asks": "What stress is silently stored in this once the excitement ends, and how do I release it gradually?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-timberframe-marriage-marks",
+      "source": "Timber framing, pre-fitting in the shop and cutting marriage marks",
+      "move": "Assemble the whole thing once in the easy place, label every mating pair, then take it apart and raise it for real.",
+      "asks": "What full dry run can I do somewhere cheap, with every piece labelled for reassembly?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-temper-after-hardening",
+      "source": "Bladesmithing, hardening by quench then tempering back",
+      "move": "Push the material to a state that is too hard to use, then deliberately take some of it back until it can bear load.",
+      "asks": "What should I over-harden first and then soften on purpose?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-zellige-fragments",
+      "source": "Moroccan zellige mosaic, hand-cut tile fragments",
+      "move": "Break the material into many small cut pieces and fit them into a pattern that tolerates each piece's flaw.",
+      "asks": "What if the whole were cut into shards that each only need to be right locally?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-rope-counter-twist",
+      "source": "Traditional ropemaking, strands laid against the twist of the yarns",
+      "move": "Twist each level in the opposite direction to the one below so the tendencies to unwind hold each other in place.",
+      "asks": "Which two forces trying to undo the thing could be set against each other so they lock?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-compass-timber",
+      "source": "Traditional shipbuilding, choosing naturally curved compass timber and knees",
+      "move": "Go looking for the raw piece whose natural shape already matches the part and cut around its grain, instead of forcing a straight stock into the curve.",
+      "asks": "Which found thing already has the shape I keep trying to manufacture?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-coppice-regrowth",
+      "source": "Coppicing woodland management",
+      "move": "Cut the thing back hard on a cycle so it regrows as many straight, usable shoots and lives longer than if left alone.",
+      "asks": "What would flourish if I cut it to the stump on schedule?",
+      "kind": "domain"
+    },
+    {
+      "id": "craft-story-stick",
+      "source": "Cabinetmakers' and carpenters' story stick (rod)",
+      "move": "Keep all key dimensions on one physical stick and transfer from the stick, never from numbers, so every part is measured against the same reference.",
+      "asks": "What is the one shared reference everything should be marked from, instead of each part carrying its own measurement?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-mycorrhizal-hub",
+      "source": "Mycorrhizal networks in forests, inspired by Suzanne Simard's research on Douglas-fir hub trees (how much they benefit seedlings is debated)",
+      "move": "Look for existing hidden links that could move surplus from where it piles up to where it is scarce, so more of the whole stand survives.",
+      "asks": "Where is something abundant sitting idle right next to something starving, and what connection could carry it across?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-starling-seven-neighbors",
+      "source": "Starling murmurations track their ~7 nearest neighbors (Ballerini et al., 2008)",
+      "move": "Coordinate a large group with one local rule about a few neighbors, with no leader and no global plan.",
+      "asks": "What single rule about my immediate neighbors would make the whole thing move together?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-beaver-leak-sound",
+      "source": "Beavers patching dams in response to the sound of running water (Wilsson, 1971)",
+      "move": "Skip the blueprint and let a simple trigger, here the sound of a leak, tell you where to add the next piece.",
+      "asks": "What is the leak signal in this problem, and could responding to it replace a master plan?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-reef-on-the-dead",
+      "source": "Coral reefs growing on the limestone skeletons of earlier generations",
+      "move": "Treat what the previous generation left behind as the foundation, and let only the thin living layer on top do the new work.",
+      "asks": "What finished, hardened thing could be my foundation so that only a thin new layer needs to be alive?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-barnacle-two-limits",
+      "source": "Connell's intertidal barnacles: Chthamalus held up by competition below and drying out above",
+      "move": "Find out which limit binds at each edge of your range: one is usually a rival, the other the environment.",
+      "asks": "At each boundary of this idea, what is stopping it, a competitor or the conditions, and can I move to where only one applies?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-canyon-trickle",
+      "source": "The Colorado River carving the Grand Canyon grain by grain",
+      "move": "Apply a small force that never stops, and let time and repetition do what one big push cannot.",
+      "asks": "What tiny steady action, repeated without pause, would wear this obstacle down?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-seed-crystal",
+      "source": "Supersaturated solutions crystallizing around a seed crystal (sodium acetate hot ice)",
+      "move": "When a system is loaded and waiting, the tiniest well-shaped seed can order the whole mass at once.",
+      "asks": "What is already saturated and waiting here, and what small seed with the right shape would set it?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-godwit-stopover",
+      "source": "Bar-tailed godwits fattening at Yellow Sea stopover sites on their migration",
+      "move": "Define a long journey by its few refueling stops, and protect and design those more carefully than the legs between them.",
+      "asks": "Where are the refueling points on this journey, and what happens if one disappears?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-hoverfly-mimic",
+      "source": "Batesian mimicry: hoverflies wearing wasp stripes",
+      "move": "Borrow the warning signal of something proven and defended, so you get the protection without paying for the defense.",
+      "asks": "Whose trusted look or signal could I wear cheaply, and how long before the bluff gets called?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-pisaster-keystone",
+      "source": "Paine's Pisaster ochraceus removal experiment on Washington rocky shores",
+      "move": "Find the one element whose job is to keep the dominant thing from crowding out everything else, and don't remove it.",
+      "asks": "What keeps the biggest, strongest piece in check so that the rest can exist, and what happens if it's gone?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-fig-wasp-sanction",
+      "source": "Fig trees aborting figs where pollinator wasps lay too many eggs (Jander and Herre)",
+      "move": "Build the penalty into the partnership itself, so that a partner who over-takes automatically loses its reward.",
+      "asks": "How could cheating cut its own payoff, without anyone having to police it?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-bee-quorum",
+      "source": "Honeybee swarms choosing a nest site by scout quorum (Seeley, Honeybee Democracy)",
+      "move": "Let several candidates advertise in competition, and commit only when enough independent scouts are present at one.",
+      "asks": "What would my quorum be, and what would the scouts need to see before the group commits?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-ant-pheromone-fade",
+      "source": "Argentine ant trails and evaporating pheromone (Goss et al., double-bridge experiment)",
+      "move": "Make every mark fade unless it's refreshed, so the shorter route that gets used more outcompetes the older one.",
+      "asks": "Which of my established paths needs to decay unless re-walked, so that a better one can win?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-cleaner-wrasse-station",
+      "source": "Cleaner wrasse stations on coral reefs, where predators queue to be cleaned",
+      "move": "Set up a fixed neutral spot where natural enemies come for a service and are not eaten.",
+      "asks": "Where could a neutral station let parties who usually clash trade something both need?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-leaf-abscission",
+      "source": "Deciduous trees absorbing nutrients from leaves before the abscission layer drops them",
+      "move": "Before shedding what costs more than it earns in the hard season, pull the valuable nutrients back out of it.",
+      "asks": "What should I let go of for winter, and what must I salvage from it first?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-lupine-pioneer",
+      "source": "Prairie lupines colonizing Mount St. Helens pumice after 1980, fixing nitrogen",
+      "move": "On barren ground, start with a cheap hardy pioneer whose real job is making the ground fit for what comes next.",
+      "asks": "What scrappy first step is meant to be consumed in preparing the ground for the real one?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-desert-seed-bank",
+      "source": "Sonoran desert annuals with staggered seed dormancy that never all germinate after one rain",
+      "move": "Deliberately hold part of your stock back every time conditions look good, so one false spring cannot kill everything.",
+      "asks": "What fraction should I keep dormant, and what would a false spring look like here?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-benard-cells",
+      "source": "Rayleigh-Benard convection: heated fluid spontaneously forming hexagonal cells",
+      "move": "Past a threshold gradient, order appears by itself, so steepen the difference instead of designing the pattern.",
+      "asks": "What difference could I sharpen until the structure organizes itself?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-sandpile-criticality",
+      "source": "Bak's sandpile and self-organized criticality: avalanches of every size from steady grain-by-grain input",
+      "move": "Expect slides of all sizes from steady loading, and stop treating each small one as an anomaly to be prevented.",
+      "asks": "Which small slides am I suppressing, and is that just storing up a bigger one?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-salmon-imprint",
+      "source": "Pacific salmon homing to natal streams by smell imprinted as juveniles",
+      "move": "Imprint a distinctive signature at the origin, so that after wandering far you can find your way back by it.",
+      "asks": "What signature should I imprint at the start, so a return from far away is possible?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-leafcutter-fungus",
+      "source": "Leafcutter ants farming fungus on cut leaves instead of eating them",
+      "move": "Feed the raw material to an intermediate organism that digests it for you, and consume that instead.",
+      "asks": "What could process the raw input into a form I can actually use?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-penguin-huddle-rotation",
+      "source": "Emperor penguin huddles rotating individuals from the cold edge to the warm center (Zitterbart et al.)",
+      "move": "Share the hardest position by rotating everyone through it, so no one is stuck on the exposed edge.",
+      "asks": "Who is stuck on the exposed edge here, and how could the burden rotate?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-dart-frog-warning",
+      "source": "Aposematism in poison dart frogs, which advertise toxicity in bright colors",
+      "move": "If you really have the defense or quality, make it loud and unmistakable, so you don't have to fight to prove it.",
+      "asks": "What is genuinely strong about this that should be made impossible to miss?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-strangler-fig",
+      "source": "Strangler figs germinating in a host tree's canopy and growing roots down its trunk",
+      "move": "Climb a structure that already exists and let it carry you toward the light, then outgrow it.",
+      "asks": "Whose standing structure could I germinate on, to skip paying for my own trunk?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-bamboo-mast",
+      "source": "Mast flowering of bamboo (Melocanna baccifera) on decades-long synchronized cycles",
+      "move": "Release everything in one synchronized burst, so consumers are swamped and enough survives, where a steady trickle would only feed them.",
+      "asks": "What if I stockpiled and released it all in one synchronized burst to overwhelm whatever eats it?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-lizard-autotomy",
+      "source": "Lizard tail autotomy: a pre-formed fracture plane lets the tail detach and wriggle while the animal flees",
+      "move": "Design a part to be sacrificed on purpose, with a clean break point built in and a decoy function, so the core escapes.",
+      "asks": "What part could be built to detach cleanly under threat, and what would it do while the rest escapes?",
+      "kind": "domain"
+    },
+    {
+      "id": "eco-delta-avulsion",
+      "source": "Mississippi River delta lobe switching (avulsion) when the old channel silts up",
+      "move": "When the route has clogged with its own deposits, stop dredging and jump to a steeper one, building a new lobe.",
+      "asks": "Which of my channels is silting up from its own success, and where is the steeper way down?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-potlatch-giveaway",
+      "source": "The potlatch of Pacific Northwest Coast peoples such as the Kwakwaka'wakw, Haida and Tlingit, a ceremonial feast where names and rights are witnessed and affirmed through giving",
+      "move": "Let standing come from what you give and from having it witnessed in public, not from what you hold.",
+      "asks": "What would this look like if its value were judged by what it hands to others rather than what it keeps?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-mother-culture-seed",
+      "source": "Vinegar mothers, kombucha SCOBYs and shared sourdough starters",
+      "move": "Keep a living portion of each batch to seed the next, so output becomes the starter for what follows.",
+      "asks": "What part of the last result can be saved to start the next one, and grow on its own?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-iftar-backward-from-sunset",
+      "source": "Ramadan iftar logistics in mosques and community meals",
+      "move": "Let one fixed, unmovable moment organize all preparation by working backward from it.",
+      "asks": "What is the moment everything must be ready for, and what has to be done by when to meet it?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-ofrenda-favorites",
+      "source": "Día de los Muertos ofrendas in Mexican households, set out to welcome the returning dead",
+      "move": "Welcome someone absent by setting out the things they loved, alongside their picture, so their presence is invited through what gave them joy.",
+      "asks": "What are the favorite things of whoever or whatever this is for, and how would they be arranged to draw it near?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-snow-house-hostile-material",
+      "source": "Inuit snow house (iglu) building",
+      "move": "Build the shelter out of the very hostile substance that surrounds you.",
+      "asks": "What is the hostile thing pressing in on this problem, and could it become the building material?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-rationing-fixed-substitution",
+      "source": "British wartime rationing and Ministry of Food recipes",
+      "move": "Accept the ration as fixed and find a substitute that does the scarce ingredient's job.",
+      "asks": "What exactly is the scarce thing doing here, and what plentiful thing could do that job instead?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-benedictine-youngest-first",
+      "source": "Rule of St Benedict, chapter 3: calling the community to counsel",
+      "move": "Before a major decision, consult everyone, and give weight to the youngest because the Lord may reveal the better course to them.",
+      "asks": "Who has the least experience or standing here, and what do they see that experts have stopped seeing?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-langar-same-level",
+      "source": "Sikh langar, the free communal kitchen of the gurdwara, where all sit together as equals",
+      "move": "Serve the same food in the same way at the same level to everyone, erasing distinctions of rank.",
+      "asks": "Which tiers, separations or special treatments could be flattened so everyone has the same experience?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-stone-soup-seed",
+      "source": "The Stone Soup folktale and communal soup-pot traditions",
+      "move": "Offer a deliberately incomplete seed and let each visitor add what they have.",
+      "asks": "What tiny, obviously unfinished starter would make others want to contribute the rest?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-yui-rotating-roof",
+      "source": "Yui labor exchange for thatched roofs in Shirakawa-go",
+      "move": "Rotate a heavy recurring burden among households so each one's turn comes with everyone's help.",
+      "asks": "What big recurring cost could become a rotation where each turn is carried by all the others?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-ahupuaa-full-slice",
+      "source": "Native Hawaiian ahupuaʻa land divisions from mountain to sea",
+      "move": "Draw boundaries so each unit holds a full cross-section of everything it needs.",
+      "asks": "How could this be cut so every piece contains a slice of all the resources, rather than one piece of one thing?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-putting-up-glut",
+      "source": "Southern Appalachian canning and putting up the harvest",
+      "move": "Capture the glut at its peak and store it for the lean season.",
+      "asks": "What is abundant right now that will be scarce later, and how can it be kept until then?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-quaker-sense-of-meeting",
+      "source": "Quaker meeting for worship with attention to business, seeking the 'sense of the meeting'",
+      "move": "Decide without a vote by waiting until the gathered group finds a course it can unite behind, and let any one person's unresolved concern hold the decision.",
+      "asks": "Which option could every affected person accept, and whose quiet reservation has not been heard?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-transhumance-follow-grass",
+      "source": "Alpine transhumance and the Alpabzug",
+      "move": "Move the whole activity to where the resource is by season instead of hauling the resource to it.",
+      "asks": "What if this relocated on a schedule to follow the thing it depends on?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-gees-bend-scrap-first",
+      "source": "The quilters of Gee's Bend, Alabama",
+      "move": "Start from the pieces already in the bag and let the design emerge from them.",
+      "asks": "What do I already have lying around, and what design does that material suggest on its own?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-shabbat-forbidden-habit",
+      "source": "Shabbat in Jewish households, a weekly day of rest from work, and the preparation that comes before it",
+      "move": "Set aside a whole category of habitual work for a day, and let the preparation beforehand shape the days around it.",
+      "asks": "If one habitual kind of work were set aside for a day, what would I prepare ahead, and what would I discover?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-seder-provoke-the-question",
+      "source": "The Passover seder, where the youngest asks why this night is different from all other nights",
+      "move": "Arrange the telling so its customs invite the youngest to ask why, and let the answers come in reply to the question.",
+      "asks": "What deliberate oddity here would make a newcomer ask 'why is this different?' and open the explanation?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-mikoshi-carry-the-center",
+      "source": "Japanese matsuri and portable shrines (mikoshi)",
+      "move": "Carry the sacred center through the neighborhood instead of expecting people to come to it.",
+      "asks": "Who can't reach the center, and what if it traveled to them, carried by the crowd?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-chuno-use-the-climate",
+      "source": "Andean chuño freeze-drying of potatoes by Quechua and Aymara communities",
+      "move": "Use a recurring natural cycle, such as night frost and day sun, as free processing equipment.",
+      "asks": "What free, repeating cycle in the environment could do this processing step for me?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-hobo-signs-for-strangers",
+      "source": "Chalk marks left on fences and gateposts by itinerant workers, as reported in accounts of Depression-era tramp culture (the full 'code' is partly legend)",
+      "move": "Leave marks in the environment itself for a stranger who will arrive later.",
+      "asks": "What message, left at the place, would help whoever comes next without anyone being present?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-dig-for-victory-idle-land",
+      "source": "Dig for Victory and Victory Gardens in wartime",
+      "move": "Convert idle space that serves only decoration into production.",
+      "asks": "What asset here is sitting idle or ornamental that could be put to work?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-oryoki-nested-kit",
+      "source": "Zen monastery oryoki, the formal meal eaten from a personal set of nested bowls",
+      "move": "Have each person carry a nested, self-contained kit so no outside setup is needed.",
+      "asks": "What minimal nested kit would let someone do this anywhere, with nothing provided?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-lectio-divina-four-passes",
+      "source": "Lectio divina, the Christian monastic practice of prayerful reading (lectio, meditatio, oratio, contemplatio)",
+      "move": "Return to the same text four times, each pass with a different stance: read, reflect, respond, rest.",
+      "asks": "What four distinct stances could I take toward the same thing, one after another, before deciding?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-kolam-made-to-be-erased",
+      "source": "Kolam, the rice-flour designs drawn each morning at doorsteps in South India, mostly by women, as a welcome and as food for small creatures",
+      "move": "Make a fresh ephemeral piece each day that is meant to be walked over and used up.",
+      "asks": "What if this were designed to be erased or consumed by its own use, then remade?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-castells-strong-base",
+      "source": "Castells, the human towers of Catalonia, with the pinya",
+      "move": "Put the strongest at the bottom and surround the base with a wide supporting crowd, with the lightest at the top.",
+      "asks": "What carries the load at the base, who supports it from outside, and what should be lightest at the top?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-hangi-charge-and-leave",
+      "source": "Maori hāngī earth oven cooking",
+      "move": "Charge a heat-holding mass once, then bury the work and walk away while it cooks.",
+      "asks": "What can I load up with energy once and leave to do its work unattended?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-whale-shares-before-the-catch",
+      "source": "Iñupiat customary sharing of the bowhead whale harvest",
+      "move": "Fix the distribution rules by role and relationship before the windfall arrives.",
+      "asks": "If this succeeds hugely, who gets what, and can that be settled now before it happens?",
+      "kind": "domain"
+    },
+    {
+      "id": "folk-furoshiki-one-cloth",
+      "source": "Japanese furoshiki wrapping cloth",
+      "move": "Replace a set of specialized containers with one flexible square and a repertoire of folds.",
+      "asks": "What single general-purpose piece, folded different ways, could replace this whole set of special-purpose ones?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-container-interface",
+      "source": "Malcom McLean and the standard shipping container (1956 onward)",
+      "move": "Standardize only the box's outer interface and let everything inside vary without limit.",
+      "asks": "What single dimension, if frozen and shared, would let every other part of this be swapped, stacked or handed off freely?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-quipu-carrier-encodes",
+      "source": "Inca quipu (knotted cords used for records)",
+      "move": "Put the information in the physical structure of the carrier itself, so it needs no separate writing system to be read.",
+      "asks": "What if the object's own shape, texture or arrangement held the data, instead of a label or screen explaining it?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-chasqui-short-legs",
+      "source": "Inca chasqui relay runners on the Qhapaq Ñan road",
+      "move": "Replace one heroic long journey with many short legs, each handled by someone who knows only their own stretch.",
+      "asks": "Where could a long, fragile effort be cut into short handoffs that each person can do fresh and well?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-terrace-reshape-ground",
+      "source": "Andean and Ifugao terrace farming",
+      "move": "Instead of fitting to a hostile slope, rebuild the slope into a staircase of small flats.",
+      "asks": "What would it mean to reshape the terrain of this problem into a series of small, level steps rather than tolerating its steepness?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-ringvaart-intercept",
+      "source": "Dutch polder ring canals (ringvaart)",
+      "move": "Intercept the unwanted inflow at the boundary in a dedicated channel so the inside never has to deal with it.",
+      "asks": "What could be diverted around the edge before it ever enters the core, instead of being cleaned up inside?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-subak-synchronized-fallow",
+      "source": "Balinese subak irrigation cooperatives, coordinated through water temples (Steve Lansing's research)",
+      "move": "Coordinate neighbors' timing so shared resources are spread out while pests and problems starve in a synchronized gap.",
+      "asks": "Who shares my resource, and what happens if we all pause or start at the same agreed moment?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-lighthouse-characteristic",
+      "source": "Lighthouse light characters (each light's unique flash pattern)",
+      "move": "Give each thing a unique rhythm so it is identified by its pattern in time, not by how it looks.",
+      "asks": "How could this be recognized instantly from far away or in poor conditions by a signature timing or sequence?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-ground-delay",
+      "source": "Air traffic flow management ground delay programs (FAA)",
+      "move": "Hold things at the origin, where waiting is cheap and safe, rather than letting them queue in the expensive, dangerous place.",
+      "asks": "Where is the waiting happening in the costliest spot, and could it move upstream to where it costs nothing?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-taktfahrplan",
+      "source": "Swiss integrated clock-face timetable (Taktfahrplan)",
+      "move": "Fix the repeating rhythm and the meeting points first, then build the infrastructure to fit that rhythm.",
+      "asks": "What if I decided the recurring beat and the moments when everything meets, and let the physical design follow from that?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-point-and-call",
+      "source": "Japanese railway pointing and calling (shisa kanko)",
+      "move": "Make the critical check a full-body, spoken ritual so attention cannot drift away from the step.",
+      "asks": "Which moment cannot be allowed to go wrong, and how can I make checking it physical and unmissable?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-rotational-grazing",
+      "source": "Rotational grazing, inspired by Allan Savory's holistic management and Joel Salatin's farming (Savory's wider claims are disputed)",
+      "move": "Move the pressure on before the thing being used is depleted, treating recovery time as the productive half of the cycle.",
+      "asks": "What am I wearing down by staying put, and what would a planned rhythm of moving on and resting look like?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-seed-vault-remote-duplicate",
+      "source": "Svalbard Global Seed Vault",
+      "move": "Keep a sealed, untouched duplicate of the irreplaceable stuff in a far-off place with a different set of risks.",
+      "asks": "What here can't be re-created, and where is a copy that would survive whatever destroys the original?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-qanat-underground",
+      "source": "Persian qanat underground aqueducts",
+      "move": "Carry the precious thing through a covered, gently graded channel so it loses nothing on the way, with access shafts only at intervals.",
+      "asks": "What is leaking away, evaporating or being skimmed in transit, and how could it travel hidden and sealed instead?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-aqueduct-constant-gradient",
+      "source": "Roman aqueduct engineering (Vitruvius and Frontinus on gradients)",
+      "move": "Commit to one gentle, constant slope and let gravity do the work, bridging or tunneling any obstacle rather than bending the route.",
+      "asks": "What constant, small push could carry this all the way if I stopped detouring around every obstacle?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-fishpond-sluice-gate",
+      "source": "Hawaiian loko i'a fishponds with makaha sluice gates",
+      "move": "Build a one-way gate whose slots let the small enter and keep the grown from leaving.",
+      "asks": "What would a size-selective one-way gate look like here, letting the small things in so they grow into something that stays?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-lobster-v-notch",
+      "source": "Maine lobster v-notching of breeding females",
+      "move": "Mark the valuable producers so everyone who meets them knows to put them back.",
+      "asks": "Which parts of this produce the future, and what visible mark would make every handler protect them?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-plimsoll-line",
+      "source": "Plimsoll line on ship hulls (British Merchant Shipping Act 1876)",
+      "move": "Paint an unmissable line on the outside that makes an invisible limit visible to any passerby.",
+      "asks": "What hidden limit could be made checkable at a glance by anyone, without special instruments or trust?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-harbor-pilot",
+      "source": "Harbor pilotage (local pilots boarding incoming ships)",
+      "move": "Bring in a local expert only for the dangerous last stretch, then drop them off.",
+      "asks": "Which narrow stretch of this journey needs someone who knows its local hazards, and could I borrow that knowledge just for that span?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-waterschap",
+      "source": "Dutch waterschappen (water boards, governing since the 13th century)",
+      "move": "Let those who live behind the same dike govern, fund and maintain it, so benefit and upkeep are bound together.",
+      "asks": "Who shares the same risk here, and what if they alone owned the upkeep and the decisions?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-eixample-chamfer",
+      "source": "Ildefons Cerdà's Eixample, Barcelona (chamfered block corners)",
+      "move": "Cut the corners off the grid to open sightlines and space, designing for how the nodes will be used rather than only for the lines.",
+      "asks": "Where do things meet or cross in this design, and what would trimming those points open up?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-curitiba-tube-station",
+      "source": "Curitiba bus rapid transit and Jaime Lerner's tube stations",
+      "move": "Copy the operational feature that makes the expensive solution fast, and skip the construction that normally comes with it.",
+      "asks": "What single operating trick gives the costly version its performance, and can I get it cheaply by itself?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-ciclovia-time-share",
+      "source": "Bogotá Ciclovía (roads closed to cars on Sundays)",
+      "move": "Give the same infrastructure a second job in a different time slot instead of building something new.",
+      "asks": "What existing thing sits idle or single-purpose part of the time, and what else could use it then?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-tessei-turnaround",
+      "source": "Shinkansen seven-minute turnaround cleaning crews (JR East/TESSEI)",
+      "move": "Treat the turnover between uses as a rehearsed, visible performance with roles, bows and a clock.",
+      "asks": "What dead time between uses could become a short choreographed routine that is proud of itself?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-dogwatch",
+      "source": "Sailing ship watch system and the split dogwatch",
+      "move": "Split one fixed slot into two odd-length ones so the pattern never repeats on the same people.",
+      "asks": "Where does a rigid rotation always put the burden on the same party, and how could an uneven split rotate it fairly?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-chinampa-muck",
+      "source": "Aztec chinampas of Lake Xochimilco",
+      "move": "Dredge the channel and use that muck to build and fertilize the growing surface, so maintaining the infrastructure produces the crop.",
+      "asks": "What does keeping the infrastructure running throw off, and could that by-product become the thing I grow on?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-aigamo-duck",
+      "source": "Aigamo duck-rice farming (Takao Furuno, Japan)",
+      "move": "Release a living worker into the system whose ordinary appetites do the weeding and fertilizing.",
+      "asks": "What creature or process, doing exactly what it naturally wants to do, would perform a chore I'm planning to do by hand?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-cascade-tanks",
+      "source": "Sri Lankan cascade tank systems (ellangawa)",
+      "move": "Chain many small basins so each one's overflow feeds the next, rather than building one big reservoir.",
+      "asks": "What if the surplus of each small piece fed the next piece, instead of pooling everything in one big store?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-water-square",
+      "source": "Rotterdam water squares (Benthemplein)",
+      "move": "Design a space with two modes, an everyday one for people and a rare storm one for the hazard, so the hazard has a place to go.",
+      "asks": "What rare extreme could be given a designated place inside something used every day, so it's absorbed instead of resisted?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-bazalgette-oversize",
+      "source": "Joseph Bazalgette's London sewers (1860s)",
+      "move": "When the expensive dig happens only once, size it for far more than today's known demand.",
+      "asks": "Where is the costly part a one-time act, and what margin should be built in now since I can't return?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-shinbashira-sway",
+      "source": "Japanese pagoda shinbashira central pillar",
+      "move": "Let stacked sections move independently around a loose central column so the structure absorbs shaking by swaying out of step.",
+      "asks": "What parts could be decoupled so each can move on its own and the shocks cancel instead of transmit?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-arsenal-moving-line",
+      "source": "Venetian Arsenal ship assembly (15th-16th century)",
+      "move": "Move the work past stationary specialists with standard parts pre-made, instead of having craftsmen chase the work.",
+      "asks": "What if the thing being made traveled past fixed stations, each doing one repeatable step?",
+      "kind": "domain"
+    },
+    {
+      "id": "infra-edo-night-soil",
+      "source": "Edo-period night soil trade (Japan)",
+      "move": "Price your waste as an asset that someone else needs, so the city pays or is paid to close a loop.",
+      "asks": "What output of mine is a valuable input for someone nearby, and how would it change if they had to bid for it?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-who-time-out",
+      "source": "WHO Surgical Safety Checklist: the pre-incision 'time out'",
+      "move": "Stop everyone at the last cheap moment before an irreversible step and have each role say aloud who the subject is, what is about to happen and what could go wrong.",
+      "asks": "What is the last point before I commit where undoing is still cheap, and what must every person involved say out loud there?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-span-of-control",
+      "source": "Incident Command System span-of-control rule (one supervisor to roughly three to seven subordinates)",
+      "move": "When the number of things you must watch passes a handful, split it and appoint a lead for each part instead of stretching your own attention.",
+      "asks": "Which parts of this exceed what one mind can track, and where are the natural seams to hand off?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-robot-first",
+      "source": "British Army bomb-disposal teams' remote 'Wheelbarrow' vehicle, first used in Northern Ireland (1972)",
+      "move": "Send an expendable proxy to touch the dangerous unknown first, and learn from what it triggers.",
+      "asks": "What cheap, losable stand-in can take the first contact with the risky part of this?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-facets-traps",
+      "source": "Ian McCammon's FACETS heuristic traps study of avalanche accidents",
+      "move": "List the specific mental shortcuts that have historically led capable people into disaster (familiarity, commitment, social proof, scarcity) and check yourself against each before going ahead.",
+      "asks": "Which known bias is quietly steering my choice right now, and what in the situation is feeding it?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-sterile-cockpit",
+      "source": "FAA sterile cockpit rule (14 CFR 121.542) for critical flight phases",
+      "move": "Define the short windows when the work is most dangerous and ban all non-essential activity, talk and interruptions during exactly those windows.",
+      "asks": "When is this most fragile, and what do I forbid, silence or defer during that window?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-aviate-navigate-communicate",
+      "source": "Pilots' emergency priority order: aviate, navigate, communicate",
+      "move": "Fix a strict ranking of duties in advance so that under overload you drop from the bottom and never from the top.",
+      "asks": "What are the three or four things I must do, in rank order, so that when I'm overloaded the right ones survive?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-swiss-cheese",
+      "source": "James Reason's Swiss cheese model of accident causation",
+      "move": "Assume every defense layer has holes and stack several imperfect layers whose holes are unlikely to line up.",
+      "asks": "Where are the holes in each of my protections, and are they different enough from each other to cover one another?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-amundsen-depots",
+      "source": "Roald Amundsen's South Pole expedition supply depots, marked with flags to either side of the route",
+      "move": "Lay resources and markers along the path ahead of the main effort, and make the markers wide enough that you can't miss them.",
+      "asks": "What can I stash and flag along the route before I need it, so that the journey leans on the path instead of on what I carry?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-lces",
+      "source": "Wildland firefighting LCES system (Lookouts, Communications, Escape routes, Safety zones)",
+      "move": "Before you engage, name your lookout, your channel, your way out and your safe place, and refuse to start work until all four exist.",
+      "asks": "Before I start, who watches, how do we talk, how do I get out, and where is safe?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-aar",
+      "source": "US Army After Action Review (AAR)",
+      "move": "Right after an effort, ask four plain questions: what was meant to happen, what did happen, why the gap, and what do we do next time.",
+      "asks": "What was the plan, what actually occurred, and which gap taught me the most?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-repeat-back",
+      "source": "US Navy nuclear propulsion program three-way communication (order, repeat-back, confirm)",
+      "move": "Make the receiver say the instruction back in their own words, so errors surface in the conversation instead of in the machine.",
+      "asks": "Where could a message be misheard and acted on, and what read-back would expose it?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-fail-safe-default",
+      "source": "Nuclear reactor fail-safe design: control rods held out by electromagnets so loss of power drops them in",
+      "move": "Arrange things so that the failure state is the safe state, and active effort is needed to stay dangerous rather than to stay safe.",
+      "asks": "If everything stops working, what happens, and can I make that the harmless outcome?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-apgar",
+      "source": "Virginia Apgar's Apgar score for newborns",
+      "move": "Compress a complex, urgent judgment into a few quick signs, each scored from zero to two, so anyone can assess in a minute and compare over time.",
+      "asks": "Which handful of signs, each scored on a coarse scale, would tell me how well this is doing?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-cant-miss",
+      "source": "Emergency medicine 'can't-miss diagnoses' differential practice",
+      "move": "Rank possibilities not by likelihood alone but by how bad it is to overlook them, and rule out the lethal ones first.",
+      "asks": "Which explanation or option is unlikely but ruinous if I ignore it, and how do I rule it out early?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-dose-escalation",
+      "source": "Phase I clinical trial dose escalation (the '3+3' design)",
+      "move": "Start well below the expected effective amount, step up in small increments on small groups, and stop climbing at the first sign of harm.",
+      "asks": "What is the smallest dose of this that could still teach me something, and what sign would stop me stepping up?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-buffer-zone",
+      "source": "UN Buffer Zone in Cyprus (the Green Line) between opposing forces",
+      "move": "When two parties can't be reconciled, put a neutral strip between them that nobody owns and that carries the contact.",
+      "asks": "What neutral space or mediating layer could sit between the two things that keep colliding?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-golden-hour",
+      "source": "R Adams Cowley's 'golden hour' in trauma care",
+      "move": "Find the window after which value falls off steeply, and organize everything to reach the right step within it, even at the cost of efficiency elsewhere.",
+      "asks": "Where does delay get dramatically more expensive, and what must happen before that point?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-v1-decision-speed",
+      "source": "Airline takeoff V1 decision speed",
+      "move": "Name the point of no return in advance, so that any trouble before it means abort and anything after it means go.",
+      "asks": "Where is my V1, and what do I do on each side of it?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-pilot-monitoring",
+      "source": "Airline split of Pilot Flying and Pilot Monitoring roles",
+      "move": "Put one person on doing and another on watching the doer and the instruments, and swap the roles on a schedule.",
+      "asks": "Who is doing, who is only watching, and when do they swap?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-alpine-style",
+      "source": "Alpine style versus siege style in Himalayan mountaineering (Messner and Habeler on Gasherbrum I)",
+      "move": "Trade the safety of heavy fixed support for speed and lightness, carrying only what you need and committing in one push.",
+      "asks": "What could I strip to a bare minimum to move fast, and what does that make me depend on?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-search-probability",
+      "source": "Land search and rescue probability-of-area planning",
+      "move": "Divide the possibility space into regions, estimate for each the chance the answer lies there and the effort to check, and search by chance per unit effort.",
+      "asks": "Where could the answer be, how likely is each place, and which is cheapest to check first?",
+      "kind": "domain"
+    },
+    {
+      "id": "ops-fram-drift",
+      "source": "Fridtjof Nansen's Fram expedition, built to be lifted by the Arctic pack ice drift",
+      "move": "Instead of fighting a powerful current, design the vessel so it is carried along by it.",
+      "asks": "What strong existing flow is working against me, and could I be built so it carries me instead?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-zwischenzug",
+      "source": "Chess: the zwischenzug (in-between move)",
+      "move": "Before making the expected reply in a sequence, insert a forcing move of your own that changes the position the reply would land in.",
+      "asks": "What could I do right now, out of sequence, that the other side must answer and that improves the situation before the obvious next step?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-hatakikomi",
+      "source": "Sumo: hatakikomi (slap-down)",
+      "move": "When the other force commits fully forward, step aside and let its own momentum finish the job.",
+      "asks": "Where is something pushing hard at me, and what happens if I stop resisting and just move out of its path?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-duckworth-lewis",
+      "source": "Cricket: Duckworth-Lewis-Stern method",
+      "move": "When two scarce resources both limit you, build an exchange rate between them so you can compare plans that spend them differently.",
+      "asks": "Which two things run out here, and how many units of one is a unit of the other worth?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-skate-spot",
+      "source": "Street skateboarding: finding a spot",
+      "move": "Look at an existing structure and ignore its intended use, asking only what surface, edge or gap it offers for your own purpose.",
+      "asks": "If I ignored what this thing is for, what is it physically good at?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-any-percent",
+      "source": "Speedrunning: Any% versus 100% categories",
+      "move": "Redefine the finish line as the minimum that triggers the end, then see how much of the 'required' path disappears.",
+      "asks": "What is the smallest set of things that actually triggers success, and what have I been treating as mandatory that is not?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-hide-where-looked",
+      "source": "Hide-and-seek: hiding where the seeker already searched",
+      "move": "Place yourself in the spot the searcher has just ruled out, since checked places are the least likely to be checked again.",
+      "asks": "Where has attention already been spent and cleared, and what could live there unnoticed?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-mie-pose",
+      "source": "Kabuki: the mie (frozen pose at a climax)",
+      "move": "At the peak moment, stop all motion and hold, so the audience can absorb what just mattered.",
+      "asks": "Which single moment deserves everything else to stop around it, and what happens if I hold there instead of rushing past?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-magic-force",
+      "source": "Stage magic: the force (a seemingly free choice)",
+      "move": "Shape the options so that whatever the person appears to freely choose lands on the one you prepared.",
+      "asks": "Which choice do I want made, and how could I arrange the offering so that the free choice always reaches it?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-clown-flop",
+      "source": "Clown training (Lecoq and Gaulier schools): 'the flop'",
+      "move": "Fail openly and with pleasure, because the audience's delight is in watching you survive the failure.",
+      "asks": "What if the visible stumble were the main event, and how would I design it so being caught out is enjoyable?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-sardines",
+      "source": "Children's game: Sardines (reverse hide-and-seek)",
+      "move": "Let each finder join the hiding place instead of ending the search, so the group converges on the answer.",
+      "asks": "When someone finds a piece of the answer, how can they join it so everyone ends up in one place?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-telephone",
+      "source": "Playground game: Telephone (Chinese whispers)",
+      "move": "Pass the idea through a chain of lossy copies and keep whatever survives and mutates.",
+      "asks": "What would this become after five careless retellings, and which accidental change is better than the original?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-rock-paper-scissors",
+      "source": "Rock-paper-scissors: non-transitive dominance",
+      "move": "Accept that no option wins everywhere, and choose by what beats the likeliest alternative rather than by what is strongest.",
+      "asks": "What is each option beaten by, and which one answers the thing most likely to be in play?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-total-football",
+      "source": "Football: Total Football (Ajax and Rinus Michels)",
+      "move": "Make roles fluid, so anyone can fill any position and the real unit being managed is the space.",
+      "asks": "What if the roles were interchangeable and the thing to protect was the shape of the whole, not each person's job?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-fencing-feint",
+      "source": "Fencing: the feint into a compound attack",
+      "move": "Make a false threat designed to draw one specific defensive reaction, then strike the opening that reaction creates.",
+      "asks": "What response do I want to provoke, and what does it leave unguarded?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-prophylaxis",
+      "source": "Chess: prophylaxis (Aron Nimzowitsch)",
+      "move": "Before pursuing your own plan, ask what the opponent most wants to do next and quietly prevent it.",
+      "asks": "What is the other side, or the problem itself, about to do, and how could I take that option away cheaply?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-tas",
+      "source": "Tool-assisted speedruns (TAS)",
+      "move": "Compute the theoretical best with unlimited retakes and no real-time pressure first, then work back toward what a human can reproduce.",
+      "asks": "If I could rehearse infinitely without penalty, what is the perfect version, and how much of it can I actually reach?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-wayang-screen",
+      "source": "Wayang kulit (Javanese shadow puppetry)",
+      "move": "Design the same performance to be seen from both sides of a screen, one seeing the shadow and the other the maker.",
+      "asks": "What if two audiences saw this from opposite sides, one seeing the result and one the mechanism, and what would each need?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-decroux-isolation",
+      "source": "Corporeal mime (Etienne Decroux): isolation",
+      "move": "Move one part alone while everything else stays perfectly still, so the single motion reads clearly.",
+      "asks": "If only one element changed and the rest froze, what would that change communicate?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-parkour-roll",
+      "source": "Parkour: the safety roll",
+      "move": "Instead of avoiding the fall, design how the fall is absorbed and converted into forward motion.",
+      "asks": "When this goes wrong, how can the force of the failure carry me onward rather than stop me?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-kuzushi",
+      "source": "Judo: kuzushi (breaking balance) before the throw (Jigoro Kano)",
+      "move": "Unbalance the opponent first so the throw needs almost no force.",
+      "asks": "What can I disturb first so that the main action becomes nearly effortless?",
+      "kind": "domain"
+    },
+    {
+      "id": "play-trading-fours",
+      "source": "Jazz: trading fours",
+      "move": "Alternate short turns, each answering the phrase just played, so the structure emerges from the dialogue.",
+      "asks": "What if we each only got four bars at a time and had to respond to what the other just did?",
+      "kind": "domain"
+    },
+    {
+      "id": "art-eno-seed-and-let-run",
+      "source": "Brian Eno, tape loops of unequal length in Music for Airports and his talk of 'gardening, not architecture'",
+      "move": "Instead of composing the outcome, design a small set of parts and a simple rule for how they combine, then let the system run and curate what emerges.",
+      "asks": "What few ingredients and one combining rule could I set going so the result surprises me, and what would I keep or prune?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-cage-chance-operations",
+      "source": "John Cage, composing with I Ching coin tosses (Music of Changes)",
+      "move": "Hand the choices you are most attached to over to a chance procedure, then commit to whatever it returns.",
+      "asks": "Which decision am I making out of habit or taste that a dice roll could make for me, and what would I build around the result?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-perec-write-without-the-letter",
+      "source": "Georges Perec, La Disparition (a novel with no letter 'e') and the Oulipo constraint practice",
+      "move": "Impose an arbitrary, severe constraint on yourself and let the effort to work around it force invention.",
+      "asks": "What one ordinary ingredient could I forbid myself, and what would I have to invent to cope without it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-basho-learn-from-the-pine",
+      "source": "Matsuo Basho, the advice recorded by his student Doho: 'learn of the pine from the pine'",
+      "move": "Go and attend to the actual thing itself until its own nature suggests the form, rather than imposing your preconceived idea on it.",
+      "asks": "What would this material, person or situation tell me if I stopped planning and simply watched it for a long while?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-zeami-see-as-audience",
+      "source": "Zeami Motokiyo, 'riken no ken' (seeing yourself as the audience sees you), from his Noh writings",
+      "move": "Step outside your own point of view and judge the work from the seat of the person receiving it, including the parts they see that you cannot.",
+      "asks": "What does this look like from the receiver's seat, including the back of my own head?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-sei-shonagon-list-by-feeling",
+      "source": "Sei Shonagon, the categorical lists of The Pillow Book (e.g. 'elegant things', 'things that make the heart beat faster')",
+      "move": "Organize observations by the feeling they produce rather than by their usual category, and build from the list.",
+      "asks": "If I sorted everything around this problem by how it makes someone feel, which unexpected items would sit together?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-hokusai-one-subject-many-situations",
+      "source": "Katsushika Hokusai, Thirty-Six Views of Mount Fuji",
+      "move": "Keep the subject fixed and vary the situation around it, making the same thing seen through many different lives, weathers and distances.",
+      "asks": "If the core of this stayed the same, what thirty-six different circumstances could I place it in, and which reveal something new?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-bausch-ask-questions-not-steps",
+      "source": "Pina Bausch, building Tanztheater pieces from questions posed to her dancers in rehearsal",
+      "move": "Instead of dictating the answer, ask many oblique questions to the people involved and assemble the work from what they offer back.",
+      "asks": "What questions could I ask the people who live with this problem whose answers I could never have invented myself?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-tharp-the-project-box",
+      "source": "Twyla Tharp, the cardboard box she starts for every new project (The Creative Habit)",
+      "move": "Begin by dropping everything that touches the project into one physical container, and refuse to start shaping until the box shows what it wants.",
+      "asks": "What would I put in a box for this, and what pattern would I notice once it is full?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-varda-gleaning",
+      "source": "Agnes Varda, The Gleaners and I and her 'cinecriture' (writing with the film itself)",
+      "move": "Build from what others have left behind or overlooked, treating found leftovers as the primary material rather than a compromise.",
+      "asks": "What is being discarded or ignored nearby that I could gather and make the heart of the thing?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-sembene-in-their-language",
+      "source": "Ousmane Sembene, making films in Wolof and other African languages as 'night school' for people his work was meant to reach",
+      "move": "Choose the form, language and venue of the work by the audience you most want to reach, not by the one that confers prestige.",
+      "asks": "Who is this really for, and what would it look like if made in their language, at their place, on their terms?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-calvino-look-in-the-mirror",
+      "source": "Italo Calvino, Six Memos for the Next Millennium, on Perseus defeating Medusa by looking only at her reflection and on 'lightness'",
+      "move": "When something is too heavy or dangerous to face directly, look at it indirectly through a reflection, and take weight out rather than adding more.",
+      "asks": "What is the unbearably heavy part here, and how could I approach it sideways or make it lighter?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-borges-review-the-imaginary",
+      "source": "Jorge Luis Borges, his invented reviews of nonexistent books (The Approach to Al-Mu'tasim, An Examination of the Work of Herbert Quain)",
+      "move": "Write about the finished thing as if it already existed, summarizing and critiquing it, and let the review tell you what it contains.",
+      "asks": "If this were already finished and I were reviewing it, what would the review praise and what would it say is missing?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-stanislavski-magic-if",
+      "source": "Konstantin Stanislavski, the 'magic if' in An Actor Prepares",
+      "move": "Ask what you would genuinely do if you were in the given circumstances, and let behavior follow from the situation rather than from a general idea.",
+      "asks": "If I were exactly this person in exactly this situation, with their pressures and tools, what would I do next?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-boal-spect-actor-stops-the-play",
+      "source": "Augusto Boal, Forum Theatre in Theatre of the Oppressed",
+      "move": "Show the situation as a rehearsal, let anyone in the audience stop it and step in to try a different action, and learn from what they attempt.",
+      "asks": "Where could I let the people affected step into the middle of this and try their own move instead of watching mine?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-shankar-alap-before-rhythm",
+      "source": "The Hindustani raga tradition, which opens with a slow unmetered alap before the rhythm enters, as in the playing of Ravi Shankar",
+      "move": "Spend the opening of the work exploring the mood and materials freely with no pulse or deadline, and only then introduce rhythm and structure.",
+      "asks": "What would an unmetered opening look like here, where I explore without commitment before any structure starts?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-el-anatsui-let-the-owner-decide-the-form",
+      "source": "El Anatsui, his bottle-cap and wire hangings which have no fixed shape and are arranged differently by each installer",
+      "move": "Make a flexible assembly of humble repeated units and let whoever receives it decide the final form.",
+      "asks": "What if I delivered the pieces and a few ways to join them, and let each person arrange the whole?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-bo-bardi-keep-the-ruin",
+      "source": "Lina Bo Bardi, converting an old drum factory into the SESC Pompeia leisure center and her 'poor architecture' stance",
+      "move": "Keep what already stands and is loved, add the minimum new thing beside it, and let what is plain carry the character.",
+      "asks": "What is already here that is worth keeping intact, and what is the smallest addition that brings it to life?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-horace-start-in-the-middle",
+      "source": "Horace, Ars Poetica, advising the poet to plunge 'in medias res' and not begin with the egg",
+      "move": "Open at the moment where things are already happening and let the backstory arrive only when it is needed.",
+      "asks": "What is the earliest part I assume I must include that could be skipped, so we start where it gets interesting?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-wen-tong-bamboo-in-the-chest",
+      "source": "Wen Tong (praised by Su Shi), the Song-dynasty idea of having 'complete bamboo in the chest' before painting the first stroke",
+      "move": "Study and absorb the subject until you can see the whole finished form inwardly, then execute in one fluent pass.",
+      "asks": "Can I see the whole thing clearly in my head, and if not, what do I still need to look at before the first stroke?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-leonardo-stains-on-the-wall",
+      "source": "Leonardo da Vinci, Treatise on Painting, on finding landscapes and battles in stained walls and mixed stones",
+      "move": "Stare at random mess and let your mind pull shapes out of it, then develop the ones that appear.",
+      "asks": "If I looked at a pile of random marks, scraps or noise related to this, what forms would I start to see?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-hoch-cut-up-and-recombine",
+      "source": "Hannah Hoch, Dada photomontages cut from magazines and mass media (Cut with the Kitchen Knife)",
+      "move": "Cut existing finished pieces apart and reassemble the fragments into something that comments on where they came from.",
+      "asks": "Which ready-made things could I cut up and recombine, and what new meaning appears in the seams?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-butler-extrapolate-the-trend",
+      "source": "Octavia E. Butler, Parable of the Sower, built by extending present trends forward and her 'positive obsession' notes",
+      "move": "Take a trend already happening, follow it faithfully several decades forward, and design for the world it produces.",
+      "asks": "If the current trend around this simply continued for thirty years, what would be normal then, and what would people need?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-le-guin-carrier-bag",
+      "source": "Ursula K. Le Guin, 'The Carrier Bag Theory of Fiction'",
+      "move": "Replace the story of the spear-hunter's conflict with the story of the bag: gather, hold and relate many things in a container.",
+      "asks": "What if this were designed as a bag that holds many small things together rather than a single heroic thrust?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-kusama-repeat-until-it-dissolves",
+      "source": "Yayoi Kusama, her Infinity Nets and polka-dot Infinity Mirror Rooms, obsessive repetition of one motif",
+      "move": "Pick one small unit and repeat it past the point of reason until the repetition becomes the subject and the boundaries dissolve.",
+      "asks": "What single element could I repeat a thousand times, and what appears when quantity takes over?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-kere-build-with-the-village",
+      "source": "Diebedo Francis Kere, the Gando Primary School in Burkina Faso built from local clay bricks by the villagers themselves",
+      "move": "Design the building method around the materials and labor of the community, so that making the thing builds the people who will use it.",
+      "asks": "What material and skills does the community already have, and how could building it together be part of the design?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-ukeles-maintenance-is-the-work",
+      "source": "Mierle Laderman Ukeles, 'Manifesto for Maintenance Art 1969!' and her work shaking hands with sanitation workers",
+      "move": "Treat upkeep, repetition and the unglamorous tasks that keep things running as the main creative subject instead of an afterthought.",
+      "asks": "What would this look like if the maintenance and daily upkeep were the point and the invention were secondary?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-miyazaki-ma-the-empty-moment",
+      "source": "Hayao Miyazaki, discussing 'ma', the deliberate pauses in action, in conversation with Takeshi Kitano",
+      "move": "Put deliberate empty beats between the busy parts, because the quiet gives the busy parts their meaning.",
+      "asks": "Where could I insert a pause with nothing happening, and what would the surrounding action gain?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-kiarostami-leave-it-half-made",
+      "source": "Abbas Kiarostami, his statement that he favors 'half-made films' that the audience completes (Close-Up, Taste of Cherry)",
+      "move": "Leave a deliberate gap in the work so the person experiencing it has to complete it with their own mind.",
+      "asks": "What part could I leave unfinished on purpose so that the user finishes it and owns it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-jacob-lawrence-one-color-all-panels",
+      "source": "Jacob Lawrence, painting the 60 panels of The Migration Series together, one color at a time across all panels",
+      "move": "Work on every piece of a series at the same time and advance one variable across all of them before moving to the next, so the whole stays coherent.",
+      "asks": "What one variable could I advance across every part at once so the whole stays unified as it develops?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-ellington-write-for-the-voice",
+      "source": "Duke Ellington and Billy Strayhorn, writing parts for the particular sound of individual band members like Johnny Hodges and Cootie Williams",
+      "move": "Compose for the specific strengths and quirks of the actual people who will carry it out, not for generic roles.",
+      "asks": "Who are the actual people or tools involved, and what idiosyncratic gift of theirs could the design be written around?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-part-tintinnabuli-one-rule",
+      "source": "Arvo Part, his tintinnabuli style, a strict two-voice system devised after years of silence and study of plainchant",
+      "move": "Strip the work down to one simple, rigorously applied rule, and let a plain beauty come from following it exactly.",
+      "asks": "If I could keep only one rule and apply it with complete strictness, what would it be and what would remain?",
+      "kind": "thinker"
+    },
+    {
+      "id": "art-bharata-design-for-one-rasa",
+      "source": "Bharata Muni, the rasa theory of the Natyashastra, in which a work is built to evoke one dominant flavor of feeling",
+      "move": "Choose the single dominant emotion the audience should savor and let every element be selected to deepen it.",
+      "asks": "What one feeling should the person be left with, and which parts do not serve it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-zhuangzi-cook-ding",
+      "source": "Zhuangzi, the story of Cook Ding carving an ox (Zhuangzi ch. 3)",
+      "move": "Stop cutting where it is solid, and feel for the natural gaps so the blade passes through spaces that are already there.",
+      "asks": "Where are the natural joints in this problem where almost no force is needed?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-laozi-empty-hub",
+      "source": "Laozi, the wheel hub, clay pot and room windows (Daodejing ch. 11)",
+      "move": "Treat the empty space as the thing you are designing, because the pot, wheel or room is useful only through what is not there.",
+      "asks": "What emptiness must I deliberately leave so that this becomes usable?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-confucius-rectify-names",
+      "source": "Confucius, the rectification of names (Analects 13.3)",
+      "move": "Check whether each thing is called what it truly does, and fix the name or the thing until they agree.",
+      "asks": "Does each part here actually do what its name claims, and what would it be called if named honestly?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-wang-yangming-knowing-acting",
+      "source": "Wang Yangming, the unity of knowing and acting (Instructions for Practical Living)",
+      "move": "Treat knowledge not yet acted on as not yet really known, and let the doing be the test of the understanding.",
+      "asks": "What is the smallest real action that would show me what I actually know?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-nagarjuna-tetralemma",
+      "source": "Nagarjuna, the catuskoti or four-cornered negation (Mulamadhyamakakarika)",
+      "move": "Refuse to stop at 'is' or 'is not', and examine 'both' and 'neither' before accepting the framing.",
+      "asks": "What answer sits outside both sides of the either/or I am stuck in?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-dogen-tenzo-cook",
+      "source": "Eihei Dogen, Instructions for the Cook (Tenzo Kyokun)",
+      "move": "Handle the humblest ingredient with the same full care as the finest, and make a meal from whatever the kitchen actually has.",
+      "asks": "What would make the plainest material I have the centre of the whole thing?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-buddha-poisoned-arrow",
+      "source": "The Buddha, the poisoned arrow parable (Culamalunkya Sutta, Majjhima Nikaya 63)",
+      "move": "When wounded, pull the arrow out first and defer the questions about who shot it and from where.",
+      "asks": "Which interesting question can I park so that I deal with the thing causing harm right now?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-jain-anekantavada",
+      "source": "Jain anekantavada and syadvada, the many-sidedness of truth, later often illustrated by the blind men and the elephant",
+      "move": "Qualify every claim with 'from this standpoint' and list the standpoints that make each partial truth hold.",
+      "asks": "From which viewpoint is each rival claim true, and what whole do they sketch together?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-rabia-fire-and-water",
+      "source": "Rabia al-Adawiyya, as told in Attar's Sufi hagiography: the water and torch to put out hell and burn paradise",
+      "move": "Remove both the reward and the punishment and see what is still worth doing for its own sake.",
+      "asks": "If every payoff and penalty vanished, what part would people still love?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-ibn-sina-floating-man",
+      "source": "Ibn Sina (Avicenna), the Floating Man thought experiment (Kitab al-Shifa)",
+      "move": "Strip away every outside input and sense, then see what is still there that you cannot deny.",
+      "asks": "With every added feature and context removed, what remains that is essential?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-al-ghazali-trial-by-living",
+      "source": "Al-Ghazali, The Deliverance from Error (al-Munqidh min al-Dalal)",
+      "move": "Study each rival school thoroughly, then live inside the most promising one before judging it.",
+      "asks": "Which competing approach have I only read about and not actually tried from the inside?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-weil-attention",
+      "source": "Simone Weil, attention as the rarest form of generosity (Waiting for God; letter to Joe Bousquet)",
+      "move": "Suspend the urge to solve, hold the thing in full attention without effort, and let its true shape come to you.",
+      "asks": "What do I notice if I look at this long and silently before trying to fix anything?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-arendt-without-banister",
+      "source": "Hannah Arendt, thinking without a banister (Denkgelander, interviews and Men in Dark Times)",
+      "move": "Put aside the received frameworks and categories, and think from the particular events themselves.",
+      "asks": "Which inherited framework am I leaning on, and what do I see if I let go of it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-anscombe-under-a-description",
+      "source": "G. E. M. Anscombe, actions are intentional under a description (Intention, 1957)",
+      "move": "Redescribe the same act in several ways, because what it is, and what it is for, depends on the description chosen.",
+      "asks": "Under what other description is this same activity something quite different?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-aristotle-four-causes",
+      "source": "Aristotle, the four causes (Physics II.3)",
+      "move": "Explain a thing four ways: what it is made of, what form it takes, what brings it about, and what it is for.",
+      "asks": "Which of material, form, maker or purpose have I left unexamined?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-marcus-view-from-above",
+      "source": "Marcus Aurelius, the view from above (Meditations, books 7 and 9)",
+      "move": "Lift your viewpoint high over the scene, over crowds and centuries, and see the matter at its true scale.",
+      "asks": "How does this look from far above, across a long span of time and many people?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-wittgenstein-look-dont-think",
+      "source": "Ludwig Wittgenstein, family resemblances and 'don't think, but look' (Philosophical Investigations section 66)",
+      "move": "Instead of defining a category, lay out many real instances and note the overlapping similarities that actually connect them.",
+      "asks": "Looking at real examples, what do they truly share, and is there no single common essence?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-rawls-veil",
+      "source": "John Rawls, the veil of ignorance (A Theory of Justice)",
+      "move": "Design the arrangement without knowing which position within it you will occupy.",
+      "asks": "If I did not know who I would turn out to be here, what would I build?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-nietzsche-eternal-recurrence",
+      "source": "Friedrich Nietzsche, the eternal recurrence thought experiment (The Gay Science, section 341)",
+      "move": "Imagine living this choice again, unchanged, innumerable times, and keep only what you would affirm.",
+      "asks": "Would I choose this again, endlessly, exactly as it is?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-midgley-plumbing",
+      "source": "Mary Midgley, philosophy as plumbing (Utopias, Dolphins and Computers)",
+      "move": "Treat a persistent trouble as a leak that points to a hidden pipe, and trace it to the buried assumption rather than mopping the symptom.",
+      "asks": "Where is the hidden pipe that this leak is coming from?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-wiredu-conceptual-decolonization",
+      "source": "Kwasi Wiredu, conceptual decolonization (Cultural Universals and Particulars)",
+      "move": "Translate a key concept into another language and watch which hidden assumptions fail to carry across.",
+      "asks": "Which word am I using that smuggles in an assumption, and what breaks when I say it in another tongue?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-zera-yacob-cave-reasoning",
+      "source": "The Hatata inquiry attributed to Zera Yacob, said to be written after retreating to a cave (Ethiopia, 1667; its authorship is debated)",
+      "move": "Withdraw from authority and examine each received teaching using only reason and the evidence of creation.",
+      "asks": "Which inherited rule still stands once I examine it alone, with only reason as my guide?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-anzaldua-borderlands",
+      "source": "Gloria Anzaldua, la frontera and the mestiza consciousness (Borderlands/La Frontera)",
+      "move": "Live in the border between two worlds and build from the tolerance for contradiction that crossing demands.",
+      "asks": "What new thing can only exist where these two contrasting worlds meet?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-kimmerer-honorable-harvest",
+      "source": "Robin Wall Kimmerer, the Honorable Harvest, Potawatomi teachings (Braiding Sweetgrass)",
+      "move": "Take only what is given, never the first or the last, never more than half, and return something in kind.",
+      "asks": "What is the least I need to take here, and what do I give back?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-deloria-place-over-time",
+      "source": "Vine Deloria Jr., place over time in American Indian thought (God Is Red)",
+      "move": "Organise understanding around particular places and what happened there, instead of around a timeline of progress.",
+      "asks": "What if this were arranged around a specific place and its stories rather than around a sequence?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-julian-hazelnut",
+      "source": "Julian of Norwich, the hazelnut vision (Revelations of Divine Love)",
+      "move": "Hold the whole of the matter as something small enough to cup in the palm, and find what holds it together.",
+      "asks": "If the entire thing were a hazelnut in my hand, what would hold it together?",
+      "kind": "thinker"
+    },
+    {
+      "id": "phil-thich-nhat-hanh-interbeing",
+      "source": "Thich Nhat Hanh, interbeing and the cloud in the sheet of paper (The Heart of Understanding)",
+      "move": "Look into the thing until you find everything it depends on that is not itself.",
+      "asks": "What non-obvious things, people and conditions are inside this that I normally don't count?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-archimedes-method",
+      "source": "Archimedes, The Method (balancing shapes on an imagined lever to discover results before proving them)",
+      "move": "Find the answer first by a loose physical analogy you would never publish, then worry about rigor afterwards.",
+      "asks": "What crude, hands-on stand-in could show me the answer now, before I make it defensible?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-eratosthenes-two-shadows",
+      "source": "Eratosthenes measuring Earth's circumference from shadow angles at Syene and Alexandria",
+      "move": "Take one cheap measurement from two separated places and let simple geometry infer the thing you cannot reach.",
+      "asks": "Which two vantage points, each easy to read, would let me deduce the unreachable quantity?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-liu-hui-polygons",
+      "source": "Liu Hui's commentary on the Nine Chapters (circle area by ever-finer polygons)",
+      "move": "Approximate the curved, messy whole by many straight simple pieces, and keep refining until the error is bounded and small enough.",
+      "asks": "What simple pieces, repeated finely enough, would stand in for this complicated shape?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-ibn-al-haytham-try-to-break",
+      "source": "Ibn al-Haytham, Book of Optics (controlled experiments with the camera obscura)",
+      "move": "Turn the favored explanation into a setup where nature can say no, and trust only what survives repeated trials.",
+      "asks": "What arrangement would visibly fail if my favorite idea were wrong?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-al-khwarizmi-balance",
+      "source": "Al-Khwarizmi, Al-Jabr (restoring and balancing equations)",
+      "move": "Apply the same operation to both sides until the unknown stands alone in a standard form with a known recipe.",
+      "asks": "What can I add or remove on both sides of this problem until only the unknown is left?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-shen-kuo-nightly-log",
+      "source": "Shen Kuo, Dream Pool Essays (repeated nightly sightings of the pole star, which showed it is not exactly at the celestial pole)",
+      "move": "Record the same observation at regular intervals long enough to learn that the reference you treated as fixed is not quite where you assumed.",
+      "asks": "What am I treating as fixed that a long, regular log would show is moving?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-mendel-countable-traits",
+      "source": "Gregor Mendel's pea-plant crosses (seven sharp binary traits, thousands of counted offspring)",
+      "move": "Choose variables that come in clean either/or forms and count a large number of cases so a hidden ratio shows itself.",
+      "asks": "Which crisp, countable feature could I tally over many cases to reveal the pattern under the mess?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-semmelweis-two-wards",
+      "source": "Ignaz Semmelweis comparing the two Vienna maternity clinics' death rates",
+      "move": "Set side by side two near-identical settings with different outcomes and list every difference until one survives.",
+      "asks": "Where does a near-twin of this situation turn out differently, and what actually differs between them?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-nightingale-coxcomb",
+      "source": "Florence Nightingale's coxcomb charts of Crimean War mortality",
+      "move": "Redraw the data so the person with power over the decision cannot look at it without seeing the cause.",
+      "asks": "How could I draw the evidence so the decision-maker feels the answer at a glance?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-lovelace-poetical-science",
+      "source": "Ada Lovelace, Notes on the Analytical Engine (suggesting it could compose music)",
+      "move": "Describe what the machine does in general terms, stripped of its first use, then ask what else those operations could act on.",
+      "asks": "If I describe my tool's basic operations without naming its original subject, what new subjects can it work on?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-noether-invariance",
+      "source": "Emmy Noether's theorem linking symmetries to conservation laws",
+      "move": "Ask what you can change without changing the result, because whatever stays constant under a change is the thing you can rely on.",
+      "asks": "Which transformations leave this unchanged, and what does that tell me must be preserved?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-curie-follow-the-signal",
+      "source": "Marie and Pierre Curie isolating radium and polonium from pitchblende by tracking radioactivity",
+      "move": "Pick one measurable trace and follow it through each successive separation, always keeping the fraction that carries the most signal.",
+      "asks": "What single measurable signal can I track while splitting this into smaller parts?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-bose-magnify-the-faint",
+      "source": "Jagadish Chandra Bose's crescograph, magnifying plant movements about ten thousand times",
+      "move": "When the response you care about is too faint to perceive, invent an instrument that amplifies it until it becomes undeniable.",
+      "asks": "What device could magnify the tiny effect until I can watch it directly?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-mirzakhani-big-paper",
+      "source": "Maryam Mirzakhani's habit of drawing on huge sheets of paper while working on hyperbolic surfaces",
+      "move": "Spread the problem across a large surface and draw it, accepting being lost for a long time until a path appears.",
+      "asks": "How would the problem look if I drew it huge and wandered around inside the picture?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-katherine-johnson-check-the-machine",
+      "source": "Katherine Johnson hand-verifying NASA's electronic computer trajectories before John Glenn's flight",
+      "move": "At the moment of highest stakes, independently recompute the automated answer by a different route before trusting it.",
+      "asks": "Where would a second, independent calculation of the automatic result be worth the effort?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-hopper-nanosecond-wire",
+      "source": "Grace Hopper handing out lengths of wire to show how far light travels in a nanosecond",
+      "move": "Hand people a physical object that makes an abstract quantity something they can hold.",
+      "asks": "What object could I put in someone's hand to make this abstraction tangible?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-carson-follow-the-chain",
+      "source": "Rachel Carson, Silent Spring (tracing pesticides link by link through soil, water and food chains)",
+      "move": "Follow a substance or decision through every link of the chain it enters, to see who ends up paying for it.",
+      "asks": "If I follow this through each link it touches, where does it surface that I did not expect?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-rubin-the-edges",
+      "source": "Vera Rubin's galaxy rotation curves, measured out to the faint outer regions",
+      "move": "Measure the edges everyone ignores, since the center behaves as expected and the edge exposes the missing piece.",
+      "asks": "What happens at the far edge of this system that nobody has bothered to measure?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-elion-selective-difference",
+      "source": "Gertrude Elion's rational drug design at Burroughs Wellcome (exploiting biochemical differences between diseased and healthy cells)",
+      "move": "Study how the target differs from everything you want to spare, then build the intervention to exploit exactly that difference.",
+      "asks": "What is chemically or structurally different about the thing I want to hit versus the things I must not harm?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-ball-change-the-form",
+      "source": "Alice Ball's injectable chaulmoogra oil esters for leprosy treatment",
+      "move": "Keep the ingredient that works and change its form until it can be delivered the way people actually need it.",
+      "asks": "What already works but is stuck in a form nobody can use, and how could I reshape it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-carver-use-the-surplus",
+      "source": "George Washington Carver's Tuskegee bulletins on crop rotation and on uses for peanuts and sweet potatoes",
+      "move": "Start from what poor local people already grow or throw away, and invent uses until the surplus becomes the resource.",
+      "asks": "What is abundant, cheap and unwanted around here, and what could it become?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-blackburn-exaggerated-organism",
+      "source": "Elizabeth Blackburn studying telomeres in the pond ciliate Tetrahymena",
+      "move": "Find a strange organism or case where the feature you want to understand is so exaggerated it is easy to see.",
+      "asks": "Where does this phenomenon appear in an extreme, overgrown form that makes it easy to study?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-tu-youyou-reread-the-old-recipe",
+      "source": "Tu Youyou rereading Ge Hong's fourth-century handbook while isolating artemisinin",
+      "move": "Reread an old recipe literally, because the modern method may have broken a detail the old one quietly specified.",
+      "asks": "What does the oldest instruction for this say that the current method silently ignores?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-zewail-strobe-the-fast",
+      "source": "Ahmed Zewail's femtosecond laser pulses to photograph chemical reactions mid-step",
+      "move": "To understand something too fast to follow, take a rapid series of snapshots shorter than the event itself.",
+      "asks": "How could I freeze the middle of the process by sampling it faster than it changes?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-raman-childs-question",
+      "source": "C. V. Raman asking why the sea is blue on a ship voyage, with a pocket spectroscope",
+      "move": "Take an everyday 'why' that adults stopped asking and investigate it with whatever tools are in your pocket.",
+      "asks": "What ordinary thing here has an answer nobody checked, and what could I check it with right now?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-yamanaka-remove-one-at-a-time",
+      "source": "Shinya Yamanaka's reduction of 24 candidate factors to four for induced pluripotent stem cells",
+      "move": "Start with every plausible ingredient together, then remove them one at a time to see which are truly required.",
+      "asks": "If I throw in everything first and subtract one piece at a time, which pieces turn out essential?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-turing-imitation-game",
+      "source": "Alan Turing, 'Computing Machinery and Intelligence' (the imitation game)",
+      "move": "Replace a question that cannot be settled with a game whose outcome anyone can observe.",
+      "asks": "What observable test could stand in for this argument about definitions?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-bell-burnell-the-scruff",
+      "source": "Jocelyn Bell Burnell noticing 'a bit of scruff' on miles of chart recorder paper, discovering pulsars",
+      "move": "Treat the small recurring oddity that everyone filters out as the main finding, and go back to it.",
+      "asks": "What small repeating anomaly am I dismissing as noise?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-kariko-disguise-the-trigger",
+      "source": "Katalin Karikó and Drew Weissman's modified nucleosides for mRNA that evades immune alarm",
+      "move": "When a promising idea is rejected, find the one signal that sets off the rejection and disguise just that part.",
+      "asks": "What exactly triggers the rejection, and can I alter only that trigger?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-hodgkin-many-views",
+      "source": "Dorothy Hodgkin's X-ray crystallography structures of penicillin, vitamin B12 and insulin",
+      "move": "Gather many partial flat views of the same object from different angles, then patiently assemble them into its true shape.",
+      "asks": "Which different angles of view, each incomplete, could be combined into the full structure?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-anning-read-the-leavings",
+      "source": "Mary Anning interpreting coprolites and bezoar stones from the Lyme Regis cliffs",
+      "move": "Read what a creature leaves behind, such as waste, traces and stomach contents, to reconstruct how it lived.",
+      "asks": "What does this thing leave behind that shows how it behaves when no one is watching?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-ikeda-name-the-fifth",
+      "source": "Kikunae Ikeda isolating glutamate from kombu broth and naming umami",
+      "move": "When an experience fits none of your existing categories, isolate its cause and give it its own name.",
+      "asks": "What do people keep experiencing that my categories cannot describe, and what is the pure cause?",
+      "kind": "thinker"
+    },
+    {
+      "id": "sci-theiler-pass-it-through-another-host",
+      "source": "Max Theiler's yellow fever 17D vaccine, weakened by serial passage through mouse and chick tissue",
+      "move": "Make a dangerous thing safe by repeatedly passing it through a different environment until it no longer thrives in the original.",
+      "asks": "What alien environment could I grow this in, over many generations, until it loses its harm but keeps its use?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-sun-tzu-shape-terrain",
+      "source": "Sun Tzu, The Art of War: win by shaping the ground before the battle",
+      "move": "Spend your effort changing the terrain, supplies and expectations so the outcome is nearly decided before any direct contest begins.",
+      "asks": "What could I change about the situation beforehand so the hard part becomes easy or unnecessary?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-ibn-khaldun-asabiyyah",
+      "source": "Ibn Khaldun, Muqaddimah: group cohesion (asabiyyah) and the rise-and-decay cycle of dynasties",
+      "move": "Treat anything people build as having a life cycle driven by how tightly its members are bound, and design for the third generation, not the founders.",
+      "asks": "What binds the people involved here, and what happens to that bond once the originals are gone?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-ostrom-existing-rules",
+      "source": "Elinor Ostrom, Governing the Commons: studying how real communities already manage shared resources",
+      "move": "Before inventing a rule or system, study how the people who actually share the scarce thing already govern it, and build on what works.",
+      "asks": "Who already lives with this problem, and what informal arrangements have they invented that survive?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-jacobs-eyes-on-street",
+      "source": "Jane Jacobs, The Death and Life of Great American Cities: 'eyes on the street'",
+      "move": "Arrange things so ordinary, self-interested daily use produces the watchfulness and care that would otherwise need a dedicated guard.",
+      "asks": "How can the everyday users of this thing generate its upkeep and safety just by being there?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-lamarr-frequency-hop",
+      "source": "Hedy Lamarr and George Antheil, frequency-hopping patent for torpedo guidance",
+      "move": "Defend or protect a signal by constantly switching channels on a pattern that only the two cooperating ends share.",
+      "asks": "What if this kept changing in step with a partner, on a pattern an outsider can't predict?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-maathai-pay-for-survival",
+      "source": "Wangari Maathai, Green Belt Movement: paying women per surviving seedling",
+      "move": "Reward the lasting result rather than the act, and put the work and the payoff in the hands of ordinary local people.",
+      "asks": "What would I pay for if I only rewarded what is still alive a year from now?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-bhatt-organize-invisible",
+      "source": "Ela Bhatt, founding SEWA, the union and bank for self-employed women",
+      "move": "Gather the people the system treats as invisible into a collective and give them their own institution, so they set the terms.",
+      "asks": "Who is working here without a seat at the table, and what organization of their own would change their bargaining power?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-freire-generative-words",
+      "source": "Paulo Freire, Pedagogy of the Oppressed and his literacy method of 'generative words'",
+      "move": "Build the lesson out of the learner's own charged vocabulary and daily world, so learning the thing is also naming their reality.",
+      "asks": "Which words or objects already carry weight for this person, and can the whole structure grow from them?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-alexander-pattern-language",
+      "source": "Christopher Alexander, A Pattern Language",
+      "move": "Describe a solution as a named pattern: the competing forces, and the arrangement that resolves them, then compose a whole from small patterns.",
+      "asks": "What forces are pulling against each other here, and which proven arrangement settles them?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-altshuller-contradiction",
+      "source": "Genrich Altshuller, TRIZ: resolving technical contradictions by separation",
+      "move": "State the problem as two demands that fight each other, then refuse the compromise and separate them in time, space or scale.",
+      "asks": "What two things do I want that contradict, and could they hold at different moments, places or sizes?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-ohno-andon-cord",
+      "source": "Taiichi Ohno, Toyota Production System: the andon cord that lets anyone stop the line",
+      "move": "Make every defect halt work at the moment it appears so it is fixed at its source while the cause is still visible.",
+      "asks": "What would it look like if any problem stopped everything until its cause was understood?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-al-jazari-flow-driven",
+      "source": "Al-Jazari, Book of Knowledge of Ingenious Mechanical Devices: water-driven automata and clocks",
+      "move": "Replace a repeated human action with a mechanism run by a flow already available nearby, with a cam or float deciding each step.",
+      "asks": "What is already flowing past this problem that could do the repeating work for free?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-sen-capabilities",
+      "source": "Amartya Sen, the capability approach in Development as Freedom",
+      "move": "Judge a solution by what people become able to do and be with it, not by the resources or features it hands them.",
+      "asks": "After this exists, what can a person do that they could not do before?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-raworth-doughnut",
+      "source": "Kate Raworth, Doughnut Economics: a social foundation and an ecological ceiling",
+      "move": "Define the floor that must be met and the ceiling that must not be crossed, then search for designs inside the ring between them.",
+      "asks": "What is the minimum this must deliver, what is the limit it must not exceed, and what lives in between?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-simon-satisficing",
+      "source": "Herbert Simon, bounded rationality and satisficing",
+      "move": "Write down in advance what counts as good enough, then take the first option that clears it instead of hunting for the best.",
+      "asks": "What is my stated aspiration level, and which option already meets it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-schelling-focal-point",
+      "source": "Thomas Schelling, The Strategy of Conflict: focal points for coordination without communication",
+      "move": "When parties must line up without talking, choose the option that stands out so obviously that each expects the other to choose it.",
+      "asks": "What choice would two people converge on unprompted, and can I make mine that one?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-duflo-small-experiments",
+      "source": "Esther Duflo, randomized field trials on poverty (Poor Economics)",
+      "move": "Break the grand unanswerable question into small interventions and compare each against an untouched control.",
+      "asks": "What is the smallest version of this I could try on some and not others to see what actually changes?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-fei-concentric-ripples",
+      "source": "Fei Xiaotong, From the Soil: the 'differential mode of association' in rural China",
+      "move": "Map relationships as ripples spreading from a person outward, with obligations shrinking with distance, rather than as fixed groups.",
+      "asks": "Who sits in each ring around this person, and what is owed or shared at each distance?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-hill-personal-housing",
+      "source": "Octavia Hill, Victorian housing reform through personal rent collection and tenant visits",
+      "move": "Pair any physical improvement with a continuing personal relationship, so care is carried by someone who knows the occupants.",
+      "asks": "Who will know the people here by name and keep showing up after the building work is done?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-alinsky-own-experience",
+      "source": "Saul Alinsky, Rules for Radicals: tactics inside your people's experience, outside the opponent's",
+      "move": "Choose actions your own side already knows how to do confidently that the other side has no playbook for.",
+      "asks": "What can my people do well that the obstacle has never prepared for?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-gandhi-salt-march",
+      "source": "Mohandas Gandhi, the 1930 Salt March",
+      "move": "Boil a vast principle down to one tiny everyday act that anyone can join and that cannot be ignored.",
+      "asks": "What is the smallest ordinary act that carries the whole idea and invites everyone to take part?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-follett-integration",
+      "source": "Mary Parker Follett, Creative Experience (1924): integrative conflict resolution, as in opening a window in the next room",
+      "move": "Instead of splitting the difference, uncover what each side actually needs underneath its demand, so one solution serves both fully.",
+      "asks": "What does each party really want beneath what they asked for, and is there a way to give all of it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-franklin-holistic-prescriptive",
+      "source": "Ursula Franklin, The Real World of Technology: holistic versus prescriptive technologies",
+      "move": "Ask whether a design leaves the maker in control of the whole job, or splits the job into steps dictated by someone else.",
+      "asks": "Does this give the person the whole craft, or does it only let them follow instructions?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-meadows-leverage-points",
+      "source": "Donella Meadows, 'Leverage Points: Places to Intervene in a System'",
+      "move": "Rank possible interventions by how deeply they act, from tweaking numbers up through information flows and rules to the goal itself.",
+      "asks": "Am I adjusting a number, or changing who knows what, what the rules are, or what the goal is?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-beer-viable-system",
+      "source": "Stafford Beer, the Viable System Model and Project Cybersyn",
+      "move": "Let each level absorb all the variety it can handle itself and send upward only the signals it cannot absorb.",
+      "asks": "What can the lowest level decide alone, so the top only hears about what truly exceeds it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-mazzucato-mission",
+      "source": "Mariana Mazzucato, The Entrepreneurial State and mission-oriented innovation",
+      "move": "Set one concrete, ambitious mission and let many different unplanned projects across fields contribute toward it.",
+      "asks": "What single hard, specific goal could many unrelated efforts each take a piece of?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-ban-humble-material",
+      "source": "Shigeru Ban, paper-tube emergency shelters and the Cardboard Cathedral",
+      "move": "Pick a cheap, overlooked, locally available material and test it until it proves it can carry the load.",
+      "asks": "Which ordinary thing nobody respects could do this structural job if I tested it hard?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-mozi-model-duel",
+      "source": "Mozi, the siege debate with Gongshu Ban: settling a dispute with a model of attack and defense",
+      "move": "Resolve a disagreement by staging a miniature of both sides, one attacking and one defending, until a clear winner shows.",
+      "asks": "Can I build a small model of the contest and let each side play it out before committing?",
+      "kind": "thinker"
+    },
+    {
+      "id": "soc-khan-tube-structure",
+      "source": "Fazlur Rahman Khan, the tube structural system for skyscrapers",
+      "move": "Move the strength to the outer skin so the whole envelope works together, freeing the interior from carrying the load.",
+      "asks": "What if the outside did the structural work and the inside were left open?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-hamer-pig-bank",
+      "source": "Fannie Lou Hamer's Freedom Farm Cooperative 'pig bank' in Sunflower County, Mississippi (1969)",
+      "move": "Lend out a living asset that multiplies, and have each borrower repay with its offspring so the stock passes on to the next family.",
+      "asks": "What could I give that makes more of itself, so each person who receives it can pass some on?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-baker-group-centered",
+      "source": "Ella Baker's group-centered leadership at the founding of SNCC (Shaw University, 1960)",
+      "move": "Grow many local leaders who can act without you, instead of one strong figure everyone waits on.",
+      "asks": "If the central person vanished tomorrow, who could already carry this on, and how do I make more of them?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-morgan-all-stop-signal",
+      "source": "Garrett Morgan's three-position traffic signal patent (1923), with an all-directions stop between go phases",
+      "move": "Insert a brief state where everything halts between two conflicting flows, so the switch never catches anyone halfway across.",
+      "asks": "Where does this flip abruptly from one mode to another, and what pause between them would keep someone from getting caught?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-walker-agents",
+      "source": "Madam C. J. Walker training thousands of Black women as commissioned 'Walker agents' (1910s)",
+      "move": "Turn customers into trained sellers who earn from every sale, so your growth and their income rise together.",
+      "asks": "Who already uses this and could earn a living by teaching it to others?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-wells-their-own-records",
+      "source": "Ida B. Wells compiling lynching statistics from white newspapers' own reports in The Red Record (1895)",
+      "move": "Build the case only from the other side's own published records, so they cannot wave the evidence away as yours.",
+      "asks": "What does the opposing side's own data already show, if I read it closely?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-montgomery-carpool",
+      "source": "The Montgomery Improvement Association's volunteer car pool during the bus boycott (1955-56)",
+      "move": "Replace the service you are refusing with a volunteer network of pickup points, so the refusal can last as long as it needs to.",
+      "asks": "If everyone stopped using the current way tomorrow, what parallel network would keep them moving?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-kool-herc-break",
+      "source": "DJ Kool Herc's 'Merry-Go-Round', looping a record's drum break across two turntables at Bronx parties (1973)",
+      "move": "Find the few seconds people respond to most and extend them, looping that part instead of playing the whole.",
+      "asks": "Which small part makes people light up, and what if it were stretched into the main event?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-hurston-spyglass",
+      "source": "Zora Neale Hurston returning to Eatonville, Florida, to collect folklore with 'the spy-glass of Anthropology' (Mules and Men, 1935)",
+      "move": "Go back to the place you know from the inside and study it with an outsider's instruments, to see what familiarity hid.",
+      "asks": "What would I notice about my own home ground if I studied it like a stranger with a notebook?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-panthers-free-breakfast",
+      "source": "The Black Panther Party's Free Breakfast for Children Program, begun in Oakland (1969)",
+      "move": "Meet a daily need nobody else is meeting, in plain view and for free, so the service makes the argument for you.",
+      "asks": "What everyday need could I meet in public that would prove the point better than any speech?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-banneker-wooden-clock",
+      "source": "A story told of Benjamin Banneker, said to have carved a wooden clock after studying a borrowed pocket watch (c. 1753)",
+      "move": "Study one borrowed working example closely, then rebuild it larger from the materials you have.",
+      "asks": "What working example could I borrow, understand completely and rebuild from what is already here?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-bethune-pies",
+      "source": "Mary McLeod Bethune founding her Daytona school with $1.50 and five girls, funded by selling sweet potato pies (1904)",
+      "move": "Start the institution at the smallest size that works, and grow it on what it can earn from the first day.",
+      "asks": "What could I start this week with almost no money, paid for by something I can make and sell now?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-vaughan-learn-the-machine",
+      "source": "Dorothy Vaughan teaching herself and her West Area Computing staff FORTRAN as IBM machines arrived at NASA Langley (1961)",
+      "move": "When a new machine threatens your team's work, learn its language first and teach your people, so they become the ones who run it.",
+      "asks": "What tool is coming that could replace what we do, and how could we master it before anyone else?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-clark-citizenship-schools",
+      "source": "Septima Clark's Citizenship Schools on Johns Island, South Carolina, first taught by a local beautician rather than a certified teacher (1957)",
+      "move": "Recruit the teacher from the learners' own neighbors rather than from the credentialed experts.",
+      "asks": "Who among the people themselves could teach this, because they are trusted and nothing like an expert?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-maggie-walker-penny-bank",
+      "source": "Maggie Lena Walker's St. Luke Penny Savings Bank in Richmond, Virginia (1903)",
+      "move": "Lower the price of entry to the smallest coin, so people no one has served before can become regular members.",
+      "asks": "What is the smallest amount someone could start with, and what if that were enough to join?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-pullman-porters-carry",
+      "source": "Pullman porters carrying bundles of Robert Abbott's Chicago Defender into the South (1910s)",
+      "move": "Distribute through people who already travel the route for other reasons.",
+      "asks": "Who already goes where this needs to go, and could they carry it along?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-green-book",
+      "source": "Victor Hugo Green, a Harlem mail carrier, compiling The Negro Motorist Green Book from readers' reports (1936-66)",
+      "move": "Build the map of where it is safe to go from the reports of people who have already been there.",
+      "asks": "Who has already travelled this route and could tell newcomers where they will be welcome?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-rent-party",
+      "source": "Harlem rent parties of the 1920s, with a piano player and a small charge at the door",
+      "move": "Turn a bill you cannot pay into an event people are glad to pay to attend.",
+      "asks": "What cost hanging over this could become a gathering people would pay to join?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-douglass-bread-for-lessons",
+      "source": "Frederick Douglass trading bread to white boys in Baltimore for reading lessons (Narrative of the Life of Frederick Douglass, 1845)",
+      "move": "Trade what you have in plenty for small lessons from people who hold the knowledge you are denied.",
+      "asks": "Who already knows what I need, and what small thing of mine could I trade for a lesson?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-morrison-write-it",
+      "source": "Toni Morrison's advice to write the book you want to read, as reported from her 1981 speech to the Ohio Arts Council",
+      "move": "Make the thing you went looking for and could not find.",
+      "asks": "What have I searched for and never found, that I could make myself?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-sequoyah-syllabary",
+      "source": "Sequoyah, a Cherokee silversmith who could not read, creating the Cherokee syllabary (1821)",
+      "move": "Map the system one-to-one onto the units people already hear and say, so it can be learned in days.",
+      "asks": "What units do people already use without thinking, and could the whole system be built from exactly those?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-navajo-code",
+      "source": "The Navajo Code Talkers of the US Marine Corps (1942-45), Diné Marines who built a code on their own language with terms such as 'tortoise' for tank",
+      "move": "Build your code on a language outsiders cannot read, as Diné Marines did, then add a layer of substitutions on top.",
+      "asks": "What knowledge do my people already hold that outsiders cannot read, and how could it protect this?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-winter-count",
+      "source": "Lakota winter counts (waniyetu wowapi), one pictograph per year painted on a hide",
+      "move": "Mark each period with a single image of its most memorable event, so a long history fits on one surface.",
+      "asks": "If each stage got only one picture, which event would stand for it?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-spirit-line",
+      "source": "The spirit line (ch'ihónít'i) in many Diné rugs, which some weavers explain as an opening running from the inner pattern to the border",
+      "move": "Leave one deliberate line open from the center to the edge, so the finished work does not close in on its maker.",
+      "asks": "Where should this stay deliberately open, so that finishing it does not close it off for good?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-hokulea",
+      "source": "The Polynesian Voyaging Society's canoe Hōkūleʻa sailing from Hawaiʻi to Tahiti without instruments (1976)",
+      "move": "Settle an argument about whether something was possible by rebuilding it and doing it.",
+      "asks": "Instead of debating whether this could work, what would it take to rebuild it and try it for real?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-huerta-boycott",
+      "source": "Dolores Huerta directing the United Farm Workers' grape boycott from New York (1968)",
+      "move": "When you cannot win where the power sits, move the fight to the place where the product meets its buyers.",
+      "asks": "Where does this reach the people whose choices the powerful depend on, and what could happen there?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-young-lords-garbage",
+      "source": "The Young Lords' Garbage Offensive in East Harlem (1969)",
+      "move": "Make a neglected problem impossible to ignore by moving it into the path of the people responsible for fixing it.",
+      "asks": "What is being quietly ignored, and where could I put it so the responsible party has to step over it?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-valdez-actos",
+      "source": "Luis Valdez's El Teatro Campesino actos, staged on flatbed trucks for striking farmworkers with signs naming each role (1965)",
+      "move": "Hang a sign on each player naming exactly what they stand for, and stage the conflict in minutes on whatever platform is there.",
+      "asks": "Who are the players here, and what happens if each wears a sign naming what they really represent?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-baca-great-wall",
+      "source": "Judith Baca's Great Wall of Los Angeles, painted section by section by teams of young people (1976-84)",
+      "move": "Split a long public story into sections that different teams each make in the open, so the making joins them.",
+      "asks": "What long story could be cut into sections that different groups each make in public?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-boggs-start-producing",
+      "source": "Grace Lee Boggs and Detroit Summer, young people planting gardens on Detroit's vacant lots (1992)",
+      "move": "Instead of protesting what is missing, start producing it on the spot with the people around you.",
+      "asks": "What could we start making here ourselves, today, rather than demanding that someone else provide it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-itliong-start-and-invite",
+      "source": "Larry Itliong and Filipino grape workers starting the Delano strike, then asking the Mexican American farmworkers' union to join (1965)",
+      "move": "Start the action yourself, then invite the larger group to join, instead of waiting for them to lead.",
+      "asks": "What could I start now and then ask others to join, instead of waiting for permission?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-maya-lin-chronological",
+      "source": "Maya Lin's Vietnam Veterans Memorial, listing the names in the order they died (1982)",
+      "move": "Order the entries by when they happened rather than alphabetically, so reading the list means reliving the sequence.",
+      "asks": "What if this were arranged by when things happened rather than by name or size?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-asawa-bakers-clay",
+      "source": "Ruth Asawa's flour, salt and water 'baker's clay' for San Francisco schoolchildren (Alvarado School Arts Workshop, 1968)",
+      "move": "Pick a material so cheap and forgiving that anyone can start making with it immediately.",
+      "asks": "What dirt-cheap, forgiving material would let everyone start making right now?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-ilwu-across-the-camps",
+      "source": "The 1946 Hawaiʻi sugar strike, where the ILWU united Filipino, Japanese, Chinese, Native Hawaiian and Portuguese workers whom plantations had housed in separate camps",
+      "move": "Where those in charge keep groups apart, organize across the very line they drew.",
+      "asks": "What division between the people involved is being used against them, and what if they acted as one?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-songlines",
+      "source": "Aboriginal Australian songlines, in which many peoples' custodians sing routes across Country that also carry law and story (sacred knowledge held by particular peoples)",
+      "move": "Tie knowledge to a sequence of places, each verse naming the next landmark, so that the song is also a way of knowing the path.",
+      "asks": "What sequence of stories would let someone recall every step just by telling it in order?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-kohanga-reo",
+      "source": "Māori Kōhanga Reo language nests, where fluent elders care for preschoolers entirely in te reo (from 1982)",
+      "move": "Revive what is fading by putting its last fluent holders with the youngest learners in everyday care, with no other language allowed.",
+      "asks": "Who still holds this fully, and how could they spend ordinary days with the newest beginners?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-sheppard-petition",
+      "source": "Kate Sheppard's 1893 women's suffrage petition to the New Zealand Parliament, glued into a roll some 270 metres long",
+      "move": "Join every individual voice into one continuous physical object, so its sheer size makes the argument.",
+      "asks": "What could I gather into a single object whose size alone shows how many people care?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-achebe-lions-historians",
+      "source": "Chinua Achebe on the proverb that the hunt is told to glorify the hunter until the lions have their own historians (Paris Review, 1994)",
+      "move": "Retell the story from the side that has never had its own historian.",
+      "asks": "Who in this has never told their side, and what changes when they tell it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-gbowee-hold-the-doors",
+      "source": "Leymah Gbowee and the Women of Liberia Mass Action for Peace blocking the doors of the Accra peace talks (2003)",
+      "move": "Gather physically at the decision-makers' doors and stay there until they decide.",
+      "asks": "Where do the people who must decide this actually sit, and what if they could not leave without an answer?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-nollywood-straight-to-tape",
+      "source": "Kenneth Nnebue, an electronics trader with surplus blank tapes, releasing Living in Bondage straight to VHS (1992)",
+      "move": "Make it fast and cheap for a channel your audience already owns, and let the volume of releases teach you what works.",
+      "asks": "What could I release within a week through a channel people already use, and what would ten releases teach me?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-mandela-speak-last",
+      "source": "Nelson Mandela on the regent at Mqhekezweni, who heard everyone out at tribal meetings and spoke only at the end (Long Walk to Freedom, 1994)",
+      "move": "Let the person with the most authority speak last, after everyone else has spoken freely.",
+      "asks": "What would I hear if the most powerful voice in the room went last?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-talking-drums-redundancy",
+      "source": "Kele talking drums of the Congo, documented by John F. Carrington in The Talking Drums of Africa (1949)",
+      "move": "Wrap each key word in a longer stock phrase, so the message survives a noisy channel that drops detail.",
+      "asks": "If this had to travel through noise, what added redundancy would keep its meaning from being mistaken?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-arpilleras",
+      "source": "Chilean arpilleras, scrap-cloth scenes stitched by women relatives of the disappeared and sold abroad through the Vicaría de la Solidaridad (1970s)",
+      "move": "Carry a dangerous truth inside a humble craft object that can travel where speech is blocked.",
+      "asks": "What ordinary object could carry this message past the people who would stop it?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-participatory-budget",
+      "source": "Porto Alegre's participatory budgeting, in which neighborhood assemblies decide part of the city's investment budget (from 1989)",
+      "move": "Hand a real slice of the budget to the people affected and let them decide it in open assemblies.",
+      "asks": "Which part of the resources could the people affected decide directly?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-recovered-factories",
+      "source": "Argentina's worker-recovered factories after the 2001 crisis, run under the slogan 'occupy, resist, produce'",
+      "move": "When the owners walk away, let the people who know the work keep it running themselves.",
+      "asks": "If the people at the top left, how could those who do the work run it on their own?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-carolina-de-jesus-diary",
+      "source": "Carolina Maria de Jesus's diary of São Paulo favela life, written in notebooks she found while collecting paper (Quarto de Despejo, 1960)",
+      "move": "Keep a plain daily record from inside the hardship, in your own words, because it reaches people that outside reports cannot.",
+      "asks": "What would a daily diary kept by the person living this show that no outside report has?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-chipko",
+      "source": "The Chipko movement in Uttarakhand, including Gaura Devi and the women of Reni holding the trees to stop the felling (1974)",
+      "move": "Put your own body between the threat and the thing you protect, so harming it means harming you in public.",
+      "asks": "What would it look like to stand physically between this and what threatens it?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-hadid-paint-the-plan",
+      "source": "Zaha Hadid painting her early projects, such as The Peak competition entry (1983), instead of only drafting them",
+      "move": "Explore the design in a different medium that shows what your usual tools cannot.",
+      "asks": "What other medium could I sketch this in to reveal shapes my usual tools hide?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-phule-spare-sari",
+      "source": "A story told about Savitribai Phule carrying a spare sari to her girls' school in Pune after being pelted on the way (1840s)",
+      "move": "Expect the predictable attack and carry the remedy with you, so it costs minutes instead of the mission.",
+      "asks": "What will people reliably throw at this, and what spare could I carry so it barely slows me down?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-merian-whole-life",
+      "source": "Maria Sibylla Merian, Metamorphosis insectorum Surinamensium (1705), drawing each insect through its life stages on its host plant",
+      "move": "Show the subject at every stage of its life together with what it lives on, on a single page.",
+      "asks": "What would I learn by drawing this across its whole life cycle, alongside what feeds it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-douglas-matter-out-of-place",
+      "source": "Mary Douglas, Purity and Danger (1966), on dirt as matter out of place",
+      "move": "Treat whatever people call mess or dirt as a sign of a boundary crossed, and map the order it offends.",
+      "asks": "What is considered out of place here, and what hidden order does that reveal?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-stepwell-every-level",
+      "source": "The Rani ki Vav stepwell in Patan, Gujarat, commissioned by Queen Udayamati (11th century)",
+      "move": "Build access at every level, so the resource can be reached whether it stands high or low.",
+      "asks": "How could people reach this whether the supply is high or low?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-ishikawa-fishbone",
+      "source": "Kaoru Ishikawa's cause-and-effect (fishbone) diagram for quality control",
+      "move": "Draw the problem as a spine with a branch for each category of cause, and fill every branch before choosing one.",
+      "asks": "Which whole categories of cause have I not even listed yet?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-kano-delighters",
+      "source": "Noriaki Kano's model of quality (1984): must-be, one-dimensional and attractive qualities",
+      "move": "Sort every feature into those whose absence angers, those that please in proportion, and those that delight only when present.",
+      "asks": "What here is simply expected, what is more-is-better, and what would delight because nobody expects it?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-ger-lattice",
+      "source": "The Mongolian ger, whose khana lattice walls fold up like scissors when camp moves",
+      "move": "Make the structure collapse flat by its own geometry, so moving it costs less than staying put.",
+      "asks": "How could this fold for travel and spring back without losing its strength?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-garcia-marquez-deadpan",
+      "source": "Gabriel García Márquez on learning from his grandmother to tell the fantastic with a straight face (Paris Review, 1981)",
+      "move": "Present the strangest part in a completely flat, matter-of-fact voice, so the listener accepts it as ordinary.",
+      "asks": "What if the most unlikely part of this were presented as the most ordinary thing in the world?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-montaigne-essay",
+      "source": "Michel de Montaigne's Essais (1580), each an 'essai', a trial of his own judgment",
+      "move": "Write a short attempt at the question with no conclusion required, then another, and let the attempts accumulate.",
+      "asks": "What would three short, unfinished attempts at this teach me before I commit to an answer?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-polya-easier-problem",
+      "source": "George Pólya, How to Solve It (1945), on finding a related problem you can solve",
+      "move": "When the problem resists, solve an easier related one first and use it as a stepping stone.",
+      "asks": "What easier version of this could I solve today, and what would it teach me about the real one?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-nise-paint-not-shock",
+      "source": "Nise da Silveira's painting studio at the Engenho de Dentro psychiatric hospital in Rio de Janeiro, opened as an alternative to electroshock (1946)",
+      "move": "Replace the forceful intervention with a medium through which people can show you what is going on inside.",
+      "asks": "What medium could let the people involved show me what they cannot tell me?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-edhi-cradle",
+      "source": "Bilquis and Abdul Sattar Edhi's cradles outside Edhi Foundation centers in Pakistan, where babies can be left with no questions asked",
+      "move": "Place a safe, no-questions-asked drop point exactly where the desperate act would otherwise happen.",
+      "asks": "Where are people being pushed into a terrible choice, and what no-questions alternative could sit right there?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-trc-truth-for-amnesty",
+      "source": "South Africa's Truth and Reconciliation Commission, which granted amnesty only in exchange for full disclosure (1995 Act)",
+      "move": "Offer a pardon in exchange for the complete truth, so people have more reason to tell everything than to hide it.",
+      "asks": "What could I offer in exchange for full disclosure that would be worth more to people than staying silent?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-austen-two-inches",
+      "source": "Jane Austen's 1816 letter on the 'little bit (two inches wide) of ivory' she worked with a fine brush",
+      "move": "Work on a deliberately tiny canvas with great precision instead of a broad one.",
+      "asks": "What if I shrank the scope to a few people or one small setting and got it exactly right?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-ferrante-absent-author",
+      "source": "Elena Ferrante publishing under a pseudonym and staying out of public view since her first novel (1992)",
+      "move": "Separate the work from its maker entirely, so it is judged only on itself.",
+      "asks": "What would change about this if no one knew who made it?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-kahlo-mirror-canopy",
+      "source": "Frida Kahlo painting self-portraits in bed with a mirror fixed to its canopy after her 1925 bus accident",
+      "move": "When you are confined, make the confinement your vantage point and what you can see from it your subject.",
+      "asks": "If I could not leave this spot, what could I make from exactly what is visible from here?",
+      "kind": "thinker"
+    },
+    {
+      "id": "rev-poniatowska-many-voices",
+      "source": "Elena Poniatowska's La noche de Tlatelolco (1971), assembled from eyewitness testimony with no narrator",
+      "move": "Build the account entirely from many witnesses' own words, with no single narrator stitching them together.",
+      "asks": "What if this were told only in the voices of the people who were there?",
+      "kind": "domain"
+    },
+    {
+      "id": "rev-batik-resist",
+      "source": "Javanese batik, where hot wax protects areas of the cloth before each dye bath",
+      "move": "Mask off the parts that must stay as they are before you apply the change to everything else.",
+      "asks": "What must stay untouched, and how could I protect it before changing the rest?",
+      "kind": "domain"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "half-the-parts",
+      "text": "Cut it to half the parts, steps or features you planned, and it must still do the job."
+    },
+    {
+      "id": "cannot-see-it",
+      "text": "It has to work fully for someone who cannot see it."
+    },
+    {
+      "id": "one-hand",
+      "text": "It must be usable or makeable with one hand."
+    },
+    {
+      "id": "four-hours",
+      "text": "The first working version has to exist within four hours."
+    },
+    {
+      "id": "only-whats-here",
+      "text": "Use only materials, parts or code already within reach right now."
+    },
+    {
+      "id": "eight-year-old-explains",
+      "text": "An eight-year-old must be able to explain how it works after trying it once."
+    },
+    {
+      "id": "no-power-no-signal",
+      "text": "It must work with no electricity, signal or network."
+    },
+    {
+      "id": "survives-abuse",
+      "text": "It must still work after being dropped, misused or ignored for a month."
+    },
+    {
+      "id": "no-words",
+      "text": "It must communicate everything without a single written or spoken word."
+    },
+    {
+      "id": "fits-in-a-pocket",
+      "text": "The whole thing must fit in a pocket or on a single page."
+    },
+    {
+      "id": "fifty-years",
+      "text": "It must keep working for fifty years with no maintenance."
+    },
+    {
+      "id": "one-material",
+      "text": "Use only one material, one language or one tool."
+    },
+    {
+      "id": "ten-seconds",
+      "text": "The person using it gives it only ten seconds of attention."
+    },
+    {
+      "id": "someone-else-builds",
+      "text": "A stranger must be able to build it from your instructions alone, with you absent."
+    },
+    {
+      "id": "ten-at-once",
+      "text": "Ten people must be able to use it at the same moment without taking turns."
+    },
+    {
+      "id": "con-total-cost-under-a-banknote",
+      "text": "The whole thing must cost less than the smallest banknote in your local currency."
+    },
+    {
+      "id": "con-paid-for-by-those-who-benefit",
+      "text": "The people who benefit must fund it entirely themselves, with no donor, grant or loan."
+    },
+    {
+      "id": "con-usable-while-walking",
+      "text": "It must be fully usable by someone who is walking and cannot stop or put anything down."
+    },
+    {
+      "id": "con-ready-before-the-kettle-boils",
+      "text": "Anyone must be able to start using it in the time it takes a kettle to boil."
+    },
+    {
+      "id": "con-no-new-purchases",
+      "text": "Every material must be something that would otherwise have been thrown away."
+    },
+    {
+      "id": "con-silent",
+      "text": "It must make no sound at all, and must not depend on anyone hearing anything."
+    },
+    {
+      "id": "con-wearing-thick-gloves",
+      "text": "It must be fully usable by someone wearing thick winter gloves."
+    },
+    {
+      "id": "con-audience-of-one-grandparent",
+      "text": "The only audience is one specific elderly person who distrusts anything new, and they must choose to keep it."
+    },
+    {
+      "id": "con-audience-hostile-to-start",
+      "text": "The people it is for must begin out of the room, sceptical, and want nothing to do with it."
+    },
+    {
+      "id": "con-fills-a-stadium",
+      "text": "It must work identically for five people and for fifty thousand without being redesigned."
+    },
+    {
+      "id": "con-survives-a-toddler",
+      "text": "It must survive a full day with a determined two-year-old and be unharmed."
+    },
+    {
+      "id": "con-ages-gracefully",
+      "text": "It must look better after ten years of wear than on its first day."
+    },
+    {
+      "id": "con-no-one-gets-left-out",
+      "text": "Nobody present may ever be picked, ranked, eliminated or left waiting."
+    },
+    {
+      "id": "con-no-phones-in-sight",
+      "text": "It must work in a room where phones, screens and cameras are forbidden."
+    },
+    {
+      "id": "con-explained-in-one-gesture",
+      "text": "The entire explanation must be a single physical gesture, with no words."
+    },
+    {
+      "id": "con-undoable-completely",
+      "text": "It must be completely reversible, leaving no trace that it ever existed."
+    },
+    {
+      "id": "con-works-in-a-lift",
+      "text": "It must work entirely inside a lift in the time between two floors."
+    },
+    {
+      "id": "con-works-underwater-or-in-rain",
+      "text": "It must work while soaked in heavy rain, or fully underwater."
+    },
+    {
+      "id": "con-no-straight-lines",
+      "text": "No straight line, flat surface or right angle may appear anywhere in it."
+    },
+    {
+      "id": "con-owned-by-no-one",
+      "text": "No one may own, sell or control it, and anyone must be free to copy or alter it."
+    },
+    {
+      "id": "con-harm-nothing-living",
+      "text": "Nothing living, including plants and insects, may be harmed in making or using it."
+    },
+    {
+      "id": "con-safe-if-misused",
+      "text": "If used completely wrongly, by the worst possible person, it must still hurt nobody."
+    },
+    {
+      "id": "con-nothing-to-remember",
+      "text": "No one may be asked to remember a password, rule, name or number."
+    },
+    {
+      "id": "con-no-personal-data",
+      "text": "It must work without learning who anyone is: no names, accounts, faces or tracking."
+    },
+    {
+      "id": "con-made-by-the-users",
+      "text": "The people who will use it must make every part of it themselves."
+    },
+    {
+      "id": "con-made-by-a-pair-blindfolded",
+      "text": "It must be makeable by two people who cannot speak to each other."
+    },
+    {
+      "id": "con-no-tools-sharper-than-a-spoon",
+      "text": "Making it must require no tool sharper or more powerful than a spoon."
+    },
+    {
+      "id": "con-ten-second-lifespan",
+      "text": "Its whole useful life lasts only ten seconds, and that moment must be unforgettable."
+    },
+    {
+      "id": "con-gets-better-with-use",
+      "text": "Every use must leave it more useful to the next person than before."
+    },
+    {
+      "id": "con-works-offline-and-alone",
+      "text": "It must function when the person using it is completely alone and nobody can help."
+    },
+    {
+      "id": "con-must-be-beautiful-ugly",
+      "text": "It must be deliberately ugly in one obvious way that people still come to love."
+    },
+    {
+      "id": "con-borrowed-from-another-craft",
+      "text": "It must be built using only techniques from a craft that has nothing to do with this problem."
+    },
+    {
+      "id": "con-nothing-new-created",
+      "text": "It may rearrange, rename or reuse existing things, but must make nothing new."
+    },
+    {
+      "id": "con-smell-and-touch-only",
+      "text": "It may communicate only through smell and touch, with nothing seen or heard."
+    },
+    {
+      "id": "con-stays-in-one-square-metre",
+      "text": "All of it must happen within a single square metre of floor."
+    },
+    {
+      "id": "con-works-for-a-month-abroad",
+      "text": "It must work for a traveller in a country whose language, money and customs they do not know."
+    },
+    {
+      "id": "con-failure-must-be-funny",
+      "text": "When it fails, which it will, the failure must make everyone laugh rather than leave anyone worse off."
+    },
+    {
+      "id": "rev-con-no-money-changes-hands",
+      "text": "No money may change hands at any point in making or using it."
+    },
+    {
+      "id": "rev-con-forty-five-degrees",
+      "text": "It must work in 45°C heat in full sun, with no shade or cooling."
+    },
+    {
+      "id": "rev-con-village-first",
+      "text": "It must be designed first for a village with no road access, and only then adapted for a city."
+    },
+    {
+      "id": "rev-con-made-with-a-rival",
+      "text": "It must be made together with a rival or competitor, and both must come out ahead."
+    },
+    {
+      "id": "rev-con-no-experts",
+      "text": "No one trained in this field may take part in making it."
+    },
+    {
+      "id": "rev-con-repairable-by-anyone",
+      "text": "Anyone must be able to repair it with common tools and no manual."
+    },
+    {
+      "id": "rev-con-elder-and-child",
+      "text": "It must work equally well, at the same moment, for an eighty-year-old and an eight-year-old."
+    },
+    {
+      "id": "rev-con-sung-from-memory",
+      "text": "Everything needed to use it must fit into a song or rhyme someone can sing from memory."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "run": "2026-10-23-pi-monitor",
+  "skill_version": "0.5",
+  "mode": "gated",
+  "started_utc": "2026-10-23T23:07:45Z",
+  "ended_utc": "2026-10-23T23:54:36Z",
+  "minutes_wall": 50,
+  "minutes_waiting_on_person": {"gate1": 11, "gate2": 2},
+  "agents": {
+    "total": 19,
+    "cold_samplers_haiku": 2,
+    "problem": 2,
+    "retrieval": 1,
+    "sketch_generators": 4,
+    "sketch_control": 1,
+    "wild_card": 1,
+    "filter_judge": 1,
+    "grounding": 2,
+    "developers": 3,
+    "adversary": 1,
+    "fact_checker": 1
+  },
+  "tokens_subagents_approx": 1426408,
+  "tokens_by_role": {
+    "cold": 113915, "problem": 111482, "retrieval": 127820,
+    "generators": 315130, "control": 66104, "wild": 58355,
+    "filter": 77735, "grounding": 155222, "developers": 237031,
+    "adversary": 63099, "fact_checker": 100515
+  },
+  "sketches": 31,
+  "scored_items": 33,
+  "duplicate_groups": 25,
+  "dropped_at_filter": {"dead": 1, "no_fit": 2},
+  "menu": {
+    "items": 12,
+    "distances": {"D": 5, "B": 5, "O": 5, "I": 5, "U": 5, "AA": 4, "T": 4, "A": 4, "AF": 4, "V": 4, "N": 3, "AC": 3},
+    "reference_distance": 1,
+    "slots_by_source": {"cards": 9, "control": 2, "wild": 1},
+    "non_anglo_american_precedents": 10
+  },
+  "mean_distance": {"carded_sketches": 4.1, "control_sketches": 4.0, "wild": 5, "cold": 1.5},
+  "wells": {"count": 4, "new_to_ledger": 4, "on_menu": 2, "source": "5 of 5 unprompted lists each; arcade also cold A"},
+  "pool": {"entries": 86, "pages_fetched": 27, "dealt": 80, "kind": "precedents"},
+  "grounding": {"items": 13, "verified": 11, "unverified": 1, "wrong": 1, "decisions_changed": 1},
+  "picks_gate1": ["V Patchwork Booth", "I Seven-hour line", "D Solder-along table"],
+  "attacks": {"fatal": 3, "scar": 0},
+  "winner": {"label": "V", "name": "Patchwork Booth", "source": "g2", "card": "rev-arpilleras", "constraint": "four-hours", "pool_entry": 72, "distance": 4},
+  "factcheck": {"claims": 29, "verified": 23, "unsupported": 5, "unsupported_flagged": 2, "wrong": 1, "fixed": 1, "marked_unverified": 3},
+  "rule_breaks_noted": ["problem agent used the person's name from inherited context (rule 6)"]
+}

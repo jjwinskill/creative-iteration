@@ -236,7 +236,7 @@ The brief, grown by three grill rounds from one line to about 20 requirements, a
 - **A side project fixed the drawing.** An anatomy template (named points plus a type-designer's curve rule) reproduced real guitars within a few millimetres. Every agent design made with it read as a guitar, and the person kept seven as starting points.
 - **What made it work:** start from one real exemplar and push, instead of averaging; checks calibrated on real objects; a picture judge used only to reject defects (it disagreed with the person on taste); locked picks, after agents quietly changed picked outlines and gamed a check; and per-agent folders, after agents sharing one ran each other's scripts.
 
-## v0.10 (current)
+## v0.10
 
 Built from the guitar work:
 - **Shape briefs use a proven template,** never freehand drawing (`references/shape.md`). With no template for the object, the run stays in words and offers building one as its own project.
@@ -246,4 +246,23 @@ Built from the guitar work:
 - **One folder per agent.**
 - **Model judges reject defects but don't choose for taste,** and cook-mode reports say the picks reflect a model's taste.
 
-v0.10 hasn't had a full run yet.
+## 2026-10-25 UTC: a blind three-way test on a gift brief
+
+The same confirmed brief (a Christmas gift for the person's spouse) ran three ways: plain Claude, v0.10 with cards, and v0.10 without cards. The person judged the results blind.
+- **Plain Claude's ideas ranked best** (mean rank 3.3 of 9), at about a seventeenth of the skill's cost (103k tokens against about 1.8M an arm). The person's pick was one of its ideas, and a well. No cards came a close second and had the favourite menu, for its range. The carded arm ranked 7th, 8th and 9th.
+- **Every menu was too saccharine.** The spouse's current reading genre turned into its tropes in the gifts.
+- **Card stories leaked into the ideas** (a duel, a piano roll, a painting). The moves that worked were verbs: a small steady force over time, sharing upkeep among those who benefit, letting the owner decide the form. Two traditions that looked like card leaks came from the pool, and the developers' fidelity step pushed the gifts closer to them.
+- **About 74% of the skill's agent tokens were fixed context:** about 53k per agent before it read its task. Three judges per gate cost about 200k, and they ranked the person's second favourite last.
+
+## v0.11 (current)
+
+Built from the blind test:
+- **Cards become operators:** one-sentence, subject-free rewrites of each move, with a script that flags leaked words. No agent sees a card. Constraint cards are no longer drawn.
+- **No cards in the fan-out.** Operators reframe the problem, and they mutate the strongest ideas (including wells and the obvious answers) in a new lens round, changing how an idea works while it keeps its fit.
+- **Two of four generators are interest-blind:** they don't see the taste list. The filter flags transplants (an idea whose content is a taste-list item, a precedent's prop or a card's subject).
+- **Pool precedents come with what they do,** and generators borrow how they work, not their props. Developers don't pull ideas toward precedents.
+- **The menu is built for range,** in three bands (familiar and strong, a twist on the familiar, out there) across at least four kinds, with a familiarity score.
+- **The occasion is a requirement.**
+- **Lean agents and one judge per gate** to cut the fixed context. Each agent's starting context goes in the metrics.
+
+v0.11 hasn't had a full run yet.

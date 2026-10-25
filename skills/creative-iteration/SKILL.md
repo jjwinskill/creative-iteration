@@ -1,13 +1,13 @@
 ---
 name: creative-iteration
-description: An agent-led idea generator that turns a vague want ("I want to do this thing but don't know what it should look like") into the best few ideas, seen from many outside perspectives. Agents fan out about 30 sketches from a fetched pool of real candidates or precedents, shaped by randomly drawn thinking moves from real people and trades, a judge filters them, the person picks from a short menu, and the picks are developed, attacked and delivered as an idea dossier ready for strategy and planning. Use whenever someone has a loose brief or a "what should I build / make / do" question and wants fresh, non-obvious ideas, for example "build grinder grindr", "show me a new way to build an electric guitar", "I've got a pile of scrap wood, what should I make", "I need an idea for a side project", or "help my daughter with reading", even if they never say "creative iteration". Not for planning or building an idea that's already chosen.
+description: An agent-led idea generator that turns a vague want ("I want to do this thing but don't know what it should look like") into the best few ideas, seen from many outside perspectives. Agents fan out about 30 sketches from a fetched pool of real candidates or precedents, the strongest are mutated through thinking moves drawn from real people and trades, a judge filters them, the person picks from a short menu, and the picks are developed, attacked and delivered as an idea dossier ready for strategy and planning. Use whenever someone has a loose brief or a "what should I build / make / do" question and wants fresh, non-obvious ideas, for example "build grinder grindr", "show me a new way to build an electric guitar", "I've got a pile of scrap wood, what should I make", "I need an idea for a side project", or "help my daughter with reading", even if they never say "creative iteration". Not for planning or building an idea that's already chosen.
 ---
 
-# Creative Iteration (v0.10)
+# Creative Iteration (v0.11)
 
 **What it's for:** going from "I want to do this, but I don't know what it looks like" to the best few ideas. Strategy and planning come afterward, as a separate step.
 
-**Why it works:** left alone, a model gives the obvious answer, and asking it for "ten wild ideas" gives the same ten every time. This skill brings outside perspective in from places the model doesn't control: a pool of real candidates or precedents fetched from published sources, randomly drawn thinking moves, constraints and seed material. Then it spends judgment on choosing, not generating. Mutation is cheap and dumb; selection does the work.
+**Why it works:** left alone, a model gives the obvious answer, and asking it for "ten wild ideas" gives the same ten every time. This skill brings outside perspective in from places the model doesn't control: a pool of real candidates or precedents fetched from published sources, thinking moves drawn at random from real people, trades and traditions, and seed material. The moves work as **lenses, never content**: each is stripped to a one-sentence operator and applied to ideas that already fit, changing *how* they work. Then the skill spends judgment on choosing, not generating. Mutation is cheap and dumb; selection does the work.
 
 **Outside material beats instructions.** In the v0.5 tests, what widened the ideas was data from outside the model (a fetched pool, fetched checks). Telling agents to behave differently (tag your claims, avoid the typical, pick the least likely) changed little. When a stage needs more range, give it material, not rules.
 
@@ -37,7 +37,8 @@ Make `runs/YYYY-MM-DD-<slug>/` in the current working folder unless the person n
 | `rounds/references.md` | Principles and register distilled from the person's references (when they name any) |
 | `rounds/problems.md` | The problems found and the framing |
 | `rounds/pool.md` | The numbered pool (or subject and mechanism pools) with source links, and the slices dealt |
-| `rounds/fanout.md` | Every sketch, the unprompted lists, the wells, the filter's scores, the menu, the person's picks |
+| `rounds/operators.md` | The drawn cards, their operators and the leak check |
+| `rounds/fanout.md` | Every sketch, the unprompted lists, the wells, the filter's scores, the seeds and mutations, the menu, the person's picks |
 | `rounds/grounding.md` | The menu existence check (internal) |
 | `rounds/priorart.md` | The prior-art check on each pick (originality briefs only) |
 | `rounds/develop.md` | The developed concepts and the attack |
@@ -45,7 +46,7 @@ Make `runs/YYYY-MM-DD-<slug>/` in the current working folder unless the person n
 | `vault.md` | Ideas that didn't make it, why, and what would bring each one back |
 | `dossier.md` | The output: the winner and the runners-up |
 | `report.md` | The plain-English report |
-| `metrics.json` | Agents, approximate tokens, minutes, sketches, groups, menu distances, wells, pool size and sources, fact-check counts |
+| `metrics.json` | Agents and each one's starting context, approximate tokens, minutes, sketches, mutations, groups, menu bands and distances, wells, pool size and sources, fact-check counts |
 
 ## Separation rules, and why
 
@@ -67,6 +68,11 @@ These keep the outside perspective real and the choosing honest. Breaking one qu
 
 Role prompts are in `references/roles.md`; shape briefs also follow `references/shape.md`. Models: haiku for cold answers, sonnet for everything else, and Opus for a picture judge.
 
+**Lean agents.** Every subagent starts with about 53k tokens of inherited context (system prompt, tool definitions, environment) before it reads its task. In the gift experiment, that was 74% of the skill's agent tokens: about 1.8M per arm, against 103k for plain Claude. So:
+- **Roles that need no tools** (cold sampler, operator agent, problem agents, generators, filter, mutation agents, judges, adversary) run as the **`ci-lean` agent type** when it's installed (`agents/ci-lean.md` in this skill; see the README). It has a short system prompt and nothing else to carry. If it isn't installed, use the default and say so in the report.
+- **Roles that browse** (reference, retrieval, grounding, prior art, developers, fact-checker) use the default agent.
+- **Record each agent's starting context** in `metrics.json`, so the saving is measured, not assumed.
+
 ## Stage 0: Intake and brief
 
 **Say the scope first.** If the request asks for more than ideas (a plan, a design, a build), say in the intake message that this run finds and develops the idea, and that planning is a separate step afterward (see Handoff).
@@ -86,6 +92,7 @@ The first round always includes the **role question** and the **who-else questio
 - the glad moment (a year from now, what makes them glad they did it?)
 - the no list
 - what they want out of making it
+- **the occasion,** when there is one (a holiday, a season, a launch): it's a requirement, not just a deadline. In the gift run, Christmas only set the date, and nothing checked that ideas suited a Christmas gift.
 
 **Audience-facing work** is anything other people will play, read, watch, wear or be pitched: a game, a theme, a name, a story, a costume. For it, the grilling always covers these three, in whichever round their prerequisites allow:
 - **who the others are:** ages, and what they're into. In the pinball run, "just the three of us" hid that one player was the person's kid.
@@ -136,23 +143,27 @@ Both lists become requirements, marked "distilled from the references." The name
 
 **Gate 0: "Is this you?"** Show the person the brief block and ask them to correct anything wrong, in one quick reply. This is the cheapest gate in the run and catches the lead's mistakes before every agent inherits them. Skip it only if the person explicitly says to. Log the reply verbatim.
 
-**Cold answers:** two cold samplers (haiku) answer the brief with no cards. That's **the obvious answer**, the reference for distance. (Six cold samplers cost about 340k tokens in the v0.5 test and still missed the real wells, so two is enough.)
+**Cold answers:** one lean cold sampler (haiku) gives two different answers to the brief, with no operators or pool. That's **the obvious answer**, the reference for distance, and plain Claude's strongest move. In the gift experiment, plain Claude's well-worn letters book was the person's favourite gift, so the obvious answers also become **seeds** for the mutation round (Stage 3b).
 
 **Known wells:** open this skill's `data/wells.md`, your own well ledger, and copy the section matching this kind of brief into `brief.md`, if one exists. Wells are answers models keep reaching for. The ledger is about model habits, not the person, so it doesn't break rule 6. It starts empty and grows with your runs; it's local and never committed.
 
-## Stage 1: Problems (two agents)
+## Stage 1: Operators and problems
 
-Draw three moves (`draw.py --moves 3 --wiki 1 --run <slug> --stage problems`). Two agents run in parallel:
-- **One problem agent** writes one underlying problem per card.
-- **One no-card control** writes three problems.
+**Turn cards into operators first.** Cards carry a perspective (how a real person, trade or tradition decides) wrapped in a vivid story. In the gift experiment, the story leaked: a card about a duel produced duel gifts, and one about a piano roll produced a piano roll. Meanwhile the cards that worked were the ones whose move was a verb: *a small steady force over time*, *share the upkeep among those who benefit*, *let the owner decide the form*. So no agent sees a card. Draw all the run's moves at once (`draw.py --moves 10 --wiki 1 --run <slug> --stage operators`), and give them to one lean **operator agent**. It rewrites each move as an **operator**: one sentence about *how to change an idea*, with no names, places, objects, materials or story from its source. Then run `scripts/leakcheck.py` on its output. It flags any distinctive word an operator shares with its card's source or move; re-run the agent on flagged ones. Constraint cards are no longer drawn: in the gift and Pi runs, every constraint became the idea's setting or material.
 
-Merge them. Update the tension register, and write **one framing paragraph**: the real problem and the principle a good idea must honor (rule 4). **Principles come only from requirements.** A problem drawn from background stays a tension, never a principle. The person sees the framing at Gate 1 and can correct it.
+Assign operators in draw order: 3 to the problem stage, 6 to the mutation round, and 1 to the wild card.
+
+**Problems (two lean agents, in parallel):**
+- **One problem agent** reframes the brief through each of its three operators: one underlying problem per operator.
+- **One control** finds three problems with no operators.
+
+Merge them. Update the tension register, and write **one framing paragraph**: the real problem and the principle a good idea must honor (rule 4). **Principles come only from requirements.** A problem drawn from background stays a tension, never a principle. If a problem agent warns about a pull in the brief (in the gift run, it warned that her reading would pull ideas toward book themes), carry the warning into the framing as a tension, not a clause. The person sees the framing at Gate 1 and can correct it.
 
 ## Stage 1b: The pool (one retrieval agent)
 
-In the v0.5 test, a fetched pool was the only change that widened the ideas *and* produced the best-rated ones. One **retrieval agent** (sonnet, with web) builds a numbered pool of about **80 real entries, each with its source URL**, from **at least 6 published sources** that span different regions, eras and kinds. The pool takes one of two forms:
+In the v0.5 test, a fetched pool was the only change that widened the ideas *and* produced the best-rated ones. One **retrieval agent** (sonnet, with web) builds a numbered pool of about **80 real entries, each with its source URL**, from **at least 6 published sources** that span different regions, eras and kinds. The pool takes one of three forms:
 - **Candidates,** when the brief chooses among real things (books, places, products, gifts, recipes, people, events). Each entry is something the person could pick. For books, that might mean international prizes across languages, national canons, translated-fiction and genre award lists.
-- **Precedents,** when the brief asks for something to make or do. Each entry is a real work, design, practice or project, from anywhere, that answered a nearby need. Sketches build *from* precedents; they don't copy them.
+- **Precedents,** when the brief asks for something to make or do. Each entry is a real work, design, practice or project, from anywhere, that answered a nearby need, **plus one line on what it does**, in words free of its props. Sketches borrow how a precedent works, never its objects or traditions, unless the brief asks for them. In the gift run, a Wagner morning piece and Japanese wish strips came through the pool as props, and the developers then pushed the gifts even closer to them.
 - **Subjects plus precedents,** when the brief asks for a subject the audience has to recognize: a theme, a setting, a name, a topic. Build **two pools**:
   - a **subject pool** (about 60) of things the audience already knows and likes, across media and culture, that this medium hasn't used
   - a **mechanism pool** (about 60) of far-flung precedents for how it could work
@@ -161,12 +172,14 @@ In the v0.5 test, a fetched pool was the only change that widened the ideas *and
 
 Write it to `rounds/pool.md`. Then deal slices by script, so the lead never picks who sees what: `scripts/deal.py --pool <N> --hands g1:15 g2:15 g3:15 g4:15 control:15 wild:5`. With two pools, deal each separately. Record the slices in `pool.md`.
 
-## Stage 2: Fan-out (about 30 sketches)
+## Stage 2: Fan-out (about 30 sketches, no cards)
 
-Draw `--moves 13 --constraints 4 --wiki 1 --run <slug> --stage fanout`, then assign in draw order (the draw is already random):
-- **Four sketch generators.** Each gets **three moves**, one constraint, its pool slice and the known wells. Before it reads its slice, it names the 3–4 answers it would give unprompted, each with a guess at how likely a typical model would suggest it (0–100%). Those lists feed the well map. (Slices don't overlap, so only the unprompted lists can show many agents reaching for the same thing.) Then it writes **six sketches**, each built from an entry in its slice. Each move shapes at least one sketch, **the constraint shapes exactly two**, and each sketch is a *different kind of thing* from the other five. (In the Pi run, "smell and touch only" applied to all six, so all six came back as scent machines and four were merged as duplicates.) Three moves, not six: the pool already widens, and in the v0.5 test, cards stacked on slices over-constrained the generators (fit 5/24 with cards vs. 3/6 for the control).
-- **One no-card control.** It gets a slice and the known wells, and writes six sketches under the same rules.
-- **One wild card.** It gets the 13th move, the seed and 5 pool entries, and attacks a tension picked by the script. It writes one strange sketch and says what it reveals.
+**No cards in the fan-out.** Across five runs, generators given cards landed no further from the obvious answer than generators without them (3.58 vs. 3.62 in the gift run), and in a blind test their ideas ranked last. Cards now work later, on ideas that already fit (Stage 3b).
+
+- **Four sketch generators,** each with its pool slice and the known wells. Before it reads its slice, each names the 3–4 answers it would give unprompted, each with a guess at how likely a typical model would suggest it (0–100%). Those lists feed the well map. (Slices don't overlap, so only the unprompted lists can show many agents reaching for the same thing.) Then it writes **six sketches**, each built from an entry in its slice, and each a *different kind of thing* from the other five.
+- **Two of the four are interest-blind.** When the brief carries a **taste list** (what the person or audience loves: hobbies, genres, favourite things), generators 1 and 2 get the brief without it. In the gift run, her current genre (romance) turned into romance tropes in every menu, and the person found them "overly saccharine". The filter, judges and developers still see the taste list, so fit is judged against it.
+- **One control,** with a slice and the known wells and the full brief, under the same rules.
+- **One wild card.** It gets its operator, the seed and 5 pool entries, and attacks a tension picked by the script. It writes one strange sketch and says what it reveals.
 
 **Shape briefs** (a body, a profile, a part, a piece of furniture) need a **shape template**, never freehand drawing. In the v0.9 guitar run, agents wrote raw SVG coordinates: all 33 outlines passed the size checks, and the person rejected all 33 as "boxy blobs." A side project then built a guitar template that worked: 30 of 30 designs read as guitars, and the person kept seven as starting points. Follow `references/shape.md`, which covers:
 - the template: named anatomy points and a curve rule, proven by reproducing real examples
@@ -179,16 +192,18 @@ Draw `--moves 13 --constraints 4 --wiki 1 --run <slug> --stage fanout`, then ass
 
 **Every sketch must be the kind of thing the brief asks for** (if it asks for a book, a book). In the v0.5 test, one generator wrote five sketches about how to run the blog series instead.
 
-In *surprise*, one generator is told not to propose the obvious kind of thing. **When the intake marks anything as a bonus, another generator is told to ignore that bonus entirely** (rule 4); pick both by `--pick`. Sketches are short (under about 80 words): what it is, which pool entry it builds from, why it serves the why, and which move shaped it.
+In *surprise*, one generator is told not to propose the obvious kind of thing. **When the intake marks anything as a bonus, another generator is told to ignore that bonus entirely** (rule 4); pick both by `--pick`. Sketches are short (under about 80 words): what it is, which pool entry it builds from, and why it serves the why.
 
-## Stage 3: Filter, wells and menu
+## Stage 3: Filter, mutation and menu
 
-One fresh **filter judge** gets every sketch plus the two cold answers, shuffled and unlabeled. For each, it gives:
+**3a. Filter.** One fresh, lean **filter judge** gets every sketch plus the two cold answers, shuffled and unlabeled. For each, it gives:
 - the **duplicate group** it belongs to
+- its **kind** (for a gift: an object, an experience, something made, something learned, a ritual; name the kinds that fit the brief)
 - **distance** from the obvious answer, 1–5
+- **familiarity,** likely / maybe / unlikely: would the person have thought of it themselves?
 - **feasibility** within the 0 (fine / risky / dead), with one reason
-- **fit** to the why (yes / partly / no)
-- **forced fit:** yes, if the sketch bends its pool entry to make the idea work
+- **fit** to each requirement and the occasion (yes / partly / no each)
+- **transplant:** yes if the idea's content *is* a taste-list item, a precedent's prop or a card's subject, dressed up instead of transformed
 - **pull,** 1–5: would the audience on the dial want it, from the one-line pitch alone?
 
 With more than about 40 sketches, split them across two filter judges and have the second also group duplicates across the whole list. Otherwise use one judge.
@@ -198,15 +213,20 @@ With more than about 40 sketches, split them across two filter judges and have t
 - appears in the unprompted lists of 3 or more agents, or
 - matches both cold answers.
 
-In the v0.5 test, wells came from what generators reached for, and they repeated across runs (*Middlemarch*, *War and Peace*, *Remains of the Day*), while a map built from cold samples missed them. Wells are kept, never discarded: likeness isn't badness.
+Wells are kept, never discarded: likeness isn't badness.
 
-**Build the menu:** drop anything dead or no-fit, and keep one per duplicate group.
-- **About 8 non-well items** ordered by the drift setting's preference. Forced fits rank below clean fits at equal distance. Break remaining ties by **pull**, and only then by script. In the pinball run, 11 ideas tied at distance 4 with a full fit, so a shuffle chose the menu.
-- **Plus 2 wild slots** for what the main ordering underweights, so it still reaches the person. In *refine* and *stretch*, the two highest-distance feasible ideas below the cut. In *surprise*, where the main list is already ordered by distance, the two best fits below the cut. (In the Pi run, surprise mode's wild slots became just the next two in line, and the winner came from one of them.)
-- **Plus a convergent lane:** up to 2 wells, the strongest, labeled "well" with where they came from. They compete like everything else.
-- **Plus the obvious answer** as a labeled reference.
+**3b. Mutation: the lens round.** This is where the cards' perspectives come in: they change *how* a strong idea works, while its fit stays. Choose **six seeds** mechanically: the six highest-pull ideas with "yes" fit on every requirement and no transplant flag, including at least one well and one cold answer. Two lean **mutation agents** each get three seeds and three operators. Each applies two operators to each of its seeds: six mutations per agent, twelve in all. A mutation keeps the seed's core and its fit, changes *how* it works, and must be something the person couldn't get by tweaking the seed (a different structure, timing, owner, form or scale). For example, a book of letters from her friends, put through "a small steady force over time", becomes one letter arriving each week through the year.
 
-**Grounding pass:** one grounding agent (sonnet, with web) checks every menu item with about one fetch each: does the thing exist, and is its key specific right? It marks each **verified / unverified / wrong**. Drop "wrong" items and refill from the next in order; label "unverified" ones. Write it to `rounds/grounding.md`. It's internal: the person sees only the word "unverified". It costs about one agent, and in the v0.5 test it changed two decisions. On originality briefs, it also notes any sign that the idea itself already exists; that's a first screen only, and Stage 4a does the real check.
+**3c. Score the mutations.** The filter judge scores the twelve mutations on the same rubric, with their seeds alongside for comparison.
+
+**Build the menu for range.** Drop anything dead, any "no" on a requirement, and transplants; keep one per duplicate group. Show about **10 items in three bands**, so the person can see the novelty they're trading for:
+- **Familiar and strong** (up to 3): wells and cold answers with strong fit, labeled as such. They're honest options.
+- **A twist on the familiar** (about 4): the best mutations.
+- **Out there** (at least 3): distance 4+, familiarity "unlikely", fit "yes".
+
+Cover at least four different kinds across the menu. Within a band, order by fit, then distance, then **pull**, and only then by script. Show the obvious answer as a labeled reference.
+
+**Grounding pass:** one grounding agent (sonnet, with web) checks every menu item with about one fetch each: does the thing exist, and is its key specific right? It marks each **verified / unverified / wrong**. Drop "wrong" items and refill from the next in the band; label "unverified" ones. Write it to `rounds/grounding.md`. It's internal: the person sees only the word "unverified". On originality briefs, it also notes any sign that the idea itself already exists; that's a first screen only, and Stage 4a does the real check.
 
 The full scored list is always available on request.
 
@@ -214,14 +234,14 @@ The full scored list is always available on request.
 
 Show the framing and the menu, each item in one line with its distance. Ask the person to **pick two or three, veto any, and add a note** if they like. Log their words verbatim.
 
-**Cook mode:** three judges with different stakes (`references/roles.md`) pick the top three instead, using `references/click.md`. They get the grounding notes.
+**Cook mode:** one lean judge agent holding three stakes (`references/roles.md`) picks the top three instead, using `references/click.md`, and gets the grounding notes. In the gift run, three separate judges per gate cost about 200k, mostly fixed context.
 
 **A model's taste isn't the person's.** In the guitar work, a picture judge marked down two of the person's three favourite designs; its suggested threshold would have rejected everything they liked. So model judges and the filter **reject defects** (dead, no-fit, failed checks, blobs) and never cut for taste, and the **pull** score only breaks ties. In cook mode, the report says plainly that the picks reflect a model's taste, and keeps the runners-up close enough that the person can overrule them.
 
 **When the person vetoes the menu,** the redo has to keep every requirement, not just the new one. In the pinball run, each veto note became the loudest requirement, and each round overcorrected: esoteric, then domestic, then kid comedy. The person quit from fatigue. So:
 1. **Log the note verbatim** as a requirement in both versions of the brief block, and update the why-test.
 2. **Carry forward what they said worked** (for example, "the loops are great") as a requirement too, so it isn't lost.
-3. **Run a light redo first:** two sketch generators and the control, with fresh draws and slices, aimed at the correction. That's about 18 sketches for a third of the cost. Run a full fan-out only if the person asks for it, or vetoes the light redo's menu too.
+3. **Run a light redo first:** two sketch generators and the control, with fresh slices, aimed at the correction. That's about 18 sketches for a third of the cost. Run a full fan-out only if the person asks for it, or vetoes the light redo's menu too.
 4. **The filter scores fit against every requirement separately** (yes / partly / no each). Anything with a "no" on any requirement leaves the menu, whichever round added that requirement.
 
 ## Stage 4a: Prior art (originality briefs only)
@@ -247,14 +267,14 @@ Write it to `rounds/priorart.md`, and give each rating to that pick's developer,
 
 ## Stage 4: Develop and attack
 
-- **One developer per pick** expands the sketch into a short concept: what it is, how it works, why it fits the why, what it would take, the cheapest first test against reality, and the biggest risk. The person's note goes in the prompt, along with the prior-art rating on originality briefs.
+- **One developer per pick** expands the sketch into a short concept: what it is, how it works, why it fits the why, what it would take, the cheapest first test against reality, and the biggest risk. The person's note goes in the prompt, along with the prior-art rating on originality briefs. A precedent the idea only borrowed from is not a source: **don't pull the idea toward it.** In the gift run, the developers' fidelity step pushed two gifts closer to a Wagner piece and Japanese wish strips, which the person read as props.
 - **One adversary** then attacks all the concepts at once, without ranking them: the strongest reason each one fails, labeled **fatal**, **fatal unless** (a premise about the person that, if true, saves it), or a **scar**. In the Pi run, all three picks were called fatal for want of one fact each, and one sentence from the person settled it.
 
 ## Gate 2: the choice (the person)
 
 Show each "fatal unless" as a **question to the person** before anything else. Then show each developed concept with its attack, its **prior-art rating** on originality briefs, its **source-fidelity rating** when it rests on a source (run 6: this is what lets the person speak with authority, and it reshaped two of four picks), and **the premises it depends on** (the developer lists them), so a wrong assumption is visible at a glance. The person chooses one, a combination, or **"go again clean"**: a fresh fan-out after correcting whatever premise was wrong. A combination they ask for goes back through the adversary once.
 
-**Cook mode:** the judges choose. If they converge on a combination, it gets attacked once.
+**Cook mode:** the judge agent chooses, from its three stakes. If they converge on a combination, it gets attacked once.
 
 ## Output: the idea dossier
 
@@ -278,16 +298,16 @@ Instead, end the report with the handoff: the dossier is the brief for planning.
 
 ## Card tracking
 
-- **Log every draw** with `--run` and `--stage`.
-- **After the run, credit every card and seed:**
-  - `winner`: the chosen idea came from its sketch
-  - `shortlisted`: it made the menu
+- **Log every draw** with `--run` and `--stage operators`.
+- **After the run, credit every card by what its operator did,** with the distance of the idea it shaped:
+  - `winner`: a mutation or framing it shaped led to the chosen idea
+  - `shortlisted`: a mutation it shaped made the menu
   - `taught`: it changed the framing or the tensions
   - `none`
 
-  Each credit includes the sketch's distance: `draw.py --run <slug> --stage <stage> --credit <id> --effect <effect> --distance N --note "…"`.
-- **Credit the control's sketches as `control`, and the cold answers as `cold`.**
-- `--stats` compares card-driven distance against the control and the cold answers across runs. That's how we learn whether the cards widen the spread.
+  `draw.py --run <slug> --stage <stage> --credit <id> --effect <effect> --distance N --note "…"`
+- **Credit unmutated sketches as `control`, and the cold answers as `cold`.**
+- `--stats` compares the distance of operator-shaped ideas against the others and the cold answers across runs. That's how we learn whether the lens widens the spread.
 
 ## Reporting
 
@@ -299,7 +319,7 @@ Write `report.md` and end in chat with the same content, in **plain words**: run
 5. **What got filtered out,** and why.
 6. **Would another run land here?** The stable parts (several agents reached them) and the fragile ones.
 7. **How good the brief was.**
-8. **What the cards and the pool did:** credits and distance; the control vs. the cards; how many menu items came from far-flung pool entries; the wells found.
+8. **What the operators and the pool did:** which operators' mutations reached the menu or won; each mutation's distance against its seed; how many menu items came from far-flung pool entries; the wells found.
 9. **Cost:** agents, approximate tokens and minutes.
 10. **What's next:** the handoff to planning (see Handoff).
 

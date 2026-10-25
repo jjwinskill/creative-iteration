@@ -2,7 +2,7 @@
 
 A suite of agent-led tools for the hard first step of making something: getting from "I want to do this, but I don't know what it looks like" to an idea worth building. The first tool is the **Creative Iteration** skill for Claude Code, an idea generator. Strategy and planning tools are planned to follow it.
 
-> **Status: experimental (v0.10).** This is a working research project, not a finished product. It has had thirteen runs on ten briefs, and every run changed the method. Expect rough edges, high token use, and rules that will keep changing.
+> **Status: experimental (v0.11).** This is a working research project, not a finished product. It has had fourteen runs on eleven briefs, including a blind comparison against plain Claude, and every run changed the method. Expect rough edges, high token use, and rules that will keep changing.
 
 ## Why it exists
 
@@ -13,17 +13,17 @@ Ask a language model for ideas and you get the obvious answer. Ask it for "ten w
 
 So this skill treats the model as cheap, dumb mutation and spends its judgment on **selection**. The variation comes from **outside the model**:
 - a pool of real candidates or precedents fetched from published sources
-- thinking moves drawn at random (by the operating system, never the model) from a deck of real people, trades and traditions
+- thinking moves drawn at random (by the operating system, never the model) from a deck of real people, trades and traditions, used as lenses: each is stripped to a one-sentence operator and applied to ideas that already fit, changing how they work
 - random seed material
 
 Then fresh agents filter, judge and attack, and the person steers at two short menus, because people are bad at specifying what they want and good at reacting to what's in front of them.
 
 ## How a run goes
 1. **Intake.** A short interview in up to three rounds, each with a recommended answer you can accept with "yes" (adapted from Matt Pocock's grilling skill). For work other people will play or use, it always covers who they are, the hook and the feel. Every limit becomes a check: measured where possible, calibrated on real examples where the word is qualitative. The person's answers go to every agent verbatim, and the person confirms the brief ("Is this you?"). Any references the person names are distilled into subject-free principles and tone, so their subjects don't steer the ideas.
-2. **Problems.** Two agents look for the real problem under the request, one with drawn moves and one without.
+2. **Operators and problems.** The drawn moves are rewritten as subject-free operators (a script checks that nothing from the card's story leaks through). Two agents look for the real problem under the request, one reframing it through operators and one without.
 3. **The pool.** One agent fetches about 80 real entries from at least six sources across regions, eras and kinds. A script deals each idea agent its own random slice.
-4. **Fan-out.** Four agents with drawn moves, one no-card control and one wild card write about 30 sketches.
-5. **Filter.** A fresh judge scores every sketch, unlabeled and shuffled, for distance from the obvious answer, feasibility and fit. The answers every model reaches for ("wells") are flagged, not deleted.
+4. **Fan-out.** Four agents, a control and a wild card write about 30 sketches from their pool slices. Two of the four don't see the person's taste list, so ideas don't just dress up what the person already loves.
+5. **Filter and mutation.** A fresh judge scores every sketch, unlabeled and shuffled, for distance, familiarity, feasibility and fit. The strongest ideas, including the obvious ones, then go through the operators: each operator changes how an idea works while it keeps its fit. The menu is built for range, in three bands: familiar and strong, a twist on the familiar, and out there. The answers every model reaches for ("wells") are flagged, not deleted.
 6. **Gate 1.** The person picks two or three from a short menu, or vetoes it. A veto triggers a light redo aimed at the correction, which still has to meet every earlier requirement.
 7. **Develop and attack.** Each pick is developed, checked against real sources, and attacked by an adversary. When the brief demands something new, a prior-art search on each pick (patents, products, plugins, papers, forums, and the same principle in other fields) comes first.
 8. **Gate 2.** The person chooses.
@@ -45,7 +45,8 @@ Breadth brings a responsibility: a one-line "move" can flatten a living traditio
 
 ## What the tests have shown so far
 - **Outside material beats instructions.** What widened the ideas was fetched data (the pool, the fact-checks). Telling agents to behave differently (tag your claims, avoid the typical, pick the least likely) changed little.
-- **The pool is the engine.** With a fetched pool, even the no-card control lands nearly as far from the obvious answer as the carded agents.
+- **The pool is the engine; cards as content were not.** With a fetched pool, the no-card control landed as far from the obvious answer as the carded agents in every run. In a blind test, plain Claude matched or beat the skill on one gift brief at a seventeenth of the cost, and the carded arm ranked last. The cards leaked their stories into the ideas, so v0.11 uses them only as subject-free lenses on ideas that already fit.
+- **Agents literalize inputs.** A taste list became tropes, a card's story became a prop, a reference's subject became a theme. v0.11 keeps inputs as principles, not props.
 - **Wells are real and predictable.** In the Raspberry Pi run, all five idea agents named the same four builds (an arcade, a smart mirror, a photo frame, a media center) before seeing their pools. None of them won.
 - **Fact-checking catches what memory gets wrong.** Every final dossier is checked against fetched sources. In tests, it found a confident wrong claim in two of five final documents, and unflagged guesses in every one.
 
@@ -72,6 +73,12 @@ git clone https://github.com/jjwinskill/creative-iteration.git
 ln -s "$PWD/creative-iteration/skills/creative-iteration" ~/.claude/skills/creative-iteration
 ```
 
+Optional, to cut a run's cost: install the lean agent the skill uses for roles that need no tools.
+
+```bash
+mkdir -p ~/.claude/agents && ln -s "$PWD/creative-iteration/skills/creative-iteration/agents/ci-lean.md" ~/.claude/agents/ci-lean.md
+```
+
 Then ask Claude Code something like "I've got a pile of scrap wood, what should I make?" and the skill picks it up. Runs are written to `runs/` in your working folder.
 
 **One rule for running it:** the session orchestrating a run must never read `deck/deck.json`. It only draws cards through `scripts/draw.py`. Reading the deck primes the model, and the draw stops being outside randomness. Reading the deck yourself is fine.
@@ -81,8 +88,9 @@ Then ask Claude Code something like "I've got a pile of scrap wood, what should 
 |---|---|
 | `skills/creative-iteration/SKILL.md` | The method |
 | `skills/creative-iteration/references/` | Agent prompts (`roles.md`), the judging rubric (`click.md`) and file templates (`templates.md`) |
-| `skills/creative-iteration/scripts/` | `draw.py` (random cards, logging, credits, stats) and `deal.py` (random pool slices) |
-| `skills/creative-iteration/deck/deck.json` | The move and constraint deck |
+| `skills/creative-iteration/scripts/` | `draw.py` (random cards, logging, credits, stats), `deal.py` (random pool slices) and `leakcheck.py` (flags operators that still carry their card's story) |
+| `skills/creative-iteration/agents/ci-lean.md` | The lean agent type for roles that need no tools |
+| `skills/creative-iteration/deck/deck.json` | The deck of thinking moves (its constraint cards are no longer drawn) |
 | `skills/creative-iteration/data/` | Your local draw log and well ledger (the answers models keep reaching for, by kind of brief). Created on first use, never committed |
 | `docs/creative-iteration/` | Lessons from every run, and an example run |
 

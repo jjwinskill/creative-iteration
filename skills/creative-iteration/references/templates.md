@@ -112,30 +112,43 @@ Draws: … (seed: …)
 <One paragraph: the real problem and the principle a good idea must honor. No example techniques.>
 ```
 
+## rounds/operators.md
+
+```markdown
+# Operators
+Draws: … (seed: …)
+| Card id | Operator | Question | Leak check | Used in |
+|---|---|---|---|---|
+```
+
 ## rounds/fanout.md
 
 ```markdown
 # Fan-out
-Draws: generator 1: moves …, constraint …; … ; wild card: …, seed …, tension …
+Slices: g1 … (interest-blind) · g2 … (interest-blind) · g3 … · g4 … · control … · wild … (operator …, seed …, tension …)
 
 ## Unprompted lists (each agent's 3–4 before its slice, with typicality guesses)
 | Agent | Candidates (guess %) |
 |---|---|
 
 ## Sketches (filter scores; blind labels from the script)
-| Label | Source (card / control / wild / cold) | Pool # | Sketch (one line) | Group | Distance | Feasible | Fit | Forced | Pull | Well |
-|---|---|---|---|---|---|---|---|---|---|---|
+| Label | Source (generator / control / wild / cold) | Pool # | Sketch (one line) | Group | Kind | Distance | Familiar | Feasible | Fit (each requirement) | Transplant | Pull | Well |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
 
 ## Wells this run
 | Well | Why (ledger / 3+ unprompted lists / both cold) |
 |---|---|
 
-## Menu (shown at Gate 1)
-1. <one line>, distance N
-… (about 8)
-Wild slot A: <the highest-distance feasible idea>
-Wild slot B: <the next>
-Convergent lane: <up to 2 wells, labeled, with where they came from>
+## Seeds and mutations
+Seeds (mechanical: top pull with full fit, no transplant, at least one well and one cold answer): …
+| Label | Seed | Operator | Mutation (one line) | Distance | Familiar | Fit | Pull |
+|---|---|---|---|---|---|---|---|
+
+## Menu (shown at Gate 1, in three bands)
+**Familiar and strong:** <up to 3 wells or cold answers, labeled>
+**A twist on the familiar:** <about 4 mutations>
+**Out there:** <at least 3: distance 4+, familiarity unlikely, full fit>
+Kinds covered: …
 Reference: the obvious answer, <one line>
 
 ## Gate 1 (verbatim)

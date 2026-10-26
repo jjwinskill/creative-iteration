@@ -2,7 +2,7 @@
 
 A suite of agent-led tools for the hard first step of making something: getting from "I want to do this, but I don't know what it looks like" to an idea worth building. The first tool is the **Creative Iteration** skill for Claude Code, an idea generator. Strategy and planning tools are planned to follow it.
 
-> **Status: experimental (v0.12).** This is a working research project, not a finished product. It has had sixteen runs on twelve briefs, including two comparisons against plain Claude, and every run changed the method. Expect rough edges, high token use, and rules that will keep changing.
+> **Status: experimental (v0.13).** This is a working research project, not a finished product. It has had seventeen runs on thirteen briefs, including two comparisons against plain Claude, and every run changed the method. Expect rough edges, high token use, and rules that will keep changing.
 
 ## Why it exists
 
@@ -76,7 +76,7 @@ ln -s "$PWD/creative-iteration/skills/creative-iteration" ~/.claude/skills/creat
 Recommended, to roughly halve a run's cost: install the two small agent types the skill uses. One is for roles that need no web, the other for roles that browse. Start a new Claude Code session afterward so they're picked up.
 
 ```bash
-mkdir -p ~/.claude/agents && for a in ci-lean ci-browse; do ln -s "$PWD/creative-iteration/skills/creative-iteration/agents/$a.md" ~/.claude/agents/$a.md; done
+mkdir -p ~/.claude/agents && for a in ci-lean ci-browse ci-shape; do ln -s "$PWD/creative-iteration/skills/creative-iteration/agents/$a.md" ~/.claude/agents/$a.md; done
 ```
 
 Then ask Claude Code something like "I've got a pile of scrap wood, what should I make?" and the skill picks it up. Runs are written to `runs/` in your working folder.
@@ -88,8 +88,8 @@ Then ask Claude Code something like "I've got a pile of scrap wood, what should 
 |---|---|
 | `skills/creative-iteration/SKILL.md` | The method |
 | `skills/creative-iteration/references/` | Agent prompts (`roles.md`), the judging rubric (`click.md`) and file templates (`templates.md`) |
-| `skills/creative-iteration/scripts/` | `draw.py` (random cards, logging, credits, stats), `deal.py` (random pool slices), `leakcheck.py` (flags operators that still carry their card's story), `blind.py` (shuffles agents' ideas for a judge), `fetch.py` (the run's shared fetch cache) and `cost.py` (prices a run from its transcripts) |
-| `skills/creative-iteration/agents/` | `ci-lean.md` for roles that need no web, and `ci-browse.md` for roles that browse |
+| `skills/creative-iteration/scripts/` | `draw.py` (random cards, logging, credits, stats), `deal.py` (random pool slices), `leakcheck.py` (flags operators that still carry their card's story), `blind.py` (shuffles agents' ideas for a judge), `fetch.py` (the run's shared fetch cache), `cost.py` (prices a run from its transcripts), `menu.py` (builds the banded menu from the filter's scores) and `packet.py` (a blind packet for people comparing runs) |
+| `skills/creative-iteration/agents/` | `ci-lean.md` for roles that need no web, `ci-browse.md` for roles that browse, and `ci-shape.md` for shape-template roles |
 | `skills/creative-iteration/deck/deck.json` | The deck of thinking moves (its constraint cards are no longer drawn) |
 | `skills/creative-iteration/data/` | Your local draw log and well ledger (the answers models keep reaching for, by kind of brief). Created on first use, never committed |
 | `docs/creative-iteration/` | Lessons from every run, and an example run |

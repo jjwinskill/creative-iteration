@@ -276,7 +276,7 @@ The brief asked for one new, balanced design within a long-established catalog o
 - **The menu check looked for exact copies, not near relatives.** A pick the person cut at Gate 2 as "far too close" to an existing design had already been fully developed. A cheap adversary flagged it first; a closeness pass after the gate cost about as much as the original prior-art pass.
 - **Cost, priced from the transcripts:** $31.80 for the skill (lead $13.24, 14 browsing agents $16.41, 15 lean agents $2.15, the card stages about $0.40), against $2.54 for plain Claude. Lean agents started at 3.7k tokens instead of 54k. Four fifths of the browsing came after the menu, and identical search results were fetched up to five times. See [COST.md](COST.md).
 
-## v0.12 (current)
+## v0.12
 
 Built from that run's cost and its misses:
 - **A `ci-browse` agent type** for the roles that need the web: five tools, its own folder, a call budget, fetching through the cache, a short summary back. `ci-lean` can now write its own output file.
@@ -286,3 +286,26 @@ Built from that run's cost and its misses:
 - **The seed fallback is written down:** when no idea has "yes" on every requirement, seeds come from ideas with no "no".
 - **Cost is measured in dollars** by `scripts/cost.py` from the lead's and every agent's transcripts, and reported against the last run and plain Claude.
 - **The cards stay.** They cost about 1% of a run.
+
+## 2026-10-26 UTC: v0.12 first run, an offset body from the person's own guitar design (gated)
+
+The person brought their own design, a Fly-derived body from the shape-tooling work, and asked for an offset version with two P90s. $22.83 over 115 minutes, 28% less than the v0.11 run.
+- **The new agent types worked:** web agents started at about 6k tokens, lean ones at about 3.7k. The lead was still 43% of the cost, over 137 calls.
+- **The person chose their own design, refined to pass every check.** That was also both cold answers and all five unprompted lists. It's the second run in a row where the obvious answer won. The brief was really refine, not stretch.
+- **The lens round barely moved shapes:** 3 of 12 mutations went beyond their seed, and all 3 had drawing defects. The picture judge rejected 19 of 40 drawings, each after an agent's full work.
+- **A late question worked:** both problem agents asked what makes the reference guitar recognizable, and the person's one-line answer shaped the rest.
+- **The lead misquoted a wood density;** an agent caught it.
+- **The checks and development did the deciding work:** horn strength, weight, and moving the control cavity and jack away from a thin, sloping edge.
+
+## v0.13 (current)
+
+Built from the last four runs:
+- **Refine mode:** when the person brings their own design to keep, the run explores less (two generators and the control) and spends on checks and development, and their design, refined, leads the menu.
+- **The cold answer is always on the menu** as a real option, developed if chosen.
+- **A `ci-shape` agent type** for template roles (no web, a render budget). Shape generators submit only designs that pass the template's code defect gates.
+- **Scripted bookkeeping:** `scripts/menu.py` builds the banded menu from the filter's scores. The lead aims for under about 70 calls.
+- **One late question** when two or more problem agents hit the same gap about the person.
+- **The lead's own numbers are verified,** by script or source, like agents'.
+- **An optional blind test mode** with `scripts/packet.py` and three or more raters.
+
+v0.13 hasn't had a full run yet.

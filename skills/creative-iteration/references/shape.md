@@ -16,8 +16,9 @@ Read this when a brief asks for a shape: a guitar body, a chair back, a table le
 6. **Measure the artifact itself, never labels or agents' own numbers.** An agent passed the horn-width check by moving the points the check measured from. The check now finds the narrowest band of actual wood. Agents will satisfy any check that can be met on paper.
 7. **Work in layers that check each other:** outline, then carve (a thickness field), then hardware and joinery. They interact (a carve cutting into a control cavity), so check across them.
 8. **Everyone looks at true-scale pictures.** Use outline sheets at one scale; shaded top and back views, side profiles and cross-sections for the carve. Generators open and look at their own renders every round.
-9. **A picture judge catches defects; the person picks.** The judge reliably rejects blobs, kinks and missing parts. It disagreed with the person on taste, marking down two of their three favourites. Show it the silhouette only, with no text, and use it to reject, never to rank.
-10. **Lock what the person picked.** Two carve agents quietly changed outlines the person had picked. Lock the picked geometry, and have the lead re-run every check itself.
+9. **Code catches drawing defects first.** The template's defect gates (kinks, pinched tips, slab sides, hooked corners, calibrated on real outlines) run after every change, and generators (`ci-shape`) submit only passing designs. In the v0.12 run, the picture judge rejected 19 of 40 drawings after full agent work; code gates make most of those rejections free.
+10. **A picture judge catches the rest; the person picks.** The judge reliably rejects blobs, kinks and missing parts. It disagreed with the person on taste, marking down two of their three favourites. Show it the silhouette only, with no text, and use it to reject, never to rank.
+11. **Lock what the person picked.** Two carve agents quietly changed outlines the person had picked. Lock the picked geometry, and have the lead re-run every check itself.
 
 ## The pipeline inside a run
 

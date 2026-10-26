@@ -3,7 +3,7 @@ name: creative-iteration
 description: An agent-led idea generator that turns a vague want ("I want to do this thing but don't know what it should look like") into the best few ideas, seen from many outside perspectives. Agents fan out about 30 sketches from a fetched pool of real candidates or precedents, the strongest are mutated through thinking moves drawn from real people and trades, a judge filters them, the person picks from a short menu, and the picks are developed, attacked and delivered as an idea dossier ready for strategy and planning. Use whenever someone has a loose brief or a "what should I build / make / do" question and wants fresh, non-obvious ideas, for example "build grinder grindr", "show me a new way to build an electric guitar", "I've got a pile of scrap wood, what should I make", "I need an idea for a side project", or "help my daughter with reading", even if they never say "creative iteration". Not for planning or building an idea that's already chosen.
 ---
 
-# Creative Iteration (v0.12)
+# Creative Iteration (v0.13)
 
 **What it's for:** going from "I want to do this, but I don't know what it looks like" to the best few ideas. Strategy and planning come afterward, as a separate step.
 
@@ -26,6 +26,13 @@ description: An agent-led idea generator that turns a vague want ("I want to do 
 | **Refine** | as given | improve the person's idea, staying the same kind of thing | fit |
 | **Stretch** (default) | as given | change form while serving the same why | fit, with distance from the obvious answer as the tiebreak |
 | **Surprise** | one level up: the need under the request | be a different kind of thing entirely | distance, among ideas that fit and are feasible |
+
+**Refine mode.** When the person brings their own design or idea and wants to keep it ("make it my own", "improve my…", a seed they made and love), set drift to refine, and the whole run changes shape:
+- **Fan-out:** two generators and the control instead of four plus a wild card. The person's design is seed one for the mutation round.
+- **Menu:** their own design, refined to pass every check, leads it (`scripts/menu.py --refine`), and twists on it take most of the slots.
+- **Budget:** goes to checks and development, where refine briefs get decided.
+
+In the v0.12 guitar run, the person's own Slouch Fly was the seed. They picked it, refined, over every alternative after the run had spent 28 sketches and 12 mutations exploring away from it. Ask at intake whether the seed is theirs to keep, if the brief doesn't already say.
 
 ## Run folder
 
@@ -66,7 +73,8 @@ These keep the outside perspective real and the choosing honest. Breaking one qu
 9. **Verify agents' claims, and lock picks.** Agents will satisfy a check any way they can on paper. In the guitar work, one passed a horn-width check by moving the points the check measured from, and two developers quietly changed outlines the person had picked. So:
    - checks measure the artifact itself, never an agent's own numbers or labels;
    - the lead re-runs every check before anything reaches the person;
-   - a pick is **locked**: developers deepen it but don't swap its core (the central idea, the chosen item, the picked geometry). The lead compares each developed concept against the picked sketch, and any drift goes back.
+   - a pick is **locked**: developers deepen it but don't swap its core (the central idea, the chosen item, the picked geometry). The lead compares each developed concept against the picked sketch, and any drift goes back;
+   - **the lead's own numbers are checked too.** Any weight, density, dimension, price or spec the lead tells the person comes from a script's output or a fetched source, cited with where it came from. In the guitar run, the lead quoted the wrong wood density for the person's design, and an agent caught it.
 10. **One folder per agent.** Agents that write files work in their own folder under the run (`agents/<role>/`) and don't read others', except files their prompt names. In the guitar run, agents sharing a scratch folder ran each other's scripts. In the v0.11 run, default agents wrote into the shared session scratchpad anyway, and one hit a script clash; the `ci-browse` type now states the rule in its system prompt. The one shared folder is `cache/`, and only `scripts/fetch.py` writes it.
 
 Role prompts are in `references/roles.md`; shape briefs also follow `references/shape.md`. Models: haiku for cold answers, sonnet for everything else, and Opus for a picture judge.
@@ -78,6 +86,7 @@ Priced from its transcripts, the v0.11 run cost **$31.80**: the lead (the orches
 **Three agent types:**
 - **`ci-lean`** (`agents/ci-lean.md`), for roles that need no web: cold sampler, operator agent, problem agents, generators, the control, wild card, filter, mutation agents, judges and adversary. It starts at about 4k tokens instead of 54k.
 - **`ci-browse`** (`agents/ci-browse.md`), for roles that need the web: reference, retrieval, grounding, prior art, developers and fact-checker. It carries five tools instead of the full set, keeps to its own folder and to a call budget, fetches through the cache, and returns a short summary.
+- **`ci-shape`** (`agents/ci-shape.md`), for shape briefs: generators, mutation agents and the wild card working with a template. It carries Read, Write and Bash, has no web, and keeps to a render budget (6 rounds per design). In the v0.12 run, these roles ran as browse agents for the shell access, at $0.93–1.72 each.
 - **The default agent** only when one of these isn't installed (see the README). Say so in the report.
 
 **Keep the lead thin.** The lead re-reads its whole context on every call, so whatever enters its context is paid for again on every call after that. In the v0.11 run, its average context was 260k tokens over 141 calls.
@@ -85,6 +94,7 @@ Priced from its transcripts, the v0.11 run cost **$31.80**: the lead (the orches
 - **Agents write their own output files** (`agents/<role>/out.md`) and return one line (lean) or a summary under 120 words (browse). The lead reads a file only for what its next step needs.
 - **Never retype an agent's output.** Build judge inputs with `scripts/blind.py` (it shuffles and labels sections from agents' files), and assemble round files from agents' files with the shell (`cat`, a heading per agent). The lead writes only its own part: tables, decisions and the person's words. In the v0.11 run, the lead retyped about 120k characters of round files.
 - **Batch file work into one shell call,** and use scripts to count or extract from big files rather than reading them in.
+- **Script the bookkeeping.** `scripts/menu.py` builds the banded menu from the filter's scores (written once as JSON), `scripts/blind.py` builds judge inputs, and `scripts/cost.py` prices the run. **Aim for under about 70 lead calls in a gated run.** The v0.12 run took 137, and the lead was 43% of its $22.83.
 
 **Spend browsing where it decides something.**
 - **One shared fetch cache.** Every browsing agent fetches through `scripts/fetch.py` with the run's `cache/` folder, keeping only the fields or snippets it needs. In the v0.11 run, the same search results were fetched up to five times by different agents.
@@ -178,6 +188,8 @@ Assign operators in draw order: 3 to the problem stage, 6 to the mutation round,
 - **One problem agent** reframes the brief through each of its three operators: one underlying problem per operator.
 - **One control** finds three problems with no operators.
 
+**One late question.** If two or more problem agents name the same thing they can't answer from the brief, and it's about the person (their taste, their situation, what makes the thing theirs), then in gated mode the lead asks the person that one question before the fan-out. Log the reply verbatim and add it to both brief blocks as a requirement. In cook mode, mark it unknown. In the v0.12 guitar run, both problem agents asked independently what makes a guitar read as a Parker Fly. The person's answer ("the silhouette and curves, plus strong angular bass horn") shaped everything after it.
+
 Merge them. Update the tension register, and write **one framing paragraph**: the real problem and the principle a good idea must honor (rule 4). **Principles come only from requirements.** A problem drawn from background stays a tension, never a principle. If a problem agent warns about a pull in the brief (in the gift run, it warned that her reading would pull ideas toward book themes), carry the warning into the framing as a tension, not a clause. The person sees the framing at Gate 1 and can correct it.
 
 ## Stage 1b: The pool (one retrieval agent)
@@ -208,6 +220,8 @@ Write it to `rounds/pool.md`. Then deal slices by script, so the lead never pick
 - checks calibrated on real objects
 - a picture judge that only rejects defects
 - true-scale sheets, locked picks, and development in layers (outline, then carve, then hardware)
+
+**Shape generators run as `ci-shape` and submit only designs that pass the template's code defect gates** (kinks, pinched tips, slab sides, hooked corners) as well as its checks. The picture judge comes after, for what code can't see. In the v0.12 run, the picture judge rejected 19 of 40 drawings, every one after an agent's full work.
 
 **If no proven template exists for this kind of object, don't improvise one inside the run.** Run the idea search in words: what the shape does, which precedent it builds from, and its key proportions. Then offer building the template as its own project, before any drawing.
 
@@ -240,12 +254,12 @@ Wells are kept, never discarded: likeness isn't badness.
 
 **3c. Score the mutations.** The filter judge scores the twelve mutations on the same rubric, with their seeds alongside for comparison.
 
-**Build the menu for range.** Drop anything dead, any "no" on a requirement, and transplants; keep one per duplicate group. Show about **10 items in three bands**, so the person can see the novelty they're trading for:
-- **Familiar and strong** (up to 3): wells and cold answers with strong fit, labeled as such. They're honest options.
+**Build the menu for range,** with `scripts/menu.py` (the rules below are what it applies, so the lead doesn't hand-pick). Drop anything dead, any "no" on a requirement, and transplants; keep one per duplicate group. Show about **10 items in three bands**, so the person can see the novelty they're trading for:
+- **Familiar and strong** (up to 3): **always the best cold answer** ("the obvious answer"), plus wells with strong fit, labeled as such. They're real options, developed like any other pick when chosen. In refine mode, the person's own design, refined, comes first. In the gift test, the person's pick was a well. In the v0.12 guitar run, it was the cold answer. Plain Claude's strongest move belongs on the menu, not just beside it.
 - **A twist on the familiar** (about 4): the best mutations.
 - **Out there** (at least 3): distance 4+, familiarity "unlikely", fit "yes".
 
-Cover at least four different kinds across the menu. Within a band, order by fit, then distance, then **pull**, and only then by script. Show the obvious answer as a labeled reference.
+Cover at least four different kinds across the menu. Within a band, order by fit, then distance, then **pull**, and only then by script.
 
 **Grounding pass:** one grounding agent (browse) checks every menu item with about one fetch each: does the thing exist, and is its key specific right? It marks each **verified / unverified / wrong**. Drop "wrong" items and refill from the next in the band; label "unverified" ones. Write it to `rounds/grounding.md`. It's internal: the person sees only the word "unverified".
 
@@ -321,6 +335,15 @@ Include the vault, and on originality briefs, the prior-art rating with its link
 The run ends at the fact-checked dossier. **Don't write a plan, a design or a build inside the run,** even when the person asked for one. In the guitar run, the lead went on to write a 1,600-word design plan in the same session. It was well researched, but no stage gated it, attacked it or fact-checked it.
 
 Instead, end the report with the handoff: the dossier is the brief for planning. Offer the person the planning step as a separate run, using the suite's planning skill when it exists. Until then, offer a fresh session that takes `dossier.md` as its brief, so planning starts clean rather than inheriting this run's agents and framing.
+
+## Test mode: blind comparison (optional)
+
+To test the skill against a baseline (plain Claude, another version, a variant), run every arm on **the same confirmed brief**. Then:
+- **Build the packet** with `scripts/packet.py` from each arm's `menu.md` and `top3.md`. It labels menus X, Y, Z, shuffles every developed idea into one list, evens out formatting, and writes the key to a separate file.
+- **Get at least three raters.** The person who wrote the brief counts as one. Each rater picks a favourite menu, gives pairwise preferences on pairs the coordinator assigns (which would you rather have, and why, in one line), ranks the ideas, and names the one they'd choose. Only then is the key opened.
+- **Report win rates per arm,** and the cost per arm from `scripts/cost.py`.
+
+One person judging their own brief can't separate taste from bias. The person said so in the v0.11 run, after preferring the skill's menu to plain Claude's.
 
 ## Card tracking
 

@@ -54,7 +54,7 @@ The same prompt with the operators and the seed removed: "Find the three biggest
 
 > {requirements-only brief block}. Build a pool of about 80 real {candidates the person could choose / precedents: real works, designs, practices or projects that answered a nearby need}. Fetch at least 6 published sources (lists, prizes, archives, catalogs, collections) that span different regions, languages, eras and kinds; no more than about a quarter of the pool from any one region or tradition. Don't add entries from memory: every entry needs the URL it came from. Return a numbered list, one line each: the entry, a 10-word description, the source URL. For precedents, add one line on **what it does**, in words free of its objects, people and traditions ("keeps a promise visible every day", not "strips of paper hung on bamboo"). Don't judge fit; range is the job.
 
-## Sketch generator (lean), four in Stage 2
+## Sketch generator (lean; `ci-shape` on shape briefs), four in Stage 2 (two in refine mode)
 
 > {requirements-only brief block; for generators 1 and 2, also without the taste list}. Known wells, answers models keep reaching for: {wells, or "none yet"}. Don't propose them or close variants.
 >
@@ -72,7 +72,7 @@ The same prompt with the operators and the seed removed: "Find the three biggest
 
 The same prompt with the full requirements-only block, taste list included. It keeps its slice, the wells, step 1, the sketch count and the different-kinds rule.
 
-## Wild card (lean), Stage 2
+## Wild card (lean; `ci-shape` on shape briefs), Stage 2 (none in refine mode)
 
 > {requirements-only brief block}. Attack this tension: "{picked tension}". Your operator: "{operator}". Seed material: {title}: {extract}. Five pool entries: {entries}. Build from one of them.
 >
@@ -94,7 +94,7 @@ The same prompt with the full requirements-only block, taste list included. It k
 >
 > Be terse: one line per sketch. Don't rank.
 
-## Mutation agent (lean), two in Stage 3b
+## Mutation agent (lean; `ci-shape` on shape briefs), two in Stage 3b
 
 > {brief block, including the taste list}. Here are three ideas that fit this brief well: {seeds}. And three operators, each a way of changing *how* something works:
 > 1. "{operator}" It asks: "{question}"

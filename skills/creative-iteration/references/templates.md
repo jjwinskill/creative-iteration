@@ -145,7 +145,7 @@ Seeds (mechanical: top pull with full fit, no transplant, at least one well and 
 |---|---|---|---|---|---|---|---|
 
 ## Menu (shown at Gate 1, in three bands)
-**Familiar and strong:** <up to 3 wells or cold answers, labeled>
+**Familiar and strong:** <the best cold answer (always), plus wells; in refine mode the person's own design first, refined>
 **A twist on the familiar:** <about 4 mutations>
 **Out there:** <at least 3: distance 4+, familiarity unlikely, full fit>
 Kinds covered: …

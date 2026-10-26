@@ -3,7 +3,7 @@ name: creative-iteration
 description: An agent-led idea generator that turns a vague want ("I want to do this thing but don't know what it should look like") into the best few ideas, seen from many outside perspectives. Agents fan out about 30 sketches from a fetched pool of real candidates or precedents, the strongest are mutated through thinking moves drawn from real people and trades, a judge filters them, the person picks from a short menu, and the picks are developed, attacked and delivered as an idea dossier ready for strategy and planning. Use whenever someone has a loose brief or a "what should I build / make / do" question and wants fresh, non-obvious ideas, for example "build grinder grindr", "show me a new way to build an electric guitar", "I've got a pile of scrap wood, what should I make", "I need an idea for a side project", or "help my daughter with reading", even if they never say "creative iteration". Not for planning or building an idea that's already chosen.
 ---
 
-# Creative Iteration (v0.11)
+# Creative Iteration (v0.12)
 
 **What it's for:** going from "I want to do this, but I don't know what it looks like" to the best few ideas. Strategy and planning come afterward, as a separate step.
 
@@ -46,7 +46,10 @@ Make `runs/YYYY-MM-DD-<slug>/` in the current working folder unless the person n
 | `vault.md` | Ideas that didn't make it, why, and what would bring each one back |
 | `dossier.md` | The output: the winner and the runners-up |
 | `report.md` | The plain-English report |
-| `metrics.json` | Agents and each one's starting context, approximate tokens, minutes, sketches, mutations, groups, menu bands and distances, wells, pool size and sources, fact-check counts |
+| `metrics.json` | Cost in dollars from `scripts/cost.py` (lead, lean, browse, per agent, with starting context), minutes, sketches, mutations, groups, menu bands and distances, wells, pool size and sources, fact-check counts |
+| `agents/<role>/` | Each agent's own folder: its output file and anything it writes |
+| `agents/block-full.md`, `agents/block-req.md` | The two brief blocks, written once; prompts point to them |
+| `cache/` | The shared fetch cache, written only by `scripts/fetch.py` |
 
 ## Separation rules, and why
 
@@ -64,14 +67,32 @@ These keep the outside perspective real and the choosing honest. Breaking one qu
    - checks measure the artifact itself, never an agent's own numbers or labels;
    - the lead re-runs every check before anything reaches the person;
    - a pick is **locked**: developers deepen it but don't swap its core (the central idea, the chosen item, the picked geometry). The lead compares each developed concept against the picked sketch, and any drift goes back.
-10. **One folder per agent.** Agents that write files work in their own folder under the run and don't read others'. In the guitar run, agents sharing a scratch folder ran each other's scripts.
+10. **One folder per agent.** Agents that write files work in their own folder under the run (`agents/<role>/`) and don't read others', except files their prompt names. In the guitar run, agents sharing a scratch folder ran each other's scripts. In the v0.11 run, default agents wrote into the shared session scratchpad anyway, and one hit a script clash; the `ci-browse` type now states the rule in its system prompt. The one shared folder is `cache/`, and only `scripts/fetch.py` writes it.
 
 Role prompts are in `references/roles.md`; shape briefs also follow `references/shape.md`. Models: haiku for cold answers, sonnet for everything else, and Opus for a picture judge.
 
-**Lean agents.** Every subagent starts with about 53k tokens of inherited context (system prompt, tool definitions, environment) before it reads its task. In the gift experiment, that was 74% of the skill's agent tokens: about 1.8M per arm, against 103k for plain Claude. So:
-- **Roles that need no tools** (cold sampler, operator agent, problem agents, generators, filter, mutation agents, judges, adversary) run as the **`ci-lean` agent type** when it's installed (`agents/ci-lean.md` in this skill; see the README). It has a short system prompt and nothing else to carry. If it isn't installed, use the default and say so in the report.
-- **Roles that browse** (reference, retrieval, grounding, prior art, developers, fact-checker) use the default agent.
-- **Record each agent's starting context** in `metrics.json`, so the saving is measured, not assumed.
+## Cost
+
+Priced from its transcripts, the v0.11 run cost **$31.80**: the lead (the orchestrating session) $13.24, 14 default browsing agents $16.41, and 15 lean agents $2.15. Plain Claude answered the same brief for **$2.54**. The cards are cheap: the operator, problem, mutation and wild-card agents together cost about $0.40, so keep them. The money goes to the lead's context and to browsing agents. Four fifths of the browsing went on checks and development after the menu, much of it repeated searching. The full analysis is in `docs/creative-iteration/COST.md`. The aim is about half the v0.11 cost for a gated run.
+
+**Three agent types:**
+- **`ci-lean`** (`agents/ci-lean.md`), for roles that need no web: cold sampler, operator agent, problem agents, generators, the control, wild card, filter, mutation agents, judges and adversary. It starts at about 4k tokens instead of 54k.
+- **`ci-browse`** (`agents/ci-browse.md`), for roles that need the web: reference, retrieval, grounding, prior art, developers and fact-checker. It carries five tools instead of the full set, keeps to its own folder and to a call budget, fetches through the cache, and returns a short summary.
+- **The default agent** only when one of these isn't installed (see the README). Say so in the report.
+
+**Keep the lead thin.** The lead re-reads its whole context on every call, so whatever enters its context is paid for again on every call after that. In the v0.11 run, its average context was 260k tokens over 141 calls.
+- **Write the brief blocks to files once** (`agents/block-full.md`, `agents/block-req.md`), along with slices and inputs. Prompts point to the files instead of pasting them.
+- **Agents write their own output files** (`agents/<role>/out.md`) and return one line (lean) or a summary under 120 words (browse). The lead reads a file only for what its next step needs.
+- **Never retype an agent's output.** Build judge inputs with `scripts/blind.py` (it shuffles and labels sections from agents' files), and assemble round files from agents' files with the shell (`cat`, a heading per agent). The lead writes only its own part: tables, decisions and the person's words. In the v0.11 run, the lead retyped about 120k characters of round files.
+- **Batch file work into one shell call,** and use scripts to count or extract from big files rather than reading them in.
+
+**Spend browsing where it decides something.**
+- **One shared fetch cache.** Every browsing agent fetches through `scripts/fetch.py` with the run's `cache/` folder, keeping only the fields or snippets it needs. In the v0.11 run, the same search results were fetched up to five times by different agents.
+- **Call budgets** go in each browsing prompt (`references/roles.md`): retrieval 25, grounding 2 per item, prior art 20 per pick, developer 10, fact-checker 20. The v0.11 developers made 22–45 calls each, mostly repeating the prior-art searches.
+- **Closeness is checked at the menu** (see the grounding pass), so a pick that's a near copy of something real is flagged before anyone develops it. In the v0.11 run, a pick that the person cut at Gate 2 as too close to an existing work had already cost a prior-art agent and a developer.
+- **One prior-art pass covers near relatives too** (Stage 4a), so there's no second closeness pass. **Developers get its file** and don't search the catalog again.
+
+**Measure it.** At the end, run `scripts/cost.py --since <the run's start> --json agents/cost.json`. It prices the lead and every subagent from Claude Code's own transcripts, by model, with cache reads, cache writes and output separated. Put the totals in `metrics.json` and the report. Token counts from the Agent tool aren't comparable across runs: some are a final context size, others a sum over calls.
 
 ## Stage 0: Intake and brief
 
@@ -133,7 +154,7 @@ In the guitar work, "durable" and "realistic to build" stayed words through the 
 - **A seed** is a reference the person wants the result *derived from* ("inspired by the Parker Fly"). It's a requirement, and the idea-seeding roles get the real thing: its geometry, text or specs, not a description. Distance is then measured from the seed, and the pushes away from it create the originality. In the guitar work, agents given a description of the Fly drifted to "some kind of strange in between," while agents seeded from its fitted outline produced the designs the person kept.
 - **A taste reference** is something they love for how it plays or feels ("pins I admire for how they're made"). It's handled as below.
 
-**Taste references** are background, so their subjects don't seed the ideas. But they carry what the person values, so distill it first. One **reference agent** (sonnet, with web) reads reviews and write-ups of each, and returns two subject-free lists:
+**Taste references** are background, so their subjects don't seed the ideas. But they carry what the person values, so distill it first. One **reference agent** (browse) reads reviews and write-ups of each, and returns two subject-free lists:
 - **play or use principles:** how it works, and why people love it
 - **register words:** how it feels
 
@@ -161,7 +182,7 @@ Merge them. Update the tension register, and write **one framing paragraph**: th
 
 ## Stage 1b: The pool (one retrieval agent)
 
-In the v0.5 test, a fetched pool was the only change that widened the ideas *and* produced the best-rated ones. One **retrieval agent** (sonnet, with web) builds a numbered pool of about **80 real entries, each with its source URL**, from **at least 6 published sources** that span different regions, eras and kinds. The pool takes one of three forms:
+In the v0.5 test, a fetched pool was the only change that widened the ideas *and* produced the best-rated ones. One **retrieval agent** (browse) builds a numbered pool of about **80 real entries, each with its source URL**, from **at least 6 published sources** that span different regions, eras and kinds. The pool takes one of three forms:
 - **Candidates,** when the brief chooses among real things (books, places, products, gifts, recipes, people, events). Each entry is something the person could pick. For books, that might mean international prizes across languages, national canons, translated-fiction and genre award lists.
 - **Precedents,** when the brief asks for something to make or do. Each entry is a real work, design, practice or project, from anywhere, that answered a nearby need, **plus one line on what it does**, in words free of its props. Sketches borrow how a precedent works, never its objects or traditions, unless the brief asks for them. In the gift run, a Wagner morning piece and Japanese wish strips came through the pool as props, and the developers then pushed the gifts even closer to them.
 - **Subjects plus precedents,** when the brief asks for a subject the audience has to recognize: a theme, a setting, a name, a topic. Build **two pools**:
@@ -196,7 +217,7 @@ In *surprise*, one generator is told not to propose the obvious kind of thing. *
 
 ## Stage 3: Filter, mutation and menu
 
-**3a. Filter.** One fresh, lean **filter judge** gets every sketch plus the two cold answers, shuffled and unlabeled. For each, it gives:
+**3a. Filter.** One fresh, lean **filter judge** gets every sketch plus the two cold answers, shuffled and unlabeled by `scripts/blind.py` from the agents' own files (each sketch a `### <idea name>` section), with the key kept for the lead. For each, it gives:
 - the **duplicate group** it belongs to
 - its **kind** (for a gift: an object, an experience, something made, something learned, a ritual; name the kinds that fit the brief)
 - **distance** from the obvious answer, 1–5
@@ -215,7 +236,7 @@ With more than about 40 sketches, split them across two filter judges and have t
 
 Wells are kept, never discarded: likeness isn't badness.
 
-**3b. Mutation: the lens round.** This is where the cards' perspectives come in: they change *how* a strong idea works, while its fit stays. Choose **six seeds** mechanically: the six highest-pull ideas with "yes" fit on every requirement and no transplant flag, including at least one well and one cold answer. Two lean **mutation agents** each get three seeds and three operators. Each applies two operators to each of its seeds: six mutations per agent, twelve in all. A mutation keeps the seed's core and its fit, changes *how* it works, and must be something the person couldn't get by tweaking the seed (a different structure, timing, owner, form or scale). For example, a book of letters from her friends, put through "a small steady force over time", becomes one letter arriving each week through the year.
+**3b. Mutation: the lens round.** This is where the cards' perspectives come in: they change *how* a strong idea works, while its fit stays. Choose **six seeds** mechanically: the six highest-pull ideas with "yes" fit on every requirement and no transplant flag, including at least one well and one cold answer. If fewer than six have "yes" on everything (in the v0.11 run, none did), take ideas with no "no" on any requirement, ranked by pull and then by count of "yes", and log it. Two lean **mutation agents** each get three seeds and three operators. Each applies two operators to each of its seeds: six mutations per agent, twelve in all. A mutation keeps the seed's core and its fit, changes *how* it works, and must be something the person couldn't get by tweaking the seed (a different structure, timing, owner, form or scale). For example, a book of letters from her friends, put through "a small steady force over time", becomes one letter arriving each week through the year.
 
 **3c. Score the mutations.** The filter judge scores the twelve mutations on the same rubric, with their seeds alongside for comparison.
 
@@ -226,7 +247,9 @@ Wells are kept, never discarded: likeness isn't badness.
 
 Cover at least four different kinds across the menu. Within a band, order by fit, then distance, then **pull**, and only then by script. Show the obvious answer as a labeled reference.
 
-**Grounding pass:** one grounding agent (sonnet, with web) checks every menu item with about one fetch each: does the thing exist, and is its key specific right? It marks each **verified / unverified / wrong**. Drop "wrong" items and refill from the next in the band; label "unverified" ones. Write it to `rounds/grounding.md`. It's internal: the person sees only the word "unverified". On originality briefs, it also notes any sign that the idea itself already exists; that's a first screen only, and Stage 4a does the real check.
+**Grounding pass:** one grounding agent (browse) checks every menu item with about one fetch each: does the thing exist, and is its key specific right? It marks each **verified / unverified / wrong**. Drop "wrong" items and refill from the next in the band; label "unverified" ones. Write it to `rounds/grounding.md`. It's internal: the person sees only the word "unverified".
+
+**On originality briefs, grounding also rates closeness.** For each item, with one or two searches of the field's own catalog, it names the nearest existing work and rates it **distinct**, **related but distinct** or **too close**. "Too close" means a near relative: the same trigger, reward or core move in the same kind of thing, even if the wording differs. **Calibrate it first** on one pair the brief or a past run settled as too close, and one as distinct. If no such pair exists, the agent proposes one from the catalog and says so. Show "too close" on the menu with the relative named; the person decides. In the v0.11 run, the menu check looked only for exact copies, and the person cut a pick at Gate 2 as "far too close" to an existing work, after it had been fully developed. Stage 4a still does the deep check.
 
 The full scored list is always available on request.
 
@@ -248,7 +271,7 @@ Show the framing and the menu, each item in one line with its distance. Ask the 
 
 When the why, the why-test or the no list demands novelty ("never been done", "original", "the first"), the novelty claim is the requirement that matters most, so check it deeply before anything is developed. In the guitar run, the menu check made 1–2 searches per item and found nothing. The winner's closest prior art (an expired patent for the same trigger, plus studio plugins built on the same principle) surfaced only afterward, while the plan was being written.
 
-**One prior-art agent per pick** (sonnet, with web), in parallel. Each searches every kind of source:
+**One prior-art agent per pick** (browse), in parallel. Each searches every kind of source:
 - patents
 - shipping products and retailers
 - software, plugins and studio techniques
@@ -261,13 +284,16 @@ It rates the pick with links:
 - **known in principle, new in form:** the idea exists elsewhere; this form or medium is new
 - **no prior found:** list the queries tried
 
+**The same pass covers near relatives,** with the calibrated closeness rating from the grounding pass (distinct / related but distinct / too close), and names the three nearest works. In the v0.11 run, a separate closeness pass after Gate 2 cost about as much again as the prior-art pass and found what a near-relative search would have found the first time. It works within its call budget, fetching through the cache.
+
 It also searches the field's own catalog (every field that has one), and **lists every source it couldn't reach**, with the hand searches that would close the gap (where to look, and which terms). With a key source unreachable, "no prior found" becomes "**no prior found in reachable sources**", and Gate 2 shows the hand-search list. In the pinball run, the main pinball databases blocked automated fetches, so the check could only clear the themes in the sources it could reach.
 
-Write it to `rounds/priorart.md`, and give each rating to that pick's developer, who reshapes toward the genuinely new part. A "known" pick goes to Gate 2 labeled as such, not dropped: the person decides.
+Write it to `rounds/priorart.md` (assembled from the agents' files), and give each pick's prior-art file to its developer, who reshapes toward the genuinely new part without repeating the searches. A "known" pick goes to Gate 2 labeled as such, not dropped: the person decides.
 
 ## Stage 4: Develop and attack
 
-- **One developer per pick** expands the sketch into a short concept: what it is, how it works, why it fits the why, what it would take, the cheapest first test against reality, and the biggest risk. The person's note goes in the prompt, along with the prior-art rating on originality briefs. A precedent the idea only borrowed from is not a source: **don't pull the idea toward it.** In the gift run, the developers' fidelity step pushed two gifts closer to a Wagner piece and Japanese wish strips, which the person read as props.
+- **One developer per pick** expands the sketch into a short concept: what it is, how it works, why it fits the why, what it would take, the cheapest first test against reality, and the biggest risk. The person's note goes in the prompt, along with the prior-art file on originality briefs. A precedent the idea only borrowed from is not a source: **don't pull the idea toward it.** In the gift run, the developers' fidelity step pushed two gifts closer to a Wagner piece and Japanese wish strips, which the person read as props. Developers **name and link** every precedent they mention (the v0.11 fact-check found "a tabletop RPG" and "a folktale" left vague), and keep to a budget of 10 fetches: in the v0.11 run, the developers were the most expensive agents, mostly repeating prior-art searches.
+- **Revisions after Gate 2 resume the same developer** (SendMessage), so it keeps its context instead of starting again.
 - **One adversary** then attacks all the concepts at once, without ranking them: the strongest reason each one fails, labeled **fatal**, **fatal unless** (a premise about the person that, if true, saves it), or a **scar**. In the Pi run, all three picks were called fatal for want of one fact each, and one sentence from the person settled it.
 
 ## Gate 2: the choice (the person)
@@ -288,7 +314,7 @@ Write `dossier.md`: the chosen idea, then the runners-up. Each with:
 
 Include the vault, and on originality briefs, the prior-art rating with its links.
 
-**Fact-check the dossier.** One fact-checker (sonnet, with web) checks every real-world claim in `dossier.md` against fetched sources and marks it verified, unsupported or wrong. The lead fixes every wrong line, marks unflagged unsupported ones "unverified", and logs both in `rounds/factcheck.md`. In the v0.5 test, this pass found the only wrong claim in four documents, a confident plot line a developer wrote, plus 9 gaps the documents hadn't flagged.
+**Fact-check the dossier.** One fact-checker (browse) checks every real-world claim in `dossier.md` against fetched sources and marks it verified, unsupported or wrong. The lead fixes every wrong line, marks unflagged unsupported ones "unverified", and logs both in `rounds/factcheck.md`. In the v0.5 test, this pass found the only wrong claim in four documents, a confident plot line a developer wrote, plus 9 gaps the documents hadn't flagged.
 
 ## Handoff: this skill doesn't plan
 
@@ -320,11 +346,11 @@ Write `report.md` and end in chat with the same content, in **plain words**: run
 6. **Would another run land here?** The stable parts (several agents reached them) and the fragile ones.
 7. **How good the brief was.**
 8. **What the operators and the pool did:** which operators' mutations reached the menu or won; each mutation's distance against its seed; how many menu items came from far-flung pool entries; the wells found.
-9. **Cost:** agents, approximate tokens and minutes.
+9. **Cost:** dollars from `scripts/cost.py`, split into the lead, lean agents and browsing agents, with minutes. Compare it with the v0.11 run ($31.80) and with plain Claude on a similar brief (about $2.50), and name the most expensive agent.
 10. **What's next:** the handoff to planning (see Handoff).
 
 ## Afterward
 
-- Write `metrics.json`.
+- Run `scripts/cost.py`, then write `metrics.json`.
 - Add any new wells to `data/wells.md`, and bump the run count on wells seen again. Create the file if it's missing: one `## <kind of brief>` section per kind, each a table of well, runs, and how it showed up. A well goes in when it shows up in two or more runs, or when one run marks it a well. Wells are kept, never deleted.
 - If you maintain the skill, append what the run taught it to your own run log, timestamped with `date -u`. The public record of past runs is `docs/creative-iteration/LESSONS.md` in this repo.

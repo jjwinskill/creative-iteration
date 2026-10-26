@@ -254,7 +254,7 @@ The same confirmed brief (a Christmas gift for the person's spouse) ran three wa
 - **Card stories leaked into the ideas** (a duel, a piano roll, a painting). The moves that worked were verbs: a small steady force over time, sharing upkeep among those who benefit, letting the owner decide the form. Two traditions that looked like card leaks came from the pool, and the developers' fidelity step pushed the gifts closer to them.
 - **About 74% of the skill's agent tokens were fixed context:** about 53k per agent before it read its task. Three judges per gate cost about 200k, and they ranked the person's second favourite last.
 
-## v0.11 (current)
+## v0.11
 
 Built from the blind test:
 - **Cards become operators:** one-sentence, subject-free rewrites of each move, with a script that flags leaked words. No agent sees a card. Constraint cards are no longer drawn.
@@ -265,4 +265,24 @@ Built from the blind test:
 - **The occasion is a requirement.**
 - **Lean agents and one judge per gate** to cut the fixed context. Each agent's starting context goes in the metrics.
 
-v0.11 hasn't had a full run yet.
+
+## 2026-10-25 UTC: v0.11 first run, a gated game-design brief, and plain Claude on the same brief
+
+The brief asked for one new, balanced design within a long-established catalog of existing designs, which had to be unlike any of them. The skill ran gated. Plain Claude got the same confirmed brief and wrote ten designs. The person kept three of the skill's picks and judged plain Claude's menu "cool ideas, but some very unbalanced pieces."
+- **The ideas overlapped; what the person saw diverged afterward.** 8 of plain Claude's 10 designs had a close sibling among the skill's 33 sketches. Where the person rejected both runs' versions of an idea, the idea was the problem. Where they kept the skill's version, it was the better fit for the game's own conventions, which the filter scores as a requirement.
+- **The source of a precedent predicted the picks.** Menu items built on another game's rules were picked 3 of 4. Items built on folklore or literature were picked 1 of 5. Plain Claude worked from lore alone, and the person praised its flavor and panned its mechanics. A precedent that's already a game rule arrives already played and balanced. Precedents from the catalog itself were the risky ones: one became a near copy. (One run, so this is a hypothesis.)
+- **When the opponent chooses, every option has to cost them.** Designs that let the other player pick a cheap way out failed in both runs. The one the person kept made both options hurt, and the operator "propose a drastic outcome and see who objects" produced it.
+- **Operators improved fit, not distance.** No mutation moved distance (4 stayed 4). Fit rose in 6 of 12. Both kept mutations were rules or balance fixes. Menu pick rates: operator-shaped items 2 of 6, unshaped items 2 of 4. Across all runs, operator-shaped ideas average 3.7 and unshaped ones 3.6.
+- **The menu check looked for exact copies, not near relatives.** A pick the person cut at Gate 2 as "far too close" to an existing design had already been fully developed. A cheap adversary flagged it first; a closeness pass after the gate cost about as much as the original prior-art pass.
+- **Cost, priced from the transcripts:** $31.80 for the skill (lead $13.24, 14 browsing agents $16.41, 15 lean agents $2.15, the card stages about $0.40), against $2.54 for plain Claude. Lean agents started at 3.7k tokens instead of 54k. Four fifths of the browsing came after the menu, and identical search results were fetched up to five times. See [COST.md](COST.md).
+
+## v0.12 (current)
+
+Built from that run's cost and its misses:
+- **A `ci-browse` agent type** for the roles that need the web: five tools, its own folder, a call budget, fetching through the cache, a short summary back. `ci-lean` can now write its own output file.
+- **A thin lead.** Brief blocks and inputs live in files that prompts point to. Agents write their own outputs. `scripts/blind.py` shuffles agents' ideas for a judge, so the lead never retypes them.
+- **A shared fetch cache** (`scripts/fetch.py`) that keeps only the fields or snippets an agent needs.
+- **Closeness at the menu:** on originality briefs, grounding rates each item distinct / related but distinct / too close, calibrated on a settled pair. The prior-art pass covers near relatives, so there's no second closeness pass. Developers read its file instead of searching again, name and link every precedent, and keep to 10 fetches.
+- **The seed fallback is written down:** when no idea has "yes" on every requirement, seeds come from ideas with no "no".
+- **Cost is measured in dollars** by `scripts/cost.py` from the lead's and every agent's transcripts, and reported against the last run and plain Claude.
+- **The cards stay.** They cost about 1% of a run.
